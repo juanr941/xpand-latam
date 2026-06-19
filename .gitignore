@@ -1,0 +1,23 @@
+.DS_Store
+*.docx
+*.pdf
+.claude/
+serve.py
+start_server.sh
+video website 1.mp4
+
+# Social media videos — not used in website
+**/images/videos/
+
+# Original pre-optimization files (replaced by WebP)
+**/images/rompiendo-barreras-original.mp4
+**/images/maquinaria.png
+**/images/retroexcavadora-sin-logo.png
+**/images/feria-canton-2.jpg
+**/images/montacargas-2.jpeg
+**/images/cnc-machinery.jpeg
+**/images/puentes-latam-asia.jpg
+**/images/viaje-proveedores.jpeg
+**/images/acuerdo-cooperacion.jpeg
+**/images/carga-exportacion.jpg
+**/images/calidad-control.gif

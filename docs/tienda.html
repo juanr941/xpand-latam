@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda Industrial — Maquinaria CNC y Herramientas de Precisión · Xpand Latam</title>
+  <meta name="description" content="Distribuidor de maquinaria CNC, herramientas de corte, rodamientos y equipos industriales directo desde fabricantes en China. Ecuador, Perú y Colombia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* ── HEADER ── */
+    .t-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--gray-200);
+      transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .t-header.scrolled {
+      background: var(--navy-dark);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.22);
+      border-bottom-color: transparent;
+    }
+    .t-header-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 32px;
+      height: 68px; display: flex; align-items: center;
+      justify-content: space-between; gap: 24px;
+    }
+    .t-logo { font-size: 18px; font-weight: 900; color: var(--navy); text-decoration: none; letter-spacing: -0.5px; white-space: nowrap; }
+    .t-header.scrolled .t-logo { color: #fff; }
+    .t-nav { display: flex; align-items: center; gap: 28px; }
+    .t-nav a { font-size: 14px; font-weight: 600; color: var(--gray-700); text-decoration: none; transition: color 0.2s; }
+    .t-nav a:hover { color: var(--electric-blue); }
+    .t-nav a.active { color: var(--electric-blue); }
+    .t-header.scrolled .t-nav a { color: rgba(255,255,255,0.8); }
+    .t-header.scrolled .t-nav a:hover { color: var(--orange); }
+
+    /* ── HERO ── */
+    .t-hero { position: relative; min-height: 88vh; display: flex; align-items: center; overflow: hidden; }
+    .t-hero-bg { position: absolute; inset: 0; background: var(--navy-dark); z-index: 0; }
+    .t-hero-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .t-hero-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(105deg, rgba(3,28,92,0.88) 0%, rgba(6,42,120,0.72) 55%, rgba(11,82,214,0.45) 100%);
+    }
+    .t-hero-inner {
+      position: relative; z-index: 2;
+      max-width: 860px; margin: 0 auto; width: 100%;
+      padding: 148px 32px 100px;
+      text-align: center;
+    }
+    .t-hero-tag {
+      display: inline-flex; gap: 8px; align-items: center;
+      background: rgba(84,196,192,0.15); border: 1px solid rgba(84,196,192,0.38);
+      color: var(--teal); padding: 7px 16px; border-radius: 20px;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 22px;
+      margin-left: auto; margin-right: auto;
+    }
+    .t-hero-title {
+      font-size: clamp(36px, 4.8vw, 62px); font-weight: 900; color: #fff;
+      line-height: 1.06; letter-spacing: -2px; margin-bottom: 18px;
+    }
+    .t-hero-title span { color: var(--teal); }
+    .t-hero-sub { font-size: clamp(14px, 1.6vw, 17px); color: rgba(255,255,255,0.70); line-height: 1.65; margin-bottom: 36px; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .t-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .t-edit-hero-btn {
+      position: absolute; top: 80px; right: 32px; z-index: 20;
+      display: none; background: rgba(0,0,0,0.6); color: #fff;
+      border: none; border-radius: 8px; padding: 8px 14px; font-size: 13px; cursor: pointer;
+    }
+    body.edit-mode .t-edit-hero-btn { display: block; }
+
+    /* ── WHY ── */
+    .t-why { background: #fff; padding: 80px 0; border-bottom: 1px solid var(--gray-100); }
+    .t-why-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; margin-top: 48px; }
+    .t-why-card {
+      background: var(--gray-50); border: 1px solid var(--gray-100);
+      border-radius: 16px; padding: 28px 22px;
+      display: flex; flex-direction: column; gap: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .t-why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .t-why-icon { font-size: 30px; }
+    .t-why-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); }
+    .t-why-card p { font-size: 13px; color: var(--gray-600); line-height: 1.65; }
+
+    /* ── CATALOG ── */
+    .t-catalog { background: var(--gray-50); padding: 80px 0; }
+    .t-catalog-meta { display: flex; align-items: center; justify-content: space-between; margin: 36px 0 28px; }
+    .t-catalog-count { font-size: 13.5px; color: var(--gray-500); }
+    .t-catalog-count strong { color: var(--navy); }
+
+    /* ── PRODUCT GRID ── */
+    .t-prod-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .t-prod-card {
+      background: #fff; border-radius: 16px; overflow: hidden;
+      border: 1px solid var(--gray-100);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex; flex-direction: column;
+      transition: transform 0.22s, box-shadow 0.22s, border-color 0.2s;
+    }
+    .t-prod-card:hover { transform: translateY(-6px); box-shadow: 0 14px 40px rgba(6,42,120,0.12); border-color: rgba(11,82,214,0.2); }
+    .t-prod-img {
+      height: 210px; position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .t-prod-icon { font-size: 54px; position: relative; z-index: 1; }
+    .t-prod-badge {
+      position: absolute; top: 12px; left: 12px; z-index: 2;
+      background: rgba(0,0,0,0.48); color: #fff;
+      font-size: 10.5px; font-weight: 700; padding: 4px 11px; border-radius: 20px;
+      letter-spacing: 0.5px; text-transform: uppercase; backdrop-filter: blur(4px);
+    }
+    .t-prod-body { padding: 22px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+    .t-prod-name { font-size: 14.5px; font-weight: 800; color: var(--navy); line-height: 1.3; }
+    .t-prod-tagline { font-size: 12.5px; font-weight: 600; color: var(--electric-blue); }
+    .t-prod-desc { font-size: 12.5px; color: var(--gray-600); line-height: 1.65; flex: 1; }
+    .t-prod-feats { display: flex; flex-direction: column; gap: 5px; padding: 10px 0; border-top: 1px solid var(--gray-100); margin-top: 4px; }
+    .t-prod-feat { display: flex; gap: 7px; font-size: 12px; color: var(--gray-600); align-items: flex-start; }
+    .t-prod-feat::before { content: '✓'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+    .t-prod-cta {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--navy); color: #fff;
+      padding: 10px 18px; border-radius: 8px;
+      font-size: 12.5px; font-weight: 700; text-decoration: none;
+      transition: background 0.2s, transform 0.15s; margin-top: 6px;
+    }
+    .t-prod-cta:hover { background: var(--electric-blue); transform: translateY(-1px); }
+
+    /* Featured card (Torno CNC) */
+    .t-prod-card--feat { grid-column: span 3; flex-direction: row; }
+    .t-prod-card--feat .t-prod-img { width: 400px; height: auto; min-height: 280px; flex-shrink: 0; }
+    .t-prod-card--feat .t-prod-icon { font-size: 72px; }
+    .t-prod-card--feat .t-prod-body { padding: 32px 36px; }
+    .t-prod-card--feat .t-prod-name { font-size: 18px; }
+    .t-specs-block { background: var(--gray-50); border-radius: 10px; padding: 16px 18px; margin-top: 10px; }
+    .t-specs-block h4 { font-size: 11px; font-weight: 700; color: var(--gray-400); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+    .t-specs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+    .t-spec { display: flex; flex-direction: column; gap: 2px; }
+    .t-spec-label { font-size: 10.5px; color: var(--gray-400); }
+    .t-spec-val { font-size: 13px; font-weight: 700; color: var(--navy); }
+
+    /* ── PRODUCT IMAGE UPLOAD ── */
+    .t-prod-img-upload {
+      display: none;
+      position: absolute; bottom: 8px; right: 8px; z-index: 10;
+      background: rgba(0,0,0,0.62); color: #fff;
+      border: none; border-radius: 6px; padding: 6px 10px;
+      font-size: 11px; font-weight: 600; cursor: pointer;
+      align-items: center; gap: 5px; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    body.edit-mode .t-prod-img-upload { display: flex; }
+    .t-prod-img-upload:hover { background: rgba(11,82,214,0.85); }
+
+    /* ── CTA BAND ── */
+    .t-cta-band {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--electric-blue) 100%);
+      padding: 72px 0; text-align: center;
+    }
+    .t-cta-band h2 { font-size: clamp(22px,3vw,36px); font-weight: 900; color: #fff; margin-bottom: 12px; }
+    .t-cta-band p { font-size: 15px; color: rgba(255,255,255,0.70); max-width: 540px; margin: 0 auto 36px; line-height: 1.65; }
+    .t-cta-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+    /* ── FOOTER ── */
+    .t-footer { background: var(--navy-dark); padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.07); }
+    .t-footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .t-footer-brand { font-size: 16px; font-weight: 900; color: #fff; }
+    .t-footer-brand small { display: block; font-size: 11px; color: rgba(255,255,255,0.35); font-weight: 400; margin-top: 3px; }
+    .t-footer-links { display: flex; gap: 22px; }
+    .t-footer-links a { font-size: 13px; color: rgba(255,255,255,0.48); text-decoration: none; transition: color 0.2s; }
+    .t-footer-links a:hover { color: var(--teal); }
+    .t-footer-copy { font-size: 11.5px; color: rgba(255,255,255,0.3); }
+
+    /* ── EDIT BUTTON ── */
+    .t-edit-fab {
+      position: fixed; bottom: 24px; right: 24px; z-index: 999;
+      background: var(--navy-dark); color: rgba(255,255,255,0.65);
+      border: 1px solid rgba(255,255,255,0.15); border-radius: 8px;
+      padding: 9px 16px; font-size: 12px; font-weight: 600; cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .t-edit-fab:hover { background: var(--electric-blue); color: #fff; }
+    body.edit-mode .t-edit-fab { background: var(--teal); color: var(--navy-dark); border-color: var(--teal); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .t-hero-inner { padding-top: 120px; }
+      .t-why-grid { grid-template-columns: repeat(2,1fr); }
+      .t-prod-grid { grid-template-columns: repeat(2,1fr); }
+      .t-prod-card--feat { grid-column: span 2; }
+      .t-prod-card--feat .t-prod-img { width: 320px; }
+      .t-specs-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 768px) {
+      .t-nav { display: none; }
+      .t-hero-inner { padding: 108px 20px 60px; }
+      .t-hero-sub { max-width: 100%; }
+      .t-why-grid { grid-template-columns: 1fr; }
+      .t-prod-grid { grid-template-columns: 1fr; }
+      .t-prod-card--feat { grid-column: span 1; flex-direction: column; }
+      .t-prod-card--feat .t-prod-img { width: 100%; height: 210px; }
+      .t-prod-card--feat .t-prod-body { padding: 22px; }
+      .t-prod-card--feat .t-prod-name { font-size: 15px; }
+      .t-specs-grid { grid-template-columns: repeat(2,1fr); }
+      .t-footer-inner { flex-direction: column; text-align: center; gap: 12px; }
+      .t-footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="t-header" id="tHeader">
+  <div class="t-header-inner">
+    <a href="index.html" class="t-logo">
+      <span style="color:var(--electric-blue)">X</span>pand <span style="color:var(--teal)">Latam</span>
+    </a>
+    <nav class="t-nav">
+      <a href="index.html">← Inicio</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="#catalogo" class="active">Catálogo</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <a href="https://wa.me/8613564313406" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:13px;padding:10px 20px;white-space:nowrap;">
+      📱 Solicitar Cotización
+    </a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="t-hero" id="inicio">
+  <div class="t-hero-bg">
+    <img id="t_hero_img" src="" alt="Maquinaria industrial CNC" style="display:none;" />
+    <div id="t_hero_ph"></div>
+  </div>
+  <button class="t-edit-hero-btn" onclick="document.getElementById('tHeroFileInput').click()">
+    📷 Cambiar imagen de fondo
+  </button>
+  <input type="file" id="tHeroFileInput" accept="image/*" style="display:none;" onchange="handleTHeroUpload(this)" />
+  <div class="t-hero-overlay"></div>
+  <div class="t-hero-inner">
+    <div class="t-hero-left">
+      <div class="t-hero-tag">🏭 Distribuidores Directos · Desde Fábrica en China</div>
+      <h1 class="t-hero-title">
+        Maquinaria Industrial<br><span>de Alta Precisión</span>
+      </h1>
+      <p class="t-hero-sub">
+        Somos distribuidores especializados de maquinaria CNC, herramientas de corte y rodamientos directo desde fabricantes líderes en China. Nuestro equipo técnico en Guangdong inspecciona y certifica cada equipo antes del embarque — sin intermediarios, con entrega puerta a puerta.
+      </p>
+      <div class="t-hero-actions">
+        <a href="#catalogo" class="btn btn-primary btn-lg">Ver Catálogo Completo</a>
+        <a href="https://wa.me/8613564313406" target="_blank" rel="noopener" class="btn btn-outline-white btn-lg">📱 Hablar con un experto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POR QUÉ XPAND ===== -->
+<section class="t-why">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Por qué Xpand</span>
+      <h2>Distribuidores especializados con<br><span class="text-teal">equipo propio en China</span></h2>
+      <p class="section-subtitle">No somos un catálogo en línea. Somos tu equipo de compras sobre el terreno en China.</p>
+    </div>
+    <div class="t-why-grid">
+      <div class="t-why-card">
+        <div class="t-why-icon">🏭</div>
+        <h3>Inspección Técnica en Fábrica</h3>
+        <p>Visitamos físicamente al fabricante, verificamos cada equipo y no liberamos el pago sin confirmación técnica previa. Cero sorpresas al llegar a tu planta.</p>
+      </div>
+      <div class="t-why-card">
+        <div class="t-why-icon">💰</div>
+        <h3>Precio Directo de Fábrica</h3>
+        <p>Compramos directamente al fabricante en China sin intermediarios. Negociamos el mejor precio, condiciones de garantía y plazos de entrega para tu operación.</p>
+      </div>
+      <div class="t-why-card">
+        <div class="t-why-icon">📦</div>
+        <h3>Logística Llave en Mano</h3>
+        <p>Gestionamos flete internacional, seguro de carga, trámites aduaneros y entrega final en tu bodega o planta en Ecuador, Perú o Colombia.</p>
+      </div>
+      <div class="t-why-card">
+        <div class="t-why-icon">🔧</div>
+        <h3>Soporte Post-Venta</h3>
+        <p>Asistencia técnica especializada, gestión de repuestos y coordinación directa con el fabricante para garantías, ajustes y reclamos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATÁLOGO ===== -->
+<section class="t-catalog" id="catalogo">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Catálogo Industrial</span>
+      <h2>Nuestros Productos<br><span class="text-orange">de Alta Precisión</span></h2>
+      <p class="section-subtitle">Todos los equipos son verificados por nuestro equipo técnico en China antes del embarque.</p>
+    </div>
+    <div class="t-catalog-meta">
+      <span class="t-catalog-count">Mostrando <strong>11 productos</strong> disponibles</span>
+    </div>
+
+    <div class="t-prod-grid">
+
+      <!-- 1 -->
+      <div class="t-prod-card">
+        <div class="t-prod-img" style="background:linear-gradient(135deg,#7B3F00 0%,#C07020 100%);">
+          <img id="img_cnc_prod_1" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="t-prod-icon">💎</span>
+          <span class="t-prod-badge">Laminación &amp; Rodillos</span>
+          <label class="t-prod-img-upload" title="Subir imagen">📷 Foto<input type="file" accept="image/*" style="display:none" onchange="handleTProdUpload(this,'cnc_prod_1')"></label>
+        </div>
+        <div class="t-prod-body">
+          <div class="t-prod-name">Anillo de Sello de Carburo de Tungsteno</div>
+          <div class="t-prod-tagline">Alta Durabilidad y Precisión</div>
+          <p class="t-prod-desc">Fabricado con carburo de tungsteno de primera calidad para máxima vida útil bajo alta presión, corrosión y entornos agresivos. Precisión milimétrica para garantizar hermeticidad total y mínimo mantenimiento.</p>
+          <div class="t-prod-feats">
+            <div class="t-prod-feat">Resistencia superior a corrosión química y petroquímica</div>
+            <div class="t-prod-feat">Precisión dimensional milimétrica — ajuste perfecto, cero fugas</div>
+            <div class="t-prod-feat">Fricción mínima · extiende vida útil de bombas y compresores</div>
+          </div>
+          <a href="https://wa.me/8613564313406?text=Hola%2C+me+interesa+cotizar%3A+Anillo+de+Sello+de+Carburo+de+Tungsteno" target="_blank" rel="noopener" class="t-prod-cta">📱 Solicitar Cotización →</a>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="t-prod-card">
+        <div class="t-prod-img" style="background:linear-gradient(135deg,#5C3A1E 0%,#9C5420 100%);">
+          <img id="img_cnc_prod_2" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="t-prod-icon">🔄</span>
+          <span class="t-prod-badge">Laminación &amp; Rodillos</span>
+          <label class="t-prod-img-upload" title="Subir imagen">📷 Foto<input type="file" accept="image/*" style="display:none" onchange="handleTProdUpload(this,'cnc_prod_2')"></label>
+        </div>
+        <div class="t-prod-body">
+          <div class="t-prod-name">Cilindros y Rodillos para Laminador</div>
+          <div class="t-prod-tagline">Acero Forjado de Alta Resistencia</div>
+          <p class="t-prod-desc">Optimice su proceso de laminación y asegure un acabado perfecto en cada pieza. Aceros de aleación con tratamientos térmicos avanzados para resistencia máxima al desgaste y altas temperaturas.</p>
+          <div class="t-prod-feats">
+            <div class="t-prod-feat">Construcción forjada en acero de aleación de alta calidad</div>
+            <div class="t-prod-feat">Superficies mecanizadas con tolerancias exactas</div>
+            <div class="t-prod-feat">Compatibles con laminación en frío y en caliente</div>
+          </div>
+          <a href="https://wa.me/8613564313406?text=Hola%2C+me+interesa+cotizar%3A+Cilindros+y+Rodillos+para+Laminador" target="_blank" rel="noopener" class="t-prod-cta">📱 Solicitar Cotización →</a>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="t-prod-card">
+        <div class="t-prod-img" style="background:linear-gradient(135deg,#1a3a5c 0%,#2d6090 100%);">
+          <img id="img_cnc_prod_3" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="t-prod-icon">⭕</span>
+          <span class="t-prod-badge">Cuchillas de Corte</span>
+          <label class="t-prod-img-upload" title="Subir imagen">📷 Foto<input type="file" accept="image/*" style="display:none" onchange="handleTProdUpload(this,'cnc_prod_3')"></label>
+        </div>
+        <div class="t-prod-body">
+          <div class="t-prod-name">Cuchillas de Corte Circular</div>
+          <div class="t-prod-tagline">Filo de Precisión y Larga Duración</div>
+          <p class="t-prod-desc">Cortes limpios, precisos y sin rebabas gracias a aceros superiores y filo rectificado con tecnología avanzada. Disponibles en diámetros, espesores y tipos de acero personalizados según aplicación.</p>
+          <div class="t-prod-feats">
+            <div class="t-prod-feat">Acero HSS o carburo de tungsteno según aplicación</div>
+            <div class="t-prod-feat">Tratamiento térmico optimizado — evita desportillado prematuro</div>
+            <div class="t-prod-feat">Especificaciones personalizadas (papel, plástico, textil, lámina metálica)</div>
+          </div>
+          <a href="https://wa.me/8613564313406?text=Hola%2C+me+interesa+cotizar%3A+Cuchillas+de+Corte+Circular" target="_blank" rel="noopener" class="t-prod-cta">📱 Solicitar Cotización →</a>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="t-prod-card">
+        <div class="t-prod-img" style="background:linear-gradient(135deg,#1c3d5a 0%,#1a6897 100%);">
+          <img id="img_cnc_prod_4" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="t-prod-icon">✂️</span>
+          <span class="t-prod-badge">Cuchillas de Corte</span>
+          <label class="t-prod-img-upload" title="Subir imagen">📷 Foto<input type="file" accept="image/*" style="display:none" onchange="handleTProdUpload(this,'cnc_prod_4')"></label>
+        </div>
+        <div class="t-prod-body">
+          <div class="t-prod-name">Cuchillas para Cizalla Industrial</div>
+          <div class="t-prod-tagline">Corte de Acero y Metales Pesados</div>
+          <p class="t-prod-desc">Potencia y precisión para los trabajos de corte más exigentes. Resistentes al impacto máximo y la abrasión — cortes limpios y continuidad operativa garantizada en líneas metalúrgicas de alta exigencia.</p>
+          <div class="t-prod-feats">
+            <div class="t-prod-feat">Acero herramienta con tratamiento térmico de alta dureza</div>
+            <div class="t-prod-feat">Filo prolongado — menos afilados, más producción continua</div>
+            <div class="t-prod-feat">Fabricación a medida exacta para cada cizalla</div>
+          </div>
+          <a href="https://wa.me/8613564313406?text=Hola%2C+me+interesa+cotizar%3A+Cuchillas+para+Cizalla+Industrial" target="_blank" rel="noopener" class="t-prod-cta">📱 Solicitar Cotización →</a>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="t-prod-card">
+        <div class="t-prod-img" style="background:linear-gradient(135deg,#062A78 0%,#0B52D6 100%);">
+          <img id="img_cnc_prod_5" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="t-prod-icon">🖥️</span>
+          <span class="t-prod-badge">Maquinaria CNC</span>
+          <label class="t-prod-img-upload" title="Subir imagen">📷 Foto<input type="file" accept="image/*" style="display:none" onchange="handleTProdUpload(this,'cnc_prod_5')"></label>
+        </div>
+        <div class="t-prod-body">
+          <div class="t-prod-name">Fresadora CNC para Grabado de Cilindros <span style="font-weight:500;color:var(--gray-400);font-size:12px;">XK9350FAG</span></div>
+          <div class="t-prod-tagline">Marcado y Muescado de Precisión</div>
+          <p class="t-prod-desc">Agrega marcas de calidad y funcionalidad precisa a tus rodillos de laminación. Control CNC Siemens con motores servo para grabado, marcado y muescado con exactitud y repetibilidad impecables en superficies cilíndricas.</p>
+          <div class="t-prod-feats">
+            <div class="t-prod-feat">Control Siemens CNC · motores servo en 4 ejes (X, Y, Z, A)</div>
+            <div class="t-prod-feat">Compatible con rodillos de carburo, HSS, hierro fundido y Ni-Cr</div>
+            <div class="t-prod-feat">Graba logos, caracteres, diseños y muescas para barras de refuerzo</div>
+          </div>
+          <a href="https://wa.me/8613564313406?text=Hola%2C+me+interesa+cotizar%3A+Fresadora+CNC+XK9350FAG" target="_blank" rel="noopener" class="t-prod-cta">📱 Solicitar Cotización →</a>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="t-prod-card">
+        <div class="t-prod-img" style="background:linear-gradient(135deg,#1a2744 0%,#2d4080 100%);">
+          <img id="img_cnc_prod_6" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="t-prod-icon">🔧</span>
+          <span class="t-prod-badge">Herramientas CNC</span>
+          <label class="t-prod-img-upload" title="Subir imagen">📷 Foto<input type="file" accept="image/*" style="display:none" onchange="handleTProdUpload(this,'cnc_prod_6')"></label>
+        </div>
+        <div class="t-prod-body">
+          <div class="t-prod-name">Herramientas y Soportes para Herramientas</div>
+          <div class="t-prod-tagline">Precisión en Cada Sujeción</div>
+          <p class="t-prod-desc">Amplia gama de herramientas de corte y soportes para centros de mecanizado y tornos CNC. Fabricados en acero herramienta de alta resistencia — incluye muelas diamantadas y accesorios especiales para mecanizado de precisión.</p>
+          <div class="t-prod-feats">
+            <div class="t-prod-feat">Acero herramienta de alta resistencia · compatibilidad ISO estándar</div>
+            <div class="t-prod-feat">Variedad de configuraciones: exterior, interior, ranurado, roscado</div>
+            <div class="t-prod-feat">Muelas diamantadas disponibles para rectificado de precisión</div>
+          </div>
+          <a href="https://wa.me/8613564313406?text=Hola%2C+me+interesa+cotizar%3A+Herramientas+y+Soportes+para+Herramientas" target="_blank" rel="noopener" class="t-prod-cta">📱 Solicitar Cotización →</a>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="t-prod-card">
+        <div class="t-prod-img" style="background:linear-gradient(135deg,#0d3b6e 0%,#1565C0 100%);">
+          <img id="img_cnc_prod_7" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="t-prod-icon">💠</span>
+          <span class="t-prod-badge">Herramientas CNC</span>
+          <label class="t-prod-img-upload" title="Subir imagen">📷 Foto<input type="file" accept="image/*" style="display:none" onchange="handleTProdUpload(this,'cnc_prod_7')"></label>
+        </div>
+        <div class="t-prod-body">
+          <div class="t-prod-name">Insertos de Corte PCD (Diamante Policristalino)</div>
+          <div class="t-prod-tagline">Mecanizado de Alta Velocidad</div>
+          <p class="t-prod-desc">Extraordinaria vida útil y acabados superficiales de calidad superior. Las puntas de diamante PCD duran hasta 50 veces más que el carburo convencional y permiten velocidades de corte significativamente más altas, reduciendo ciclos y cambios de herramienta.</p>
+          <div class="t-prod-feats">
+            <div class="t-prod-feat">Vida útil hasta 50× superior vs. carburo tradicional</div>
+            <div class="t-prod-feat">Acabados espejo — puede eliminar operaciones de pulido</div>
+            <div class="t-prod-feat">Aluminio, cobre, composites (no recomendado para acero)</div>
+          </div>
+          <a href="https://wa.me/8613564313406?text=Hola%2C+me+interesa+cotizar%3A+Insertos+de+Corte+PCD" target="_blank" rel="noopener" class="t-prod-cta">📱 Solicitar Cotización →</a>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="t-prod-card">
+        <div class="t-prod-img" style="background:linear-gradient(135deg,#0a3d3d 0%,#1a7a6e 100%);">
+          <img id="img_cnc_prod_8" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="t-prod-icon">🔬</span>
+          <span class="t-prod-badge">Equipos de Prueba</span>
+          <label class="t-prod-img-upload" title="Subir imagen">📷 Foto<input type="file" accept="image/*" style="display:none" onchange="handleTProdUpload(this,'cnc_prod_8')"></label>
+        </div>
+        <div class="t-prod-body">
+          <div class="t-prod-name">Máquina de Ensayo Universal Hidráulica</div>
+          <div class="t-prod-tagline">Pruebas de Tracción y Compresión</div>
+          <p class="t-prod-desc">Valide la calidad, resistencia y seguridad de sus materiales con la máxima precisión. Solución definitiva para laboratorios de control de calidad: ensayos de tracción, compresión y flexión según normas ASTM e ISO.</p>
+          <div class="t-prod-feats">
+            <div class="t-prod-feat">Sistema hidráulico de alta capacidad — metales, concreto, composites</div>
+            <div class="t-prod-feat">Celdas de carga de alta precisión + compatibilidad con extensómetro</div>
+            <div class="t-prod-feat">Software con reportes automáticos ASTM / ISO</div>
+          </div>
+          <a href="https://wa.me/8613564313406?text=Hola%2C+me+interesa+cotizar%3A+M%C3%A1quina+de+Ensayo+Universal+Hidr%C3%A1ulica" target="_blank" rel="noopener" class="t-prod-cta">📱 Solicitar Cotización →</a>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="t-prod-card">
+        <div class="t-prod-img" style="background:linear-gradient(135deg,#1e1e3e 0%,#3a3a80 100%);">
+          <img id="img_cnc_prod_9" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="t-prod-icon">🎯</span>
+          <span class="t-prod-badge">Herramientas CNC</span>
+          <label class="t-prod-img-upload" title="Subir imagen">📷 Foto<input type="file" accept="image/*" style="display:none" onchange="handleTProdUpload(this,'cnc_prod_9')"></label>
+        </div>
+        <div class="t-prod-body">
+          <div class="t-prod-name">Portaherramientas para Torno CNC</div>
+          <div class="t-prod-tagline">Sujeción Rígida y Precisa de Insertos</div>
+          <p class="t-prod-desc">La base para un mecanizado impecable empieza aquí. Fabricados en acero herramienta tratado térmicamente para máxima rigidez, absorción de vibraciones y sujeción firme y precisa del inserto de corte en cada operación.</p>
+          <div class="t-prod-feats">
+            <div class="t-prod-feat">Acero herramienta tratado térmicamente — cero deflexión en cortes pesados</div>
+            <div class="t-prod-feat">Asiento de inserto mecanizado con posicionamiento repetible</div>
+            <div class="t-prod-feat">Estilos: exterior, interior, ranurado, roscado — norma ISO</div>
+          </div>
+          <a href="https://wa.me/8613564313406?text=Hola%2C+me+interesa+cotizar%3A+Portaherramientas+para+Torno+CNC" target="_blank" rel="noopener" class="t-prod-cta">📱 Solicitar Cotización →</a>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="t-prod-card">
+        <div class="t-prod-img" style="background:linear-gradient(135deg,#2a2a2a 0%,#505050 100%);">
+          <img id="img_cnc_prod_10" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="t-prod-icon">⚙️</span>
+          <span class="t-prod-badge">Rodamientos</span>
+          <label class="t-prod-img-upload" title="Subir imagen">📷 Foto<input type="file" accept="image/*" style="display:none" onchange="handleTProdUpload(this,'cnc_prod_10')"></label>
+        </div>
+        <div class="t-prod-body">
+          <div class="t-prod-name">Rodamientos Rígidos de Bolas</div>
+          <div class="t-prod-tagline">Alta Velocidad y Mínimo Mantenimiento</div>
+          <p class="t-prod-desc">El componente esencial para movimiento suave y eficiente en su maquinaria. Diseño de ranura profunda que reduce fricción y permite rotación estable y silenciosa a altas RPM, soportando cargas radiales y axiales combinadas.</p>
+          <div class="t-prod-feats">
+            <div class="t-prod-feat">Acero premium · alta velocidad con mínima fricción y ruido</div>
+            <div class="t-prod-feat">Opciones: abierto · sellado caucho (2RS) · blindado acero (ZZ)</div>
+            <div class="t-prod-feat">Motores, bombas, compresores, transmisiones, maquinaria agrícola</div>
+          </div>
+          <a href="https://wa.me/8613564313406?text=Hola%2C+me+interesa+cotizar%3A+Rodamientos+R%C3%ADgidos+de+Bolas" target="_blank" rel="noopener" class="t-prod-cta">📱 Solicitar Cotización →</a>
+        </div>
+      </div>
+
+      <!-- 11 — FEATURED -->
+      <div class="t-prod-card t-prod-card--feat">
+        <div class="t-prod-img" style="background:linear-gradient(135deg,#031C5C 0%,#062A78 55%,#0B52D6 100%);">
+          <img id="img_cnc_prod_11" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="t-prod-icon">🏭</span>
+          <span class="t-prod-badge">Maquinaria CNC · Destacado</span>
+          <label class="t-prod-img-upload" title="Subir imagen">📷 Foto<input type="file" accept="image/*" style="display:none" onchange="handleTProdUpload(this,'cnc_prod_11')"></label>
+        </div>
+        <div class="t-prod-body">
+          <div class="t-prod-name">Torno CNC para Rodillos de Laminación <span style="font-weight:500;color:var(--gray-400);font-size:12px;">CK8450H</span></div>
+          <div class="t-prod-tagline">Mecanizado Pesado de Alta Precisión</div>
+          <p class="t-prod-desc">Maximice la vida útil y el rendimiento de sus cilindros con este torno diseñado específicamente para mecanizar piezas de gran tonelaje y alta dureza. Combina una estructura ultra-robusta con la precisión del control numérico Siemens — ideal para fabricar o rectificar perfiles con exactitud impecable en laminadoras, plantas papeleras y talleres metalúrgicos.</p>
+          <div class="t-prod-feats">
+            <div class="t-prod-feat">Control numérico Siemens 828D · precisión de posicionamiento 0.001 mm</div>
+            <div class="t-prod-feat">Estructura monolítica de hierro fundido — absorbe vibraciones en piezas de hasta 8 toneladas</div>
+            <div class="t-prod-feat">Husillo de alto torque (45 KN.m) para desbaste de materiales endurecidos a bajas RPM</div>
+            <div class="t-prod-feat">Contrapunto hidráulico y lunetas robustas para soporte de cilindros largos hasta 2,500 mm</div>
+          </div>
+          <div class="t-specs-block">
+            <h4>Especificaciones Técnicas — CK8450H</h4>
+            <div class="t-specs-grid">
+              <div class="t-spec"><span class="t-spec-label">Diámetro de rodillo</span><span class="t-spec-val">100 – 550 mm</span></div>
+              <div class="t-spec"><span class="t-spec-label">Longitud máxima</span><span class="t-spec-val">2,500 mm</span></div>
+              <div class="t-spec"><span class="t-spec-label">Peso máx. pieza</span><span class="t-spec-val">8.0 toneladas</span></div>
+              <div class="t-spec"><span class="t-spec-label">Motor principal</span><span class="t-spec-val">45 kW VFD</span></div>
+              <div class="t-spec"><span class="t-spec-label">Precisión</span><span class="t-spec-val">0.001 mm</span></div>
+              <div class="t-spec"><span class="t-spec-label">Control CNC</span><span class="t-spec-val">Siemens 828D</span></div>
+            </div>
+          </div>
+          <a href="https://wa.me/8613564313406?text=Hola%2C+me+interesa+cotizar%3A+Torno+CNC+CK8450H+para+Rodillos+de+Laminaci%C3%B3n" target="_blank" rel="noopener" class="t-prod-cta" style="align-self:flex-start;">
+            📱 Solicitar Cotización →
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /t-prod-grid -->
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="t-cta-band">
+  <div class="container">
+    <h2>¿No encuentras lo que buscas?</h2>
+    <p>Cuéntanos la maquinaria o herramienta que necesitas y nuestro equipo en China la consigue directamente desde el fabricante. Primera consulta gratuita y sin compromiso.</p>
+    <div class="t-cta-actions">
+      <a href="https://wa.me/8613564313406?text=Hola%2C+necesito+cotizar+maquinaria+que+no+encuentro+en+el+cat%C3%A1logo" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+        📱 Hablar con un experto en China
+      </a>
+      <a href="index.html#contacto" class="btn btn-outline-white btn-lg">
+        Enviar formulario de contacto
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="t-footer">
+  <div class="t-footer-inner">
+    <div class="t-footer-brand">
+      <span style="color:var(--electric-blue)">X</span>pand <span style="color:var(--teal)">Latam</span>
+      <small>Soluciones Industriales desde China</small>
+    </div>
+    <div class="t-footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#ubicaciones">Oficinas</a>
+      <a href="index.html#contacto">Contacto</a>
+    </div>
+    <span class="t-footer-copy">© 2026 Xpand Latam · Todos los derechos reservados</span>
+  </div>
+</footer>
+
+<!-- Edit mode FAB -->
+<div style="position:fixed;bottom:24px;right:24px;z-index:999;display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+  <button id="tiendaExportBtn" onclick="exportAllImages()" style="display:none;background:#D98B00;color:#fff;border:none;border-radius:50px;padding:9px 16px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.25);">📥 Exportar imágenes</button>
+  <button class="t-edit-fab" onclick="document.body.classList.toggle('edit-mode');document.getElementById('tiendaExportBtn').style.display=document.body.classList.contains('edit-mode')?'block':'none';" title="Activar modo edición (Ctrl+Shift+E)">✏️ Editar</button>
+</div>
+
+<script>
+// Header scroll
+const tHdr = document.getElementById('tHeader');
+window.addEventListener('scroll', () => {
+  tHdr.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+function compressImage(file, cb) {
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var img = new Image();
+    img.onload = function() {
+      var MAX = 1200;
+      var w = img.width, h = img.height;
+      if (w > MAX) { h = Math.round(h * MAX / w); w = MAX; }
+      if (h > MAX) { w = Math.round(w * MAX / h); h = MAX; }
+      var canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      cb(canvas.toDataURL('image/jpeg', 0.78));
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+// Hero image upload
+function handleTHeroUpload(input) {
+  const file = input.files[0];
+  if (!file) return;
+  input.value = '';
+  compressImage(file, function(dataUrl) {
+    try { localStorage.setItem('tienda_hero_bg', dataUrl); } catch(err) { alert('Almacenamiento lleno.'); return; }
+    applyTHero(dataUrl);
+  });
+}
+function applyTHero(src) {
+  const img = document.getElementById('t_hero_img');
+  const ph  = document.getElementById('t_hero_ph');
+  if (img) { img.src = src; img.style.display = 'block'; }
+  if (ph)  ph.style.display = 'none';
+}
+
+// Product card image upload
+function handleTProdUpload(input, key) {
+  const file = input.files[0];
+  if (!file) return;
+  input.value = '';
+  compressImage(file, function(dataUrl) {
+    try { localStorage.setItem('xpand_img_' + key, dataUrl); } catch(err) { alert('Almacenamiento lleno.'); return; }
+    applyTProd(key, dataUrl);
+  });
+}
+function applyTProd(key, src) {
+  const img = document.getElementById('img_' + key);
+  if (!img) return;
+  img.src = src;
+  img.style.display = 'block';
+}
+
+// Keyboard shortcut
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey && e.shiftKey && e.key === 'E') {
+    document.body.classList.toggle('edit-mode');
+  }
+});
+
+function exportAllImages() {
+  var downloads = [];
+  for (var i = 0; i < localStorage.length; i++) {
+    var storageKey = localStorage.key(i);
+    var filename = null;
+    if (storageKey.startsWith('xpand_img_')) filename = storageKey.replace('xpand_img_', '') + '.jpg';
+    else if (storageKey === 'tienda_hero_bg') filename = 'tienda_hero_bg.jpg';
+    if (filename) downloads.push({ data: localStorage.getItem(storageKey), filename: filename });
+  }
+  if (downloads.length === 0) { alert('No hay imágenes guardadas en este navegador.'); return; }
+  downloads.forEach(function(d, idx) {
+    setTimeout(function() {
+      var a = document.createElement('a');
+      a.href = d.data; a.download = d.filename;
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    }, idx * 400);
+  });
+  alert(downloads.length + ' imagen(es) exportando...\n\n1. Crea una carpeta "img" dentro del proyecto\n2. Mueve todos los archivos descargados ahí\n3. Re-sube el proyecto completo a Netlify');
+}
+
+// Load all saved images on page load (falls back to img/ folder for Netlify)
+window.addEventListener('load', () => {
+  var heroSaved = localStorage.getItem('tienda_hero_bg');
+  if (heroSaved) {
+    applyTHero(heroSaved);
+  } else {
+    var t = new Image();
+    t.onload = function() { applyTHero('img/tienda_hero_bg.jpg'); };
+    t.src = 'img/tienda_hero_bg.jpg';
+  }
+
+  ['cnc_prod_1','cnc_prod_2','cnc_prod_3','cnc_prod_4','cnc_prod_5',
+   'cnc_prod_6','cnc_prod_7','cnc_prod_8','cnc_prod_9','cnc_prod_10','cnc_prod_11'].forEach(function(key) {
+    var src = localStorage.getItem('xpand_img_' + key);
+    if (src) {
+      applyTProd(key, src);
+    } else {
+      var t = new Image();
+      t.onload = (function(k) { return function() { applyTProd(k, 'img/' + k + '.jpg'); }; })(key);
+      t.src = 'img/' + key + '.jpg';
+    }
+  });
+});
+</script>
+</body>
+</html>
