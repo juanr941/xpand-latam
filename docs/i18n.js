@@ -1269,6 +1269,12 @@ function setLang(lang) {
 
 // Load saved language on page start
 window.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('xpand_lang') || 'en';
-  setLang(saved);
+  const saved = localStorage.getItem('xpand_lang');
+  if (saved) {
+    setLang(saved);
+  } else {
+    // Detect from browser language — ZH users get Chinese, everyone else gets Spanish
+    const bl = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
+    setLang(bl.startsWith('zh') ? 'zh' : 'es');
+  }
 });
