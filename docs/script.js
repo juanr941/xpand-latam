@@ -1,3 +1,16 @@
+// ===== EDIT MODE GATE =====
+// Edit button only visible when URL contains ?edit (e.g. yoursite.com/?edit)
+// Visitors never see it.
+(function () {
+  const editToggle = document.getElementById('editToggle');
+  if (!editToggle) return;
+  if (new URLSearchParams(window.location.search).has('edit')) {
+    editToggle.style.display = '';
+  } else {
+    editToggle.style.display = 'none';
+  }
+})();
+
 // ===== HEADER SCROLL =====
 window.addEventListener('scroll', () => {
   const header = document.getElementById('header');
