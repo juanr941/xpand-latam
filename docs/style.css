@@ -2218,6 +2218,7 @@ body.edit-mode .sv-vis-upload { display: flex; }
 }
 .sv-tab-nav {
   display: flex; gap: 0; max-width: 1280px; margin: 0 auto; padding: 0 32px;
+  justify-content: center;
 }
 .sv-tab-btn {
   flex: 0 0 auto; padding: 16px 22px;
