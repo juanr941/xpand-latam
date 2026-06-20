@@ -1044,7 +1044,7 @@ body.edit-mode .ops-caption-edit-hint { display: block; }
 .why-header h2 { font-size: clamp(28px,3.5vw,44px); font-weight: 800; color: var(--navy); line-height: 1.15; margin-bottom: 16px; }
 .why-header > p { font-size: 17px; color: var(--gray-600); line-height: 1.7; }
 .why-body-row {
-  display: grid; grid-template-columns: 1fr 1fr;
+  display: grid; grid-template-columns: 0.75fr 1.25fr;
   gap: 56px; align-items: start;
 }
 .why-presence-img {
