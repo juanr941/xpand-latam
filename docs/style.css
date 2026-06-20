@@ -2611,112 +2611,98 @@ body.edit-mode .sv-vis-upload { display: flex; }
 
 /* ===== INVERSIONES EN ASIA ===== */
 .invest-asia-section {
-  background: linear-gradient(135deg, #031C5C 0%, #062A78 55%, #0a3a5c 100%);
-  padding: 100px 0;
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(160deg, #dbeafe 0%, #eff6ff 50%, #e0f2fe 100%);
+  border-top: 3px solid var(--electric-blue);
+  border-bottom: 3px solid var(--electric-blue);
+  padding: 80px 0 72px;
+  text-align: center;
 }
-.invest-asia-section::before {
-  content: '';
-  position: absolute;
-  top: -80px; right: -80px;
-  width: 400px; height: 400px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(217,139,0,0.12) 0%, transparent 70%);
-  pointer-events: none;
+.invest-asia-top {
+  max-width: 860px;
+  margin: 0 auto 56px;
+  padding: 0 24px;
 }
-.invest-asia-inner {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 72px;
-  align-items: center;
-}
-.invest-asia-left .section-tag-dark { margin-bottom: 20px; }
-.invest-asia-left h2 {
-  font-size: clamp(28px, 3.5vw, 46px);
-  font-weight: 900;
-  color: #fff;
-  line-height: 1.1;
+.ia-tag {
+  display: inline-block;
+  background: rgba(11,82,214,0.1);
+  color: var(--electric-blue);
+  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(11,82,214,0.2);
   margin-bottom: 20px;
 }
-.invest-asia-lead {
-  font-size: 16px;
-  color: rgba(255,255,255,0.72);
-  line-height: 1.7;
-  margin-bottom: 36px;
-  max-width: 520px;
+.invest-asia-top h2 {
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 900; color: var(--navy); line-height: 1.1; margin-bottom: 20px;
 }
-.invest-asia-feats { display: flex; flex-direction: column; gap: 24px; margin-bottom: 36px; }
-.ia-feat { display: flex; gap: 16px; align-items: flex-start; }
-.ia-feat-icon { font-size: 26px; flex-shrink: 0; margin-top: 2px; }
-.ia-feat strong { display: block; font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
-.ia-feat p { font-size: 13px; color: rgba(255,255,255,0.62); line-height: 1.6; margin: 0; }
+.ia-highlight { color: var(--electric-blue); }
+.ia-lead {
+  font-size: 17px; color: var(--gray-600); line-height: 1.7;
+  max-width: 680px; margin: 0 auto;
+}
 
-.invest-asia-right {
+/* Three feature columns */
+.ia-feats-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(11,82,214,0.12);
+  border-bottom: 1px solid rgba(11,82,214,0.12);
+  margin: 0 0 56px;
 }
-.ia-stat-card {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 16px;
-  padding: 24px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  transition: background 0.2s;
+.ia-feat {
+  padding: 40px 40px;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  text-align: center;
+  border-right: 1px solid rgba(11,82,214,0.12);
 }
-.ia-stat-card:hover { background: rgba(255,255,255,0.11); }
-.ia-stat-card--gold {
-  background: linear-gradient(135deg, rgba(217,139,0,0.18) 0%, rgba(217,139,0,0.08) 100%);
-  border-color: rgba(217,139,0,0.35);
+.ia-feat:last-child { border-right: none; }
+.ia-feat-icon { font-size: 36px; }
+.ia-feat strong { font-size: 16px; font-weight: 800; color: var(--navy); }
+.ia-feat p { font-size: 14px; color: var(--gray-600); line-height: 1.65; margin: 0; }
+
+/* Stats bar */
+.ia-stats-bar {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0; margin: 0 auto 48px; max-width: 700px; padding: 0 24px;
 }
-.ia-stat-card--teal {
-  background: linear-gradient(135deg, rgba(84,196,192,0.15) 0%, rgba(84,196,192,0.05) 100%);
-  border-color: rgba(84,196,192,0.3);
+.ia-stat {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  flex: 1; padding: 0 24px;
 }
-.ia-sc-num {
-  font-size: 36px;
-  font-weight: 900;
-  color: #fff;
-  line-height: 1;
-  letter-spacing: -1px;
+.ia-stat-num {
+  font-size: 42px; font-weight: 900; color: var(--electric-blue);
+  line-height: 1; letter-spacing: -1.5px;
 }
-.ia-stat-card--gold .ia-sc-num { color: var(--orange); }
-.ia-stat-card--teal .ia-sc-num { color: var(--teal); }
-.ia-sc-label {
-  font-size: 12px;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.4;
-  font-weight: 500;
+.ia-stat-lbl { font-size: 13px; color: var(--gray-600); font-weight: 500; }
+.ia-stat-sep { width: 1px; height: 52px; background: rgba(11,82,214,0.2); flex-shrink: 0; }
+
+/* Bottom row */
+.ia-bottom {
+  display: flex; flex-direction: column; align-items: center; gap: 24px;
+  padding: 0 24px;
 }
-.ia-badge-row {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.ia-countries {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
 }
-.ia-badge-row span {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 20px;
-  padding: 6px 14px;
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(255,255,255,0.82);
+.ia-countries span {
+  background: rgba(11,82,214,0.08); border: 1px solid rgba(11,82,214,0.18);
+  border-radius: 20px; padding: 7px 16px;
+  font-size: 14px; font-weight: 600; color: var(--navy);
 }
-@media (max-width: 1024px) {
-  .invest-asia-inner { grid-template-columns: 1fr; gap: 48px; }
-}
+
 @media (max-width: 768px) {
-  .invest-asia-section { padding: 64px 0; }
-  .invest-asia-right { grid-template-columns: 1fr 1fr; }
-  .ia-sc-num { font-size: 28px; }
+  .invest-asia-section { padding: 56px 0 52px; }
+  .ia-feats-row { grid-template-columns: 1fr; }
+  .ia-feat { border-right: none; border-bottom: 1px solid rgba(11,82,214,0.12); padding: 28px 32px; }
+  .ia-feat:last-child { border-bottom: none; }
+  .ia-stats-bar { flex-direction: column; gap: 28px; }
+  .ia-stat-sep { width: 60px; height: 1px; }
+  .ia-stat-num { font-size: 36px; }
 }
 @media (max-width: 480px) {
-  .invest-asia-section { padding: 48px 0; }
-  .ia-stat-card { padding: 18px 14px; }
+  .invest-asia-section { padding: 44px 0 40px; }
+  .ia-feat { padding: 24px 24px; }
+  .ia-stat-num { font-size: 30px; }
 }
 
 /* ===== MOBILE SERVICE & PRODUCT CARDS ===== */
