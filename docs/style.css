@@ -2605,3 +2605,90 @@ body.edit-mode .sv-vis-upload { display: flex; }
   .ctab-btn { padding: 7px 12px; font-size: 12px; }
   .footer-grid { gap: 24px; }
 }
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+/* Machinery grid — no mobile override existed */
+@media (max-width: 1024px) {
+  .machinery-grid { grid-template-columns: 1fr; gap: 48px; }
+  .machinery-grid .machinery-visual { order: -1; }
+}
+
+@media (max-width: 768px) {
+  /* Nav padding reduction keeps header at ~68px matching sticky tab top:68px */
+  .nav { padding: 14px 16px; gap: 12px; }
+
+  /* Section paddings: 100px → 60px */
+  .services,
+  .how-it-works,
+  .clients,
+  .countries-section,
+  .eval-section,
+  .lang-advantage-strip { padding: 60px 0; }
+  .why-xpand { padding: 60px 0; }
+  .faq-section { padding: 52px 0; }
+  .projects-section { padding: 60px 0 40px; }
+  .success-cases { padding: 52px 0 0; }
+  .machinery { padding: 64px 0; }
+
+  /* Contact: fix class mismatch (mobile polish block used wrong class .contact-section) */
+  .contact { padding: 52px 0 64px; }
+  .contact-form { padding: 28px 20px; }
+  .contact-info h2 { font-size: 26px; }
+
+  /* Comparison table: horizontal scroll on phones */
+  .comparison-table { overflow-x: auto; -webkit-overflow-scrolling: touch; display: block; }
+  .comp-row { min-width: 460px; }
+
+  /* FAQ */
+  .faq-item { padding: 20px; }
+  .faq-q-text { font-size: 15px; }
+  .section-header { margin-bottom: 36px; }
+
+  /* Leaders + client height */
+  .client-slot { height: 80px; }
+  .leader-slot { height: 140px; }
+
+  /* Lang banner inside why-xpand */
+  .lang-banner { padding: 16px 20px; gap: 12px; }
+}
+
+@media (max-width: 480px) {
+  /* Tighter section paddings */
+  .services,
+  .how-it-works,
+  .clients,
+  .why-xpand,
+  .faq-section { padding: 44px 0; }
+  .lang-advantage-strip,
+  .countries-section,
+  .eval-section { padding: 44px 0; }
+  .projects-section { padding: 44px 0 28px; }
+  .contact { padding: 40px 0 52px; }
+  .contact-form { padding: 20px 14px; }
+  .success-cases { padding: 40px 0 0; }
+  .machinery { padding: 48px 0; }
+
+  /* Ops gallery — tighter for small phones */
+  .ops-carousel-stage { height: 310px; }
+  .ops-slot-card { width: 230px !important; }
+  .ops-img-slot { height: 200px !important; border-radius: 12px 12px 0 0; }
+  .ops-card-caption { font-size: 11.5px; min-height: 48px; border-radius: 0 0 12px 12px; padding: 10px 14px; }
+
+  /* Hero trust stats stack vertically */
+  .hero-trust { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .trust-divider { display: none; }
+
+  /* Typography & spacing */
+  .section-header { margin-bottom: 24px; }
+  .section-tag { font-size: 11px; }
+  .faq-item { padding: 14px 16px; }
+  .faq-q-text { font-size: 14px; }
+  .cta-band { padding: 44px 0; }
+  .leader-slot { height: 90px; padding: 10px 14px; }
+  .nav { padding: 12px 14px; gap: 8px; }
+
+  /* Machinery stat cards */
+  .msc-num { font-size: 22px; }
+  .msc-label { font-size: 10px; }
+}
