@@ -2005,11 +2005,7 @@
           </div>
           <a href="https://wa.me/886932999971" target="_blank" class="btn btn-primary hv-btn">📱 Contactar ejecutivo</a>
         </div>
-        <form class="contact-form" action="https://formsubmit.co/juanricardo@xpandlatam.com" method="POST">
-          <input type="hidden" name="_subject" value="Nueva consulta — Xpand Latam" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value="https://www.xpandlatam.com/#contacto" />
+        <form class="contact-form" id="contactForm">
           <h3>Solicitar consulta gratuita</h3>
           <div class="form-row">
             <div class="form-group">
@@ -2080,11 +2076,17 @@
               <label class="checkbox-label"><input type="checkbox" /> Excavadoras / Montacargas</label>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+          <button type="submit" class="btn btn-primary btn-lg" id="contactSubmitBtn" style="width:100%;">
             Enviar solicitud →
           </button>
           <p class="form-note">Respuesta garantizada en menos de 24 horas hábiles.</p>
         </form>
+        <div id="contactSuccess" style="display:none;text-align:center;padding:48px 24px;">
+          <div style="font-size:52px;margin-bottom:16px;">✅</div>
+          <h3 style="color:var(--navy);margin-bottom:10px;">¡Solicitud enviada!</h3>
+          <p style="color:var(--gray-600);margin-bottom:24px;">Nos pondremos en contacto contigo en menos de 24 horas hábiles.</p>
+          <a href="https://wa.me/8613564313406" target="_blank" class="btn btn-primary">📱 WhatsApp si es urgente</a>
+        </div>
       </div>
     </div>
   </div>
@@ -2166,5 +2168,46 @@
 
 <script src="script.js"></script>
 <script src="i18n.js"></script>
+<script>
+(function () {
+  var form = document.getElementById('contactForm');
+  var btn = document.getElementById('contactSubmitBtn');
+  var successDiv = document.getElementById('contactSuccess');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+
+    var data = new FormData(form);
+    data.append('_subject', 'Nueva consulta — Xpand Latam');
+    data.append('_template', 'table');
+    data.append('_captcha', 'false');
+
+    fetch('https://formsubmit.co/ajax/juanricardo@xpandlatam.com', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (json) {
+      if (json.success === 'true' || json.success === true) {
+        form.style.display = 'none';
+        successDiv.style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Enviar solicitud →';
+        alert('Hubo un error al enviar. Intenta por WhatsApp.');
+      }
+    })
+    .catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Enviar solicitud →';
+      alert('Error de conexión. Contáctanos por WhatsApp.');
+    });
+  });
+})();
+</script>
 </body>
 </html>
