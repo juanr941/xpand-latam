@@ -2971,3 +2971,98 @@ body.edit-mode .sv-vis-upload { display: flex; }
   font-size: 13px;
   color: rgba(255,255,255,0.65);
 }
+
+/* ===== MOBILE COMPREHENSIVE FIX — iPhone + Galaxy S23 Ultra ===== */
+
+/* Prevent root-level horizontal scroll */
+html { overflow-x: hidden; }
+
+@media (max-width: 768px) {
+  /* Hero: reduce height so content is visible without scroll */
+  .hero--fullbleed { min-height: 72vh; }
+
+  /* Hero title: long Spanish phrase was 5-6 lines at 36px min */
+  .hero-title {
+    font-size: clamp(26px, 6.5vw, 34px);
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+  }
+  .hero-subtitle { max-width: 100%; margin-bottom: 20px; }
+  .hero-actions { margin-bottom: 24px; gap: 10px; }
+
+  /* Trust row */
+  .trust-item strong { font-size: 20px; }
+
+  /* Section headers: long headings overflow at 28px min */
+  .section-header h2 { font-size: clamp(22px, 5.5vw, 32px); }
+  .why-header h2 { font-size: clamp(22px, 5.5vw, 34px); }
+  .success-cases-content h2 { font-size: clamp(22px, 5.5vw, 32px); }
+
+  /* Risks nav: white-space:nowrap was truncating button labels */
+  .rnav-title { white-space: normal; line-height: 1.4; }
+  .rnav-btn { align-items: flex-start; gap: 8px; }
+  .rnav-loss { font-size: 12px; }
+
+  /* Risk detail on mobile */
+  .rd-loss { font-size: 24px; }
+  .risk-detail h4 { font-size: 16px; }
+  .risk-lesson { padding: 12px 14px; }
+
+  /* Steps: keep column layout (don't override with horizontal scroll) */
+  .steps-grid { overflow-x: visible; flex-direction: column; flex-wrap: wrap; padding-bottom: 0; }
+  .step-card { min-width: unset; width: 100%; }
+  .step-arrow { display: none; }
+
+  /* Why-xpand comparison table: cleaner overflow */
+  .comparison-table { margin: 0 -20px; padding: 0 20px; border-radius: 0; }
+
+  /* CTA band buttons full width on mobile */
+  .cta-band-actions { flex-direction: column; align-items: center; width: 100%; }
+  .cta-band-actions .btn { width: 100%; justify-content: center; text-align: center; }
+
+  /* Contact info title spacing */
+  .contact-info { text-align: center; }
+  .contact-channels { align-items: stretch; }
+  .languages { justify-content: center; }
+
+  /* FAQ section header */
+  .faq-section .section-header h2 { font-size: clamp(21px, 5vw, 30px); }
+}
+
+@media (max-width: 480px) {
+  /* Hero: let height be content-driven */
+  .hero--fullbleed { min-height: auto; }
+  .hero-fullbleed-inner { padding: 90px 20px 60px; }
+  .hero-title { font-size: clamp(22px, 6vw, 28px); letter-spacing: -0.3px; }
+
+  /* Service mobile cards: 1 column — 2 columns was too narrow at 390px */
+  .sv-mobile-track {
+    grid-template-columns: 1fr;
+    padding: 8px 20px 16px;
+  }
+  /* Keep mach cards 2-col since they have images — visual at 2-col is fine */
+
+  /* Section headers at 480px */
+  .section-header h2 { font-size: clamp(20px, 5.5vw, 28px); }
+  .why-header h2 { font-size: clamp(20px, 5.5vw, 30px); }
+
+  /* Contact form padding */
+  .contact-form { padding: 24px 16px; }
+  .high-value-block { padding: 16px; }
+
+  /* Hero actions full width */
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; justify-content: center; text-align: center; }
+
+  /* Catch strip */
+  .catch-strip h2 { font-size: clamp(20px, 5.5vw, 28px); }
+}
+
+@media (max-width: 380px) {
+  .hero-title { font-size: 21px; }
+  .hero-subtitle { font-size: 14px; }
+  .section-header h2 { font-size: 19px; }
+  .sv-mobile-track { padding: 8px 14px 16px; gap: 10px; }
+  .mach-mobile-track { padding: 8px 14px 16px; gap: 10px; }
+  .sv-mc-body { padding: 14px; }
+}
