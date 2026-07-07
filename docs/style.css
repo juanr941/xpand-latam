@@ -2710,7 +2710,8 @@ body.edit-mode .sv-vis-upload { display: flex; }
 .mach-mobile-cards { display: none; }
 
 /* Desktop: show original tab system */
-.sv-tab-nav-outer, .sv-panels-outer, .sv-slider-nav { display: block; }
+.sv-tab-nav-outer, .sv-panels-outer { display: block; }
+.sv-slider-nav { display: flex; }
 .mach-slider-wrap { display: flex; }
 
 @media (max-width: 768px) {
