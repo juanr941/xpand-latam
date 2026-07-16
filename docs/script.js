@@ -546,15 +546,22 @@ function selectCountryTab(btn, panelId) {
 // ===== SAVINGS CALCULATOR =====
 let calcCountry = 'ecuador';
 
+// Relative weights per category — how the total savings splits across channels
 const categoryRates = {
-  machinery:     { neg: 0.12, qc: 0.07, log: 0.04 },
-  consumer:      { neg: 0.15, qc: 0.09, log: 0.03 },
-  electronics:   { neg: 0.11, qc: 0.10, log: 0.04 },
-  textile:       { neg: 0.14, qc: 0.08, log: 0.03 },
-  construction:  { neg: 0.10, qc: 0.06, log: 0.05 },
+  machinery:     { neg: 0.52, qc: 0.30, log: 0.18 },
+  consumer:      { neg: 0.56, qc: 0.33, log: 0.11 },
+  electronics:   { neg: 0.44, qc: 0.40, log: 0.16 },
+  textile:       { neg: 0.56, qc: 0.32, log: 0.12 },
+  construction:  { neg: 0.48, qc: 0.29, log: 0.23 },
 };
 
 const countryBonus = { ecuador: 1.18, peru: 1.08, colombia: 1.0 };
+
+// Total savings % scales with order volume: 8% at the low end, 20% at the high end
+const CALC_MIN_FOB = 10000;
+const CALC_MAX_FOB = 500000;
+const CALC_MIN_PCT = 0.08;
+const CALC_MAX_PCT = 0.20;
 
 function formatUSD(n) {
   return '$' + Math.round(n).toLocaleString('en-US');
@@ -566,11 +573,15 @@ function updateCalc() {
   const rates = categoryRates[category];
   const bonus = countryBonus[calcCountry];
 
-  const negSav = fob * rates.neg * bonus;
-  const qcSav  = fob * rates.qc * bonus;
-  const logSav = fob * rates.log * bonus;
+  const t = (fob - CALC_MIN_FOB) / (CALC_MAX_FOB - CALC_MIN_FOB);
+  const basePct = CALC_MIN_PCT + (CALC_MAX_PCT - CALC_MIN_PCT) * Math.min(Math.max(t, 0), 1);
+  const totalPct = basePct * bonus;
+
+  const negSav = fob * totalPct * rates.neg;
+  const qcSav  = fob * totalPct * rates.qc;
+  const logSav = fob * totalPct * rates.log;
   const total  = negSav + qcSav + logSav;
-  const maxSav = fob * (0.15 + 0.10 + 0.05) * 1.18;
+  const maxSav = CALC_MAX_FOB * CALC_MAX_PCT * countryBonus.ecuador;
 
   document.getElementById('calcFobVal').textContent = fob.toLocaleString('en-US');
   document.getElementById('savNeg').textContent = formatUSD(negSav);
