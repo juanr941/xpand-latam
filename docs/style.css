@@ -432,19 +432,19 @@ body.edit-mode .hero-bg-trigger { display: block; }
 .floating-card small { font-size: 11px; color: var(--gray-400); }
 
 /* ===== HOW IT WORKS ===== */
-.how-it-works { padding: 100px 0; background: var(--navy-dark); }
-.how-it-works .section-header h2 { color: #fff; }
-.how-it-works .section-tag { background: rgba(255,107,0,0.15); color: var(--orange); border-color: rgba(255,107,0,0.25); }
+/* Light background — sits between two dark-navy sections (proyectos / calculadora), breaks up repeated blue */
+.how-it-works { padding: 100px 0; background: var(--gray-50); }
+.how-it-works .section-tag { background: rgba(255,107,0,0.1); color: var(--orange); border-color: rgba(255,107,0,0.25); }
 .steps-grid {
   display: flex; align-items: center; gap: 0;
   overflow-x: auto; padding-bottom: 8px;
 }
 .step {
-  flex: 1; min-width: 200px; background: rgba(255,255,255,0.05);
+  flex: 1; min-width: 200px; background: #fff;
   border-radius: var(--radius-lg); padding: 36px 24px; text-align: center;
-  border: 1px solid rgba(255,255,255,0.08); transition: var(--transition);
+  border: 1px solid var(--gray-200); box-shadow: var(--shadow); transition: var(--transition);
 }
-.step:hover { background: rgba(255,255,255,0.08); transform: translateY(-4px); }
+.step:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
 .step-number {
   width: 52px; height: 52px; border-radius: 50%;
   background: linear-gradient(135deg, var(--orange) 0%, #FF8C00 100%);
@@ -453,9 +453,9 @@ body.edit-mode .hero-bg-trigger { display: block; }
   margin: 0 auto 16px; box-shadow: 0 4px 16px rgba(217,139,0,0.4);
 }
 .step-icon { font-size: 34px; margin-bottom: 12px; }
-.step h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 10px; }
-.step p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.65; }
-.step-arrow { font-size: 22px; color: rgba(255,107,0,0.4); padding: 0 8px; flex-shrink: 0; align-self: center; margin-top: -40px; }
+.step h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.step p { font-size: 13px; color: var(--gray-600); line-height: 1.65; }
+.step-arrow { font-size: 22px; color: rgba(255,107,0,0.5); padding: 0 8px; flex-shrink: 0; align-self: center; margin-top: -40px; }
 .how-it-works .cta-center .btn-primary { margin-top: 0; }
 
 /* ===== CLIENTS ===== */
