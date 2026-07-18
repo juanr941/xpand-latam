@@ -2281,6 +2281,7 @@ body.edit-mode .sv-vis-upload { display: flex; }
 .sv-panel-tag { font-size: 11px; font-weight: 700; color: var(--electric-blue); text-transform: uppercase; letter-spacing: 1px; }
 .sv-panel-content h3 { font-size: clamp(22px,2.4vw,30px); font-weight: 900; color: var(--navy); line-height: 1.2; }
 .sv-panel-content p { font-size: 15px; color: var(--gray-600); line-height: 1.75; }
+.sv-panel-content .sv-panel-lead { font-size: 16px; color: var(--orange); line-height: 1.5; }
 .sv-feats { list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; }
 .sv-feats li { display: flex; gap: 10px; font-size: 14px; color: var(--gray-700); align-items: flex-start; }
 .sv-feats li::before { content: '✓'; color: var(--teal); font-weight: 800; flex-shrink: 0; margin-top: 1px; }
