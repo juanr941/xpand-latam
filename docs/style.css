@@ -2785,6 +2785,10 @@ body.edit-mode .sv-vis-upload { display: flex; }
   }
   .mach-mc:hover { box-shadow: 0 8px 24px rgba(6,42,120,0.14); }
   .mach-mc > img { width: 100%; height: 110px; object-fit: cover; display: block; }
+  .mach-mc-icon-placeholder {
+    width: 100%; height: 110px; display: flex; align-items: center; justify-content: center;
+    font-size: 36px; background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
+  }
   .mach-mc-body {
     padding: 16px;
     display: flex;
