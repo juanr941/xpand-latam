@@ -1273,6 +1273,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if (saved) {
     setLang(saved);
   } else {
+    // Detect from browser language — ZH users get Chinese, everyone else gets Spanish
     const bl = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
     setLang(bl.startsWith('zh') ? 'zh' : 'es');
   }
