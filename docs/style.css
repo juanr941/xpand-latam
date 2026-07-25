@@ -2731,6 +2731,7 @@ body.edit-mode .sv-vis-upload { display: flex; }
     grid-template-columns: 1fr 1fr;
     gap: 14px;
     padding: 8px 24px 16px;
+    align-items: start;
   }
   .sv-mc {
     background: #fff;
@@ -2743,11 +2744,10 @@ body.edit-mode .sv-vis-upload { display: flex; }
   }
   .sv-mc-accent { height: 6px; }
   .sv-mc-body {
-    padding: 20px;
+    padding: 18px 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    flex: 1;
+    gap: 8px;
   }
   .sv-mc-tag {
     font-size: 10px;
@@ -2757,7 +2757,7 @@ body.edit-mode .sv-vis-upload { display: flex; }
     color: var(--electric-blue);
   }
   .sv-mc h3 { font-size: 15px; font-weight: 800; color: var(--navy); line-height: 1.3; margin: 0; }
-  .sv-mc p { font-size: 13px; color: var(--gray-600); line-height: 1.6; flex: 1; margin: 0; }
+  .sv-mc p { font-size: 13px; color: var(--gray-600); line-height: 1.55; margin: 0; }
   .sv-mc .btn { font-size: 13px; padding: 10px 16px; width: 100%; justify-content: center; margin-top: 4px; }
 
   /* Hide desktop mach slider, show mobile cards */
@@ -2771,6 +2771,7 @@ body.edit-mode .sv-vis-upload { display: flex; }
     grid-template-columns: 1fr 1fr;
     gap: 14px;
     padding: 8px 24px 16px;
+    align-items: start;
   }
   .mach-mc {
     background: #fff;
@@ -2791,15 +2792,14 @@ body.edit-mode .sv-vis-upload { display: flex; }
     font-size: 36px; background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
   }
   .mach-mc-body {
-    padding: 16px;
+    padding: 14px 16px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    flex: 1;
+    gap: 6px;
   }
   .mach-mc-body h3 { font-size: 14px; font-weight: 800; color: var(--navy); line-height: 1.3; margin: 0; }
-  .mach-mc-body p { font-size: 12px; color: var(--gray-600); line-height: 1.55; flex: 1; margin: 0; }
-  .mach-mc-body .mach-cta { font-size: 12px; font-weight: 700; color: var(--electric-blue); margin-top: auto; }
+  .mach-mc-body p { font-size: 12px; color: var(--gray-600); line-height: 1.5; margin: 0; }
+  .mach-mc-body .mach-cta { font-size: 12px; font-weight: 700; color: var(--electric-blue); margin-top: 2px; }
 }
 
 /* ===== MOBILE OPTIMIZATION ===== */
