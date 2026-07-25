@@ -905,7 +905,8 @@ window.leadersAddSlot = function() {
     const vw = viewport.offsetWidth;
     if (vw <= 600) return 1;
     if (vw <= 960) return 2;
-    return 3;
+    if (vw <= 1280) return 3;
+    return 4;
   }
 
   function init() {
