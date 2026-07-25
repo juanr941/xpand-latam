@@ -903,9 +903,9 @@ window.leadersAddSlot = function() {
 
   function visibleCount() {
     const vw = viewport.offsetWidth;
-    if (vw <= 600) return 1;
-    if (vw <= 960) return 2;
-    if (vw <= 1280) return 3;
+    if (vw <= 500) return 1;
+    if (vw <= 750) return 2;
+    if (vw <= 950) return 3;
     return 4;
   }
 
@@ -927,17 +927,29 @@ window.leadersAddSlot = function() {
 
   function goTo(idx) {
     const max = Math.max(0, totalCards() - visibleCount());
-    current = Math.max(0, Math.min(idx, max));
+    if (idx > max) idx = 0;
+    if (idx < 0) idx = max;
+    current = idx;
     track.style.transform = 'translateX(-' + (current * stepPx) + 'px)';
   }
 
-  document.getElementById('machPrev')?.addEventListener('click', function() { goTo(current - 1); });
-  document.getElementById('machNext')?.addEventListener('click', function() { goTo(current + 1); });
+  let autoTimer = null;
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(function() { goTo(current + 1); }, 4000);
+  }
+  function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
+
+  document.getElementById('machPrev')?.addEventListener('click', function() { goTo(current - 1); startAuto(); });
+  document.getElementById('machNext')?.addEventListener('click', function() { goTo(current + 1); startAuto(); });
+  viewport.addEventListener('mouseenter', stopAuto);
+  viewport.addEventListener('mouseleave', startAuto);
   window.addEventListener('resize', init);
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', function() { init(); startAuto(); });
   } else {
     init();
+    startAuto();
   }
 })();
