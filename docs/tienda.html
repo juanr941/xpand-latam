@@ -214,20 +214,79 @@
 <body>
 
 <!-- ===== HEADER ===== -->
-<header class="t-header" id="tHeader">
-  <div class="t-header-inner">
-    <a href="index.html" class="t-logo">
-      <span style="color:var(--electric-blue)">X</span>pand <span style="color:var(--teal)">Latam</span>
+<header id="header">
+  <nav class="container nav">
+    <a href="index.html" style="display:flex;align-items:center;">
+      <img src="images/21. XPand latam logo.jpeg" alt="Xpand Latam" class="nav-logo-img" style="height:40px;width:auto;display:block;transition:filter 0.3s;" />
     </a>
-    <nav class="t-nav">
-      <a href="index.html">← Inicio</a>
-      <a href="index.html#servicios">Servicios</a>
-      <a href="#catalogo" class="active">Catálogo</a>
-      <a href="index.html#contacto">Contacto</a>
-    </nav>
-    <a href="https://wa.me/8613564313406" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:13px;padding:10px 20px;white-space:nowrap;">
-      📱 Solicitar Cotización
-    </a>
+    <ul class="nav-links">
+      <li class="nav-item-dd">
+        <a href="index.html#servicios">Servicios</a>
+        <div class="nav-dropdown">
+          <span class="dd-label">Nuestros Servicios</span>
+          <a href="index.html#servicios">🔍 Búsqueda de Proveedores</a>
+          <a href="index.html#servicios">✅ Control de Calidad</a>
+          <a href="index.html#servicios">🏭 Auditorías de Fábrica</a>
+          <a href="index.html#servicios">🔑 Gestión Llave en Mano</a>
+          <a href="index.html#servicios">🏢 Agente de Compras en China</a>
+          <a href="index.html#servicios">✈ Viajes de Negocios</a>
+          <a href="index.html#servicios">📦 Exportaciones</a>
+          <a href="index.html#servicios">🎪 Visitas a Ferias</a>
+          <a href="index.html#servicios">🌐 Traducciones e Interpretación</a>
+        </div>
+      </li>
+      <li class="nav-item-dd">
+        <a href="index.html#maquinaria">Distribuidores</a>
+        <div class="nav-dropdown">
+          <span class="dd-label">Distribuidores Oficiales</span>
+          <a href="tienda.html" style="color:var(--orange);">⚙️ Maquinaria CNC</a>
+          <div class="dd-divider"></div>
+          <a href="montacargas.html">🏗️ Montacargas</a>
+          <a href="excavadoras.html">🚜 Excavadoras</a>
+          <a href="index.html#maquinaria">🏭 Maquinaria Industrial</a>
+        </div>
+      </li>
+      <li><a href="index.html#nosotros">Nosotros</a></li>
+      <li><a href="index.html#casos">Casos de Éxito</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-globe-btn" onclick="toggleLangDropdown(event)" aria-label="Idioma">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span class="lang-current" id="langCurrent">ES</span>
+        <span class="lang-caret">▾</span>
+      </button>
+      <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-opt" onclick="setLang('es')">🇪🇸 Español</button>
+        <button class="lang-opt" onclick="setLang('en')">🇬🇧 English</button>
+        <button class="lang-opt" onclick="setLang('zh')">🇨🇳 中文</button>
+      </div>
+    </div>
+    <a href="https://wa.me/8613564313406" target="_blank" class="btn btn-primary nav-cta">Hablemos →</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mobile-menu-label">Servicios</span>
+    <a href="index.html#servicios" onclick="toggleMenu()">Búsqueda de Proveedores</a>
+    <a href="index.html#servicios" onclick="toggleMenu()">Control de Calidad</a>
+    <a href="index.html#servicios" onclick="toggleMenu()">Auditorías de Fábrica</a>
+    <a href="index.html#servicios" onclick="toggleMenu()">Gestión Llave en Mano</a>
+    <a href="index.html#servicios" onclick="toggleMenu()">Más servicios →</a>
+    <span class="mobile-menu-label">Distribuidores</span>
+    <a href="tienda.html" onclick="toggleMenu()">Maquinaria CNC</a>
+    <a href="montacargas.html" onclick="toggleMenu()">Montacargas</a>
+    <a href="excavadoras.html" onclick="toggleMenu()">Excavadoras</a>
+    <span class="mobile-menu-label">Empresa</span>
+    <a href="index.html#nosotros" onclick="toggleMenu()">Nosotros</a>
+    <a href="index.html#casos" onclick="toggleMenu()">Casos de Éxito</a>
+    <a href="index.html#contacto" onclick="toggleMenu()">Contacto</a>
+    <a href="https://wa.me/8613564313406" target="_blank" class="btn btn-primary">Hablar con un experto →</a>
+    <span class="mobile-menu-label">Idioma</span>
+    <div style="display:flex;gap:8px;padding:6px 0;">
+      <button onclick="setLang('en');toggleMenu();" style="flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:8px;border-radius:6px;font-size:13px;cursor:pointer;">EN</button>
+      <button onclick="setLang('es');toggleMenu();" style="flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:8px;border-radius:6px;font-size:13px;cursor:pointer;">ES</button>
+      <button onclick="setLang('zh');toggleMenu();" style="flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:8px;border-radius:6px;font-size:13px;cursor:pointer;">中文</button>
+    </div>
   </div>
 </header>
 
@@ -595,12 +654,6 @@
 </div>
 
 <script>
-// Header scroll
-const tHdr = document.getElementById('tHeader');
-window.addEventListener('scroll', () => {
-  tHdr.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
-
 function compressImage(file, cb) {
   var reader = new FileReader();
   reader.onload = function(e) {
@@ -705,5 +758,7 @@ window.addEventListener('load', () => {
   });
 });
 </script>
+<script src="script.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>
