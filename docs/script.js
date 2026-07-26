@@ -953,3 +953,44 @@ window.leadersAddSlot = function() {
     startAuto();
   }
 })();
+
+// ===== CONTACT FORM (formsubmit.co, shared across all pages) =====
+(function () {
+  var form = document.getElementById('contactForm');
+  var btn = document.getElementById('contactSubmitBtn');
+  var successDiv = document.getElementById('contactSuccess');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+
+    var data = new FormData(form);
+    data.append('_subject', 'Nueva consulta — Xpand Latam');
+    data.append('_template', 'table');
+    data.append('_captcha', 'false');
+
+    fetch('https://formsubmit.co/ajax/juanricardo@xpandlatam.com', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (json) {
+      if (json.success === 'true' || json.success === true) {
+        form.style.display = 'none';
+        successDiv.style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Enviar solicitud →';
+        alert('Hubo un error al enviar. Intenta por WhatsApp.');
+      }
+    })
+    .catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Enviar solicitud →';
+      alert('Error de conexión. Contáctanos por WhatsApp.');
+    });
+  });
+})();
