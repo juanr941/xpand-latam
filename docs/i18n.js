@@ -996,6 +996,13 @@ function setLang(lang) {
   const activeBtn = document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`);
   if (activeBtn) activeBtn.classList.add('active');
 
+  // Sync header globe switcher label + close its dropdown
+  const langLabels = { es: 'ES', en: 'EN', zh: '中文' };
+  const langCurrentEl = document.getElementById('langCurrent');
+  if (langCurrentEl) langCurrentEl.textContent = langLabels[lang] || lang.toUpperCase();
+  const langSwitcherEl = document.getElementById('langSwitcher');
+  if (langSwitcherEl) langSwitcherEl.classList.remove('open');
+
   // Store preference
   localStorage.setItem('xpand_lang', lang);
 

@@ -704,14 +704,6 @@ document.addEventListener('click', (e) => {
   if (sw && !sw.contains(e.target)) sw.classList.remove('open');
 });
 
-function setLang(code) {
-  const labels = { es: 'ES', en: 'EN', zh: '中文' };
-  const el = document.getElementById('langCurrent');
-  if (el) el.textContent = labels[code] || code.toUpperCase();
-  const sw = document.getElementById('langSwitcher');
-  if (sw) sw.classList.remove('open');
-}
-
 // ===== SERVICES TAB =====
 // ===== SERVICES SLIDER =====
 var currentSvPanel = 0;
