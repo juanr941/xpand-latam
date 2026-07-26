@@ -6,12 +6,12 @@
   <title>Importar desde China a Perú — Agente de Importación | Xpand Latam</title>
   <meta name="description" content="Agente de importación especializado en China–Perú. Sourcing, control de calidad, maquinaria minera e industrial para empresas peruanas. Oficina en Lima y equipo físico en Asia." />
   <meta name="keywords" content="importar de china a peru, agente importacion china peru, importar china peru, control calidad china peru, maquinaria china peru, proveedor china peru, importaciones desde china peru, equipos mineria china peru, sourcing china peru" />
-  <link rel="canonical" href="https://www.xpandlatam.com/importar-china-peru" />
-  <link rel="alternate" hreflang="es" href="https://www.xpandlatam.com/importar-china-peru" />
-  <link rel="alternate" hreflang="en" href="https://www.xpandlatam.com/importar-china-peru" />
-  <link rel="alternate" hreflang="x-default" href="https://www.xpandlatam.com/importar-china-peru" />
+  <link rel="canonical" href="https://www.xpandlatam.com/importar-china-peru.html" />
+  <link rel="alternate" hreflang="es" href="https://www.xpandlatam.com/importar-china-peru.html" />
+  <link rel="alternate" hreflang="en" href="https://www.xpandlatam.com/importar-china-peru.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.xpandlatam.com/importar-china-peru.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.xpandlatam.com/importar-china-peru" />
+  <meta property="og:url" content="https://www.xpandlatam.com/importar-china-peru.html" />
   <meta property="og:title" content="Importar desde China a Perú — Xpand Latam" />
   <meta property="og:description" content="Agente especializado en importaciones China–Perú. Maquinaria minera, equipos industriales y control de calidad con oficina en Lima y equipo en China." />
   <meta property="og:image" content="https://www.xpandlatam.com/images/comunicacion-minera.avif" />
@@ -41,30 +41,77 @@
       <img src="images/21. XPand latam logo.jpeg" alt="Xpand Latam" class="nav-logo-img" style="height:40px;width:auto;display:block;transition:filter 0.3s;" />
     </a>
     <ul class="nav-links">
-      <li><a href="index.html#servicios">Servicios</a></li>
-      <li><a href="index.html#como-funciona">Cómo Funciona</a></li>
-      <li><a href="index.html#clientes">Clientes</a></li>
+      <li class="nav-item-dd">
+        <a href="index.html#servicios">Servicios</a>
+        <div class="nav-dropdown">
+          <span class="dd-label">Nuestros Servicios</span>
+          <a href="index.html#servicios">Búsqueda de Proveedores</a>
+          <a href="index.html#servicios">Control de Calidad</a>
+          <a href="index.html#servicios">Auditorías de Fábrica</a>
+          <a href="index.html#servicios">Gestión Llave en Mano</a>
+          <a href="index.html#servicios">Agente de Compras en China</a>
+          <a href="index.html#servicios">Viajes de Negocios</a>
+          <a href="index.html#servicios">Exportaciones</a>
+          <a href="index.html#servicios">Visitas a Ferias</a>
+          <a href="index.html#servicios">Traducciones e Interpretación</a>
+        </div>
+      </li>
+      <li class="nav-item-dd">
+        <a href="index.html#maquinaria">Distribuidores</a>
+        <div class="nav-dropdown">
+          <span class="dd-label">Distribuidores Oficiales</span>
+          <a href="tienda.html">Maquinaria CNC</a>
+          <div class="dd-divider"></div>
+          <a href="montacargas.html">Montacargas</a>
+          <a href="excavadoras.html">Excavadoras</a>
+          <a href="index.html#maquinaria">Maquinaria Industrial</a>
+          <a href="index.html#maquinaria">PVC y Pisos</a>
+          <a href="index.html#maquinaria">Ferretería y Grifería</a>
+          <a href="index.html#maquinaria">Madera y MDF</a>
+          <a href="index.html#maquinaria">Cosméticos</a>
+        </div>
+      </li>
       <li><a href="index.html#nosotros">Nosotros</a></li>
-      <li><a href="index.html#contacto" class="nav-link-cta">Consulta Gratis</a></li>
+      <li><a href="index.html#casos">Casos de Éxito</a></li>
       <li><a href="index.html#contacto">Contacto</a></li>
     </ul>
-    <a href="https://wa.me/8613564313406" target="_blank" class="btn btn-primary nav-cta">Contáctanos →</a>
-    <button class="hamburger" onclick="document.getElementById('mobileMenuSP').classList.toggle('open')" aria-label="Menu">☰</button>
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-globe-btn" onclick="toggleLangDropdown(event)" aria-label="Idioma">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span class="lang-current" id="langCurrent">ES</span>
+        <span class="lang-caret">▾</span>
+      </button>
+      <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-opt" onclick="setLang('es')">Español</button>
+        <button class="lang-opt" onclick="setLang('en')">English</button>
+        <button class="lang-opt" onclick="setLang('zh')">中文</button>
+      </div>
+    </div>
+    <a href="https://wa.me/8613564313406" target="_blank" class="btn btn-primary nav-cta">Hablemos →</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
   </nav>
-  <div class="mobile-menu" id="mobileMenuSP">
+  <div class="mobile-menu" id="mobileMenu">
     <span class="mobile-menu-label">Servicios</span>
-    <a href="control-calidad-china.html">Control de Calidad</a>
-    <a href="sourcing-proveedores-china.html">Búsqueda de Proveedores</a>
-    <a href="inspeccion-fabricas-china.html">Inspección de Fábricas</a>
-    <a href="importar-maquinaria-china.html">Maquinaria Industrial</a>
-    <span class="mobile-menu-label">Por País</span>
-    <a href="importar-china-colombia.html">Importar a Colombia</a>
-    <a href="importar-china-ecuador.html">Importar a Ecuador</a>
-    <a href="importar-china-peru.html">Importar a Perú</a>
+    <a href="index.html#servicios" onclick="toggleMenu()">Búsqueda de Proveedores</a>
+    <a href="index.html#servicios" onclick="toggleMenu()">Control de Calidad</a>
+    <a href="index.html#servicios" onclick="toggleMenu()">Auditorías de Fábrica</a>
+    <a href="index.html#servicios" onclick="toggleMenu()">Gestión Llave en Mano</a>
+    <a href="index.html#servicios" onclick="toggleMenu()">Más servicios →</a>
+    <span class="mobile-menu-label">Distribuidores</span>
+    <a href="tienda.html" onclick="toggleMenu()">Maquinaria CNC</a>
+    <a href="montacargas.html" onclick="toggleMenu()">Montacargas</a>
+    <a href="excavadoras.html" onclick="toggleMenu()">Excavadoras</a>
     <span class="mobile-menu-label">Empresa</span>
-    <a href="index.html#nosotros">Nosotros</a>
-    <a href="index.html#contacto">Contacto</a>
-    <a href="https://wa.me/8613564313406" target="_blank" class="btn btn-primary">Hablar por WhatsApp →</a>
+    <a href="index.html#nosotros" onclick="toggleMenu()">Nosotros</a>
+    <a href="index.html#casos" onclick="toggleMenu()">Casos de Éxito</a>
+    <a href="index.html#contacto" onclick="toggleMenu()">Contacto</a>
+    <a href="https://wa.me/8613564313406" target="_blank" class="btn btn-primary">Hablar con un experto →</a>
+    <span class="mobile-menu-label">Idioma</span>
+    <div style="display:flex;gap:8px;padding:6px 0;">
+      <button onclick="setLang('en');toggleMenu();" style="flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:8px;border-radius:6px;font-size:13px;cursor:pointer;">EN</button>
+      <button onclick="setLang('es');toggleMenu();" style="flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:8px;border-radius:6px;font-size:13px;cursor:pointer;">ES</button>
+      <button onclick="setLang('zh');toggleMenu();" style="flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:8px;border-radius:6px;font-size:13px;cursor:pointer;">中文</button>
+    </div>
   </div>
 </header>
 
@@ -229,6 +276,143 @@
   </div>
 </section>
 
+<!-- ===== CONTACTO (formulario completo, igual que pagina principal) ===== -->
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="section-tag">Contacto</span>
+        <h2>Hablemos de<br><span class="text-orange">tu próxima importación</span></h2>
+        <p>Operamos desde China con equipo local en Ecuador, Perú y Colombia. Disponibles en español, inglés, chino y portugués.</p>
+        <div class="contact-channels">
+          <a href="https://wa.me/886932999971" target="_blank" class="channel channel--primary">
+            <span class="channel-icon">📱</span>
+            <div>
+              <strong>WhatsApp Xpand Latam</strong>
+              <span>+886 932 999 971</span>
+            </div>
+          </a>
+          <a href="mailto:info@xpandlatam.com" class="channel">
+            <span class="channel-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <span>info@xpandlatam.com</span>
+            </div>
+          </a>
+          <a href="https://xpandlatam.com" target="_blank" class="channel">
+            <span class="channel-icon">🌐</span>
+            <div>
+              <strong>Web</strong>
+              <span>www.xpandlatam.com</span>
+            </div>
+          </a>
+        </div>
+        <div class="languages">
+          <span>🇨🇳 Chino</span>
+          <span>🇬🇧 Inglés</span>
+          <span>🇩🇪 Alemán</span>
+          <span>🇧🇷 Portugués</span>
+          <span>🇪🇸 Español</span>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <div class="high-value-block">
+          <div class="hv-content">
+            <span class="hv-icon">💼</span>
+            <div>
+              <strong>¿Tu operación supera los $500,000 USD?</strong>
+              <p>Habla directo con un ejecutivo.</p>
+            </div>
+          </div>
+          <a href="https://wa.me/886932999971" target="_blank" class="btn btn-primary hv-btn">📱 Contactar ejecutivo</a>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <h3>Solicitar consulta gratuita</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-nombre">Nombre *</label>
+              <input id="cf-nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="cf-empresa">Empresa</label>
+              <input id="cf-empresa" name="empresa" type="text" placeholder="Nombre de tu empresa" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-email">Email *</label>
+              <input id="cf-email" name="email" type="email" placeholder="tu@empresa.com" required />
+            </div>
+            <div class="form-group">
+              <label for="cf-pais">País</label>
+              <select id="cf-pais" name="pais">
+                <option value="">Selecciona tu país</option>
+                <option>Ecuador</option>
+                <option>Perú</option>
+                <option>Colombia</option>
+                <option>Otro</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-producto">¿Qué necesitas importar?</label>
+            <textarea id="cf-producto" name="producto" rows="4" placeholder="Describe el producto, cantidad aproximada y cualquier detalle relevante..."></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-industria">Industria</label>
+              <select id="cf-industria" name="industria">
+                <option value="">Tu industria</option>
+                <option>Manufactura / Industria</option>
+                <option>Construcción / Minería</option>
+                <option>Agroindustria / Alimentos</option>
+                <option>Comercio / Distribución</option>
+                <option>Logística / Transporte</option>
+                <option>Salud / Farmacéutica</option>
+                <option>Tecnología / Electrónica</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cf-volumen">Volumen anual estimado</label>
+              <select id="cf-volumen" name="volumen">
+                <option value="">Selecciona un rango</option>
+                <option>Primer pedido (explorando)</option>
+                <option>$8,000 – $30,000 USD</option>
+                <option>$30,000 – $100,000 USD</option>
+                <option>$100,000 – $500,000 USD</option>
+                <option>$500,000 – $1,000,000 USD</option>
+                <option>Más de $1,000,000 USD</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Servicio de interés</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label"><input type="checkbox" /> Búsqueda de proveedores</label>
+              <label class="checkbox-label"><input type="checkbox" /> Control de calidad (AQL)</label>
+              <label class="checkbox-label"><input type="checkbox" /> Auditoría de fábrica</label>
+              <label class="checkbox-label"><input type="checkbox" /> Gestión de compras completa</label>
+              <label class="checkbox-label"><input type="checkbox" /> Maquinaria industrial</label>
+              <label class="checkbox-label"><input type="checkbox" /> Excavadoras / Montacargas</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" id="contactSubmitBtn" style="width:100%;">
+            Enviar solicitud →
+          </button>
+          <p class="form-note">Respuesta garantizada en menos de 24 horas hábiles.</p>
+        </form>
+        <div id="contactSuccess" style="display:none;text-align:center;padding:48px 24px;">
+          <div style="font-size:52px;margin-bottom:16px;">✅</div>
+          <h3 style="color:var(--navy);margin-bottom:10px;">¡Solicitud enviada!</h3>
+          <p style="color:var(--gray-600);margin-bottom:24px;">Nos pondremos en contacto contigo en menos de 24 horas hábiles.</p>
+          <a href="https://wa.me/8613564313406" target="_blank" class="btn btn-primary">📱 WhatsApp si es urgente</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -262,5 +446,7 @@
   <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 <script>window.addEventListener('scroll',function(){document.getElementById('header').classList.toggle('scrolled',window.scrollY>60);});</script>
+<script src="script.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>

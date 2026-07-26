@@ -704,14 +704,6 @@ document.addEventListener('click', (e) => {
   if (sw && !sw.contains(e.target)) sw.classList.remove('open');
 });
 
-function setLang(code) {
-  const labels = { es: 'ES', en: 'EN', zh: '中文' };
-  const el = document.getElementById('langCurrent');
-  if (el) el.textContent = labels[code] || code.toUpperCase();
-  const sw = document.getElementById('langSwitcher');
-  if (sw) sw.classList.remove('open');
-}
-
 // ===== SERVICES TAB =====
 // ===== SERVICES SLIDER =====
 var currentSvPanel = 0;
@@ -903,9 +895,10 @@ window.leadersAddSlot = function() {
 
   function visibleCount() {
     const vw = viewport.offsetWidth;
-    if (vw <= 600) return 1;
-    if (vw <= 960) return 2;
-    return 3;
+    if (vw <= 500) return 1;
+    if (vw <= 750) return 2;
+    if (vw <= 950) return 3;
+    return 4;
   }
 
   function init() {
@@ -926,17 +919,70 @@ window.leadersAddSlot = function() {
 
   function goTo(idx) {
     const max = Math.max(0, totalCards() - visibleCount());
-    current = Math.max(0, Math.min(idx, max));
+    if (idx > max) idx = 0;
+    if (idx < 0) idx = max;
+    current = idx;
     track.style.transform = 'translateX(-' + (current * stepPx) + 'px)';
   }
 
-  document.getElementById('machPrev')?.addEventListener('click', function() { goTo(current - 1); });
-  document.getElementById('machNext')?.addEventListener('click', function() { goTo(current + 1); });
+  let autoTimer = null;
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(function() { goTo(current + 1); }, 4000);
+  }
+  function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
+
+  document.getElementById('machPrev')?.addEventListener('click', function() { goTo(current - 1); startAuto(); });
+  document.getElementById('machNext')?.addEventListener('click', function() { goTo(current + 1); startAuto(); });
+  viewport.addEventListener('mouseenter', stopAuto);
+  viewport.addEventListener('mouseleave', startAuto);
   window.addEventListener('resize', init);
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', function() { init(); startAuto(); });
   } else {
     init();
+    startAuto();
   }
+})();
+
+// ===== CONTACT FORM (formsubmit.co, shared across all pages) =====
+(function () {
+  var form = document.getElementById('contactForm');
+  var btn = document.getElementById('contactSubmitBtn');
+  var successDiv = document.getElementById('contactSuccess');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+
+    var data = new FormData(form);
+    data.append('_subject', 'Nueva consulta — Xpand Latam');
+    data.append('_template', 'table');
+    data.append('_captcha', 'false');
+
+    fetch('https://formsubmit.co/ajax/juanricardo@xpandlatam.com', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (json) {
+      if (json.success === 'true' || json.success === true) {
+        form.style.display = 'none';
+        successDiv.style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Enviar solicitud →';
+        alert('Hubo un error al enviar. Intenta por WhatsApp.');
+      }
+    })
+    .catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Enviar solicitud →';
+      alert('Error de conexión. Contáctanos por WhatsApp.');
+    });
+  });
 })();

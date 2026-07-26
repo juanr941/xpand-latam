@@ -1,20 +1,20 @@
 const translations = {
   es: {
     nav_services:    'Servicios',
-    nav_how:         'Cómo Funciona',
-    nav_clients:     'Clientes',
+    nav_distributors:'Distribuidores',
     nav_about:       'Nosotros',
+    nav_cases:       'Casos de Éxito',
     nav_contact:     'Contacto',
     nav_cta:         'Hablemos →',
-    hero_badge:      '🇨🇳 China → Ecuador · Perú · Colombia',
+    hero_badge:      '🇨🇳 Equipo físico en China · Ecuador · Perú · Colombia',
     hero_title:      'Del Caos<br><span class="text-orange">al Control.</span>',
-    hero_sub:        'Importar desde China sin inteligencia cuesta más de lo que crees.<br>Nosotros negociamos, inspeccionamos y cerramos mejor.',
+    hero_sub:        'Más de 500 empresas confían en Xpand Latam para importar de China a Ecuador, Perú y Colombia. Sourcing, calidad, maquinaria y entrega puerta a puerta.',
     hero_cta1:       '📱 Hablar con un experto',
     hero_cta2:       'Ver nuestros servicios',
     trust_years:     'Años de experiencia',
-    trust_clients:   'Clientes activos',
-    trust_countries: 'Países Andinos',
-    trust_langs:     'Idiomas',
+    trust_clients:   'Control total',
+    trust_countries: 'Empresas satisfechas',
+    trust_langs:     'Oficinas Globales',
     sect_services:   'Nuestros Servicios',
     services_title:  'Todo lo que necesitas para importar<br><span class="text-orange">con inteligencia real</span>',
     services_sub:    'No somos intermediarios. Somos tu socio estratégico en China.',
@@ -34,7 +34,7 @@ const translations = {
     clients_title:   'Líderes que ya controlan<br><span class="text-orange">sus importaciones</span>',
     clients_sub:     'Empresas que confían en Xpand Latam para sus compras en China',
     why_tag:         '¿Por qué Xpand Latam?',
-    why_title:       'Hablamos tu mismo idioma.<br><span class="text-orange">Pero eso es lo mínimo.</span>',
+    why_title:       'No somos intermediarios.<br><span class="text-orange">Somos tu equipo en China.</span>',
     process_tag:     'Proceso',
     process_title:   'Simple, transparente,<br><span class="text-orange">sin sorpresas</span>',
     contact_tag:     'Contacto',
@@ -69,11 +69,12 @@ const translations = {
     svt_title:       'Todo lo que necesitas<br><span class="text-electric">para importar con inteligencia.</span>',
     svt_sub:         'Servicios especializados con equipo físico en China y presencia legal en Latinoamérica. Sin intermediarios, sin sorpresas.',
     svt_btn0:        'Control de Calidad',
-    svt_btn1:        'Búsqueda de Proveedores',
-    svt_btn2:        'Canalización de Pagos',
-    svt_btn3:        'Traducciones',
-    svt_btn4:        'Gestión Llave en Mano',
-    svt_btn5:        'Viajes de Negocios',
+    svt_btn1:        'Agente de Compras en China',
+    svt_btn2:        'Búsqueda de Proveedores',
+    svt_btn3:        'Canalización de Pagos',
+    svt_btn4:        'Traducciones',
+    svt_btn5:        'Gestión Llave en Mano',
+    svt_btn6:        'Viajes de Negocios',
     svt0_ptag:       'Servicio 01 — Más solicitado',
     svt0_h3:         'Control de Calidad en Fábrica',
     svt0_body:       'Inspeccionamos tu mercancía en China antes del embarque. Reporte fotográfico con video en 48 horas. Bajo normas INEN (Ecuador) e INDECOPI (Perú). Cero sorpresas en destino.',
@@ -82,7 +83,7 @@ const translations = {
     svt0_f3:         'Normas INEN, INDECOPI y certificaciones locales',
     svt0_f4:         'Reporte con fotos y video en 48 horas',
     svt0_cta:        'Solicitar inspección →',
-    svt1_ptag:       'Servicio 02',
+    svt1_ptag:       'Servicio 03',
     svt1_h3:         'Búsqueda de Proveedores en China',
     svt1_body:       'Encontramos fabricantes reales — sin traders ni intermediarios. Nuestro equipo visita la fábrica en persona y negocia directamente en mandarín para obtener el mejor precio FOB posible.',
     svt1_f1:         'Mínimo 3 fabricantes comparados por categoría',
@@ -90,15 +91,16 @@ const translations = {
     svt1_f3:         'Negociación en chino — precios de fábrica real',
     svt1_f4:         'Informe de proveedor con recomendación',
     svt1_cta:        'Solicitar búsqueda de proveedor →',
-    svt2_ptag:       'Servicio 03',
+    svt2_ptag:       'Servicio 04',
     svt2_h3:         'Canalización Segura de Pagos',
+    svt2_lead:       '<strong>Cancela en moneda local — nosotros ejecutamos al otro lado del mundo.</strong>',
     svt2_body:       'Paga en cuentas locales en Ecuador, Perú o Colombia — nosotros gestionamos que el dinero llegue a su destino de forma segura. Sin transferencias SWIFT de riesgo, sin exposición a fraude bancario.',
     svt2_f1:         'Pago desde cuenta local en tu país',
     svt2_f2:         'Sin transferencias SWIFT de alto riesgo',
     svt2_f3:         'Protección total contra fraude bancario',
     svt2_f4:         'Trazabilidad completa del pago',
     svt2_cta:        'Consultar canalización →',
-    svt3_ptag:       'Servicio 04',
+    svt3_ptag:       'Servicio 05',
     svt3_h3:         'Traducciones e Interpretación en Tiempo Real',
     svt3_body:       'Interpretación simultánea en español, inglés y chino durante negociaciones, visitas a fábrica y reuniones técnicas. Especificaciones técnicas redactadas en los tres idiomas.',
     svt3_f1:         'Interpretación simultánea español · 中文 · English',
@@ -106,7 +108,7 @@ const translations = {
     svt3_f3:         'Especificaciones técnicas en 3 idiomas',
     svt3_f4:         'Disponible presencial y remoto',
     svt3_cta:        'Solicitar interpretación →',
-    svt4_ptag:       'Servicio 05',
+    svt4_ptag:       'Servicio 06',
     svt4_h3:         'Gestión de Importación Llave en Mano',
     svt4_body:       'De la fábrica en China hasta tu bodega en Ecuador, Perú o Colombia. Flete internacional, seguro de carga, despacho aduanero y entrega final. Sin INCOTERMS complicados, sin sorpresas de costo.',
     svt4_f1:         'Costo total calculado antes de tu primer pago',
@@ -114,7 +116,7 @@ const translations = {
     svt4_f3:         'Seguro de carga y seguimiento en tiempo real',
     svt4_f4:         'Entrega puerta a puerta a tu almacén',
     svt4_cta:        'Evaluar mi importación →',
-    svt5_ptag:       'Servicio 06',
+    svt5_ptag:       'Servicio 07',
     svt5_h3:         'Viajes de Negocios a China y Asia',
     svt5_body:       'Acompañamiento profesional en viajes a ferias, fábricas y reuniones en China y Asia. Itinerario completo, logística y comunicación en chino, español e inglés. Para grupos e individuales.',
     svt5_f1:         'Visitas a fábricas con negociación directa en chino',
@@ -122,11 +124,20 @@ const translations = {
     svt5_f3:         'Logística completa: vuelos, hotel, traslados',
     svt5_f4:         'Interpretación en tiempo real en reuniones técnicas',
     svt5_cta:        'Planificar mi viaje →',
+    svt6_ptag:       'Servicio 02',
+    svt6_h3:         'Agente de Compras en China',
+    svt6_lead:       '<strong>Es como tener tu propia oficina en China, sin tener que abrir una oficina real.</strong>',
+    svt6_body:       'Nos pagas en tu moneda local y nosotros nos encargamos de hacer todas las compras, negociaciones y organización directamente en fábrica.',
+    svt6_f1:         'Tu equipo de compras en China, sin costo de oficina propia',
+    svt6_f2:         'Pago en moneda local — nosotros ejecutamos en China',
+    svt6_f3:         'Negociación y organización completa de tus pedidos',
+    svt6_f4:         'Business Intelligence y conocimiento de mercado en China y Asia',
+    svt6_cta:        'Solicitar agente de compras →',
     svt_more_tag:    'Y eso no es todo',
     svt_more_h3:     'Servicios adicionales especializados',
     svt_more_p:      'Completamos tu operación con servicios que pocas agencias de sourcing ofrecen — porque tenemos equipo físico en Asia.',
-    svt_add1_h4:     'Análisis de Mercado y Sourcing',
-    svt_add1_p:      'Precios FOB reales, mapa de proveedores por región en China y costo total de importación — todo antes de comprometer un solo dólar.',
+    svt_add1_h4:     'Protección Legal de Diseño en China',
+    svt_add1_p:      'Contratos de exclusividad con tu fábrica y registro de propiedad intelectual, redactados por nuestro equipo legal en China. Tu diseño nunca sale de tus manos.',
     svt_add2_h4:     'Exportaciones LatAm → Asia',
     svt_add2_p:      'Conectamos productores latinoamericanos con compradores reales en China, Hong Kong y Taiwán. Grandes volúmenes, logística completa.',
     svt_add3_h4:     'Auditorías de Fábrica en China',
@@ -167,6 +178,25 @@ const translations = {
     ctaband_wa:      '📱 WhatsApp directo',
 
     // Why section (body text)
+    ia_tag:          'Protección Legal en China',
+    ia_h2:           'Protegemos el diseño exclusivo<br><span class="ia-highlight">que le entregas a tu fábrica</span>',
+    ia_lead:         'Contratos legales exclusivos en China, redactados por nuestro propio equipo de abogados, para que el diseño y la propiedad intelectual que entregas a tu fábrica no puedan ser copiados, fabricados ni revendidos por terceros. Protección legal e IP Rights desde China, con representación exclusiva de tu empresa en todo el proceso.',
+    ia_feat1_h:      'Contratos de exclusividad con la fábrica',
+    ia_feat1_p:      'Firmamos contratos legales vinculantes en China que prohíben a tu fábrica fabricar, vender o compartir tu diseño con terceros o competidores.',
+    ia_feat2_h:      'Registro de diseño y propiedad intelectual',
+    ia_feat2_p:      'Registramos tu diseño y propiedad intelectual ante las autoridades chinas antes de iniciar producción, blindando tu producto legalmente.',
+    ia_feat3_h:      'Representación legal exclusiva en China',
+    ia_feat3_p:      'Nuestro equipo legal propio te representa de forma exclusiva ante fábricas y autoridades chinas — no un intermediario remoto, sino abogados en el terreno defendiendo únicamente tus intereses.',
+    ia_cta:          'Proteger mi diseño →',
+    team_tag:        'Nuestro Equipo',
+    team_h2:         'Personal propio.<br><span class="text-electric">Sin intermediarios.</span>',
+    team_sub:        'Los mejores precios y calidad, con equipo permanente en Asia y Latinoamérica, en el terreno para proteger tu operación.',
+    team_asia_tag:   '🇨🇳 Asia',
+    team_asia_h3:    'Equipo de Asia',
+    team_asia_p:     'Presencia física en China, Hong Kong y Taiwán. Negociamos, inspeccionamos y auditamos directamente en fábrica — sin depender de terceros ni intermediarios.',
+    team_latam_tag:  '🌎 Latinoamérica',
+    team_latam_h3:   'Equipo de Latinoamérica',
+    team_latam_p:    'Oficinas propias en Ecuador, Perú y Colombia. Tu punto de contacto local, en tu idioma y zona horaria, respaldado por el equipo en Asia.',
     why_header_tag:  '¿Por qué Xpand Latam?',
     why_header_h2:   'No somos intermediarios.<br><span class="text-orange">Somos tu equipo en China.</span>',
     why_header_p:    'Operamos en chino, inglés, alemán y portugués. Equipo físico en Asia y en Ecuador, Perú y Colombia. No cobramos margen sobre tu mercancía — cobramos por el valor que generamos.',
@@ -207,15 +237,15 @@ const translations = {
     faq_tag:         'Preguntas Frecuentes',
     faq_h2:          'Lo que todo importador<br><span class="text-orange">necesita saber antes de empezar</span>',
     faq_q0:          '¿Cuánto cuesta el servicio de Xpand Latam?',
-    faq_a0:          'El control de calidad parte desde $250 por inspección. El sourcing y gestión de compras se estructura como porcentaje del valor FOB. <strong>El ahorro que generamos siempre supera el costo del servicio</strong> — si evaluamos tu caso y no es así, te lo decimos directamente. Primera consulta: gratuita y sin compromiso.',
+    faq_a0:          'Tenemos servicios personalizados que van desde los <strong>$500 USD o menos</strong> hasta cobros de acuerdo a tu orden de compra. Nuestro equipo experto en diferentes áreas está listo para ayudarte. Primera consulta: gratuita y sin compromiso.',
     faq_q1:          '¿Cuánto tiempo tarda una importación desde China?',
     faq_a1:          'Producción: 25–45 días según el producto. Flete marítimo: Ecuador 28–35 días · Perú 30–35 días · Colombia 32–38 días. Con gestión Xpand, coordinamos tiempos predecibles y sin demoras en aduana (SENAE / SUNAT / DIAN).',
     faq_q2:          '¿Qué pasa si el proveedor no cumple con lo acordado?',
     faq_a2:          'Eso es exactamente lo que prevenimos. Inspeccionamos en fábrica <strong>antes del embarque</strong> — si la mercancía no cumple, no liberamos el pago final. En caso de problemas post-entrega, negociamos directamente con el proveedor en chino.',
     faq_q3:          '¿Trabajan con empresas pequeñas o solo grandes corporaciones?',
-    faq_a3:          'Trabajamos con empresas que importan desde <strong>$8,000 USD por pedido</strong>. Atendemos clientes medianos, grandes y muy grandes — desde PyMEs hasta grandes corporaciones. El criterio es seriedad en la operación, no el tamaño.',
+    faq_a3:          'Trabajamos con empresas que importan desde <strong>$8,000 USD por pedido</strong>. Atendemos clientes medianos, grandes y muy grandes — desde PyMEs hasta grandes corporaciones. El criterio es seriedad en la operación, no el tamaño. Si tu pedido es recurrente o crece con el tiempo, mejor aún. Desde primeras importaciones hasta operaciones de varios millones de dólares, el mismo equipo en fábrica.',
     faq_q4:          '¿Cómo verifican que el proveedor es legítimo y no un intermediario?',
-    faq_a4:          'Verificamos el historial real de exportaciones y certificaciones ISO del proveedor, y realizamos una visita física a las instalaciones con pruebas de producción. Nunca trabajamos con traders — solo fabricantes verificados con historial de exportación a Latinoamérica.',
+    faq_a4:          'Contamos con equipo legal, financiero y de control de calidad (QA/QC) propio — reemplazamos a las empresas de procurement tradicionales. Con Xpand tienes tu propio equipo en China sin necesidad de abrir oficina propia: somos tus agentes de compras, tu relación directa con las fábricas y tu control de calidad en el terreno. <strong>Tu propio agente de compras en China</strong> — el servicio completo, pensado para mediana y pequeña empresa.',
     faq_q5:          '¿Pueden importar excavadoras y montacargas desde China?',
     faq_a5:          'Sí, es una de nuestras especialidades. Importamos excavadoras (SANY, XCMG, Liugong) y montacargas (Heli, Hangcha) con inspección técnica completa, homologación INEN y trámites SENAE/SUNAT/DIAN. <a href="excavadoras.html" style="color:var(--orange);">Ver guía de excavadoras</a> · <a href="montacargas.html" style="color:var(--orange);">Ver guía de montacargas</a>',
     faq_q6:          '¿Manejan la entrega hasta mi bodega o solo hasta el puerto?',
@@ -278,9 +308,9 @@ const translations = {
   },
   en: {
     nav_services:    'Services',
-    nav_how:         'How It Works',
-    nav_clients:     'Clients',
+    nav_distributors:'Distributors',
     nav_about:       'About Us',
+    nav_cases:       'Success Stories',
     nav_contact:     'Contact',
     nav_cta:         "Let's Talk →",
     hero_badge:      '🇨🇳 China → Ecuador · Peru · Colombia',
@@ -289,9 +319,9 @@ const translations = {
     hero_cta1:       '📱 Talk to an expert',
     hero_cta2:       'See our services',
     trust_years:     'Years of experience',
-    trust_clients:   'Active clients',
-    trust_countries: 'Andean countries',
-    trust_langs:     'Languages',
+    trust_clients:   'Total control',
+    trust_countries: 'Satisfied companies',
+    trust_langs:     'Global offices',
     sect_services:   'Our Services',
     services_title:  'Everything you need to import<br><span class="text-orange">with real intelligence</span>',
     services_sub:    "We're not middlemen. We're your strategic partner in China.",
@@ -311,7 +341,7 @@ const translations = {
     clients_title:   'Leaders who already control<br><span class="text-orange">their imports</span>',
     clients_sub:     'Companies that trust Xpand Latam for their China sourcing',
     why_tag:         'Why Xpand Latam?',
-    why_title:       'We speak your language.<br><span class="text-orange">But that\'s the bare minimum.</span>',
+    why_title:       'We are not intermediaries.<br><span class="text-orange">We are your team in China.</span>',
     process_tag:     'Process',
     process_title:   'Simple, transparent,<br><span class="text-orange">no surprises</span>',
     contact_tag:     'Contact',
@@ -346,11 +376,12 @@ const translations = {
     svt_title:       'Everything you need<br><span class="text-electric">to import with intelligence.</span>',
     svt_sub:         'Specialized services with a physical team in China and legal presence in Latin America. No middlemen, no surprises.',
     svt_btn0:        'Quality Control',
-    svt_btn1:        'Supplier Sourcing',
-    svt_btn2:        'Payment Routing',
-    svt_btn3:        'Translation & Interpretation',
-    svt_btn4:        'Turnkey Import Management',
-    svt_btn5:        'Business Travel to China',
+    svt_btn1:        'Purchasing Agent in China',
+    svt_btn2:        'Supplier Sourcing',
+    svt_btn3:        'Payment Routing',
+    svt_btn4:        'Translation & Interpretation',
+    svt_btn5:        'Turnkey Import Management',
+    svt_btn6:        'Business Travel to China',
     svt0_ptag:       'Service 01 — Most Requested',
     svt0_h3:         'Factory Quality Control',
     svt0_body:       'We inspect your goods in China before shipment. Photo and video report within 48 hours. Under INEN (Ecuador) and INDECOPI (Peru) standards. Zero surprises at destination.',
@@ -359,7 +390,7 @@ const translations = {
     svt0_f3:         'INEN, INDECOPI standards and local certifications',
     svt0_f4:         'Photo and video report within 48 hours',
     svt0_cta:        'Request inspection →',
-    svt1_ptag:       'Service 02',
+    svt1_ptag:       'Service 03',
     svt1_h3:         'Supplier Sourcing in China',
     svt1_body:       'We find real manufacturers — no traders or middlemen. Our team visits the factory in person and negotiates directly in Mandarin to get you the best possible FOB price.',
     svt1_f1:         'Minimum 3 manufacturers compared per category',
@@ -367,15 +398,16 @@ const translations = {
     svt1_f3:         'Negotiation in Chinese — real factory prices',
     svt1_f4:         'Supplier report with recommendation',
     svt1_cta:        'Request supplier sourcing →',
-    svt2_ptag:       'Service 03',
+    svt2_ptag:       'Service 04',
     svt2_h3:         'Secure Payment Routing',
+    svt2_lead:       '<strong>Pay in your local currency — we execute on the other side of the world.</strong>',
     svt2_body:       'Pay from local accounts in Ecuador, Peru or Colombia — we manage secure delivery of funds to the supplier. No risky SWIFT transfers, no exposure to bank fraud.',
     svt2_f1:         'Payment from your local account in your country',
     svt2_f2:         'No high-risk SWIFT transfers',
     svt2_f3:         'Full protection against bank fraud',
     svt2_f4:         'Complete payment traceability',
     svt2_cta:        'Ask about payment routing →',
-    svt3_ptag:       'Service 04',
+    svt3_ptag:       'Service 05',
     svt3_h3:         'Translation & Real-Time Interpretation',
     svt3_body:       'Simultaneous interpretation in Spanish, English and Chinese during negotiations, factory visits and technical meetings. Technical specs drafted in all three languages.',
     svt3_f1:         'Simultaneous interpretation Spanish · 中文 · English',
@@ -383,7 +415,7 @@ const translations = {
     svt3_f3:         'Technical specifications in 3 languages',
     svt3_f4:         'Available in-person and remote',
     svt3_cta:        'Request interpretation →',
-    svt4_ptag:       'Service 05',
+    svt4_ptag:       'Service 06',
     svt4_h3:         'Turnkey Import Management',
     svt4_body:       'From the factory in China to your warehouse in Ecuador, Peru or Colombia. International freight, cargo insurance, customs clearance and final delivery. No complex INCOTERMS, no cost surprises.',
     svt4_f1:         'Full cost calculated before your first payment',
@@ -391,7 +423,7 @@ const translations = {
     svt4_f3:         'Cargo insurance and real-time tracking',
     svt4_f4:         'Door-to-door delivery to your warehouse',
     svt4_cta:        'Evaluate my import →',
-    svt5_ptag:       'Service 06',
+    svt5_ptag:       'Service 07',
     svt5_h3:         'Business Travel to China & Asia',
     svt5_body:       'Professional accompaniment on trips to trade fairs, factories and meetings in China and Asia. Full itinerary, logistics and communication in Chinese, Spanish and English. For groups and individuals.',
     svt5_f1:         'Factory visits with direct negotiation in Chinese',
@@ -399,11 +431,20 @@ const translations = {
     svt5_f3:         'Full logistics: flights, hotel, transfers',
     svt5_f4:         'Real-time interpretation at technical meetings',
     svt5_cta:        'Plan my trip →',
+    svt6_ptag:       'Service 02',
+    svt6_h3:         'Purchasing Agent in China',
+    svt6_lead:       '<strong>It\'s like having your own office in China, without having to open a real office.</strong>',
+    svt6_body:       'You pay in your local currency and we take care of all purchasing, negotiations and organization directly at the factory.',
+    svt6_f1:         'Your purchasing team in China, with no cost of your own office',
+    svt6_f2:         'Pay in local currency — we execute in China',
+    svt6_f3:         'Full negotiation and organization of your orders',
+    svt6_f4:         'Business Intelligence and market knowledge in China and Asia',
+    svt6_cta:        'Request a purchasing agent →',
     svt_more_tag:    "And that's not all",
     svt_more_h3:     'Specialized additional services',
     svt_more_p:      "We complete your operation with services few sourcing agencies offer — because we have a physical team in Asia.",
-    svt_add1_h4:     'Market Analysis & Sourcing',
-    svt_add1_p:      'Real FOB prices, supplier map by region in China and total import cost — all before committing a single dollar.',
+    svt_add1_h4:     'Legal Design Protection in China',
+    svt_add1_p:      'Exclusivity contracts with your factory and intellectual property registration, drafted by our legal team in China. Your design never leaves your hands.',
     svt_add2_h4:     'LatAm → Asia Exports',
     svt_add2_p:      'We connect Latin American producers with real buyers in China, Hong Kong and Taiwan. Large volumes, full logistics.',
     svt_add3_h4:     'Factory Audits in China',
@@ -444,6 +485,25 @@ const translations = {
     ctaband_wa:      '📱 Direct WhatsApp',
 
     // Why section
+    ia_tag:          'Legal Protection in China',
+    ia_h2:           'We protect the exclusive design<br><span class="ia-highlight">you hand over to your factory</span>',
+    ia_lead:         'Exclusive legal contracts in China, drafted by our own legal team, so the design and intellectual property you hand over to your factory cannot be copied, manufactured or resold by third parties. Legal protection and IP rights from China, with exclusive representation of your company throughout the process.',
+    ia_feat1_h:      'Exclusivity contracts with the factory',
+    ia_feat1_p:      'We sign binding legal contracts in China that prohibit your factory from manufacturing, selling or sharing your design with third parties or competitors.',
+    ia_feat2_h:      'Design and IP registration',
+    ia_feat2_p:      'We register your design and intellectual property with Chinese authorities before production begins, legally shielding your product.',
+    ia_feat3_h:      'Exclusive legal representation in China',
+    ia_feat3_p:      'Our own legal team represents you exclusively before factories and Chinese authorities — not a remote intermediary, but lawyers on the ground defending only your interests.',
+    ia_cta:          'Protect my design →',
+    team_tag:        'Our Team',
+    team_h2:         'Our own people.<br><span class="text-electric">No middlemen.</span>',
+    team_sub:        'The best prices and quality, with a permanent team in Asia and Latin America, on the ground to protect your operation.',
+    team_asia_tag:   '🇨🇳 Asia',
+    team_asia_h3:    'Asia Team',
+    team_asia_p:     'Physical presence in China, Hong Kong and Taiwan. We negotiate, inspect and audit directly at the factory — without relying on third parties or middlemen.',
+    team_latam_tag:  '🌎 Latin America',
+    team_latam_h3:   'Latin America Team',
+    team_latam_p:    'Own offices in Ecuador, Peru and Colombia. Your local point of contact, in your language and time zone, backed by the team in Asia.',
     why_header_tag:  'Why Xpand Latam?',
     why_header_h2:   "We're not middlemen.<br><span class=\"text-orange\">We're your team in China.</span>",
     why_header_p:    'We operate in Chinese, English, German and Portuguese. Physical team in Asia and in Ecuador, Peru and Colombia. We do not charge a margin on your goods — we charge for the value we create.',
@@ -484,15 +544,15 @@ const translations = {
     faq_tag:         'Frequently Asked Questions',
     faq_h2:          'What every importer<br><span class="text-orange">needs to know before starting</span>',
     faq_q0:          'How much does Xpand Latam\'s service cost?',
-    faq_a0:          'Quality control starts from $250 per inspection. Sourcing and purchase management is structured as a percentage of the FOB value. <strong>The savings we generate always exceed the service cost</strong> — if we evaluate your case and that\'s not true, we\'ll tell you directly. First consultation: free and with no commitment.',
+    faq_a0:          'We offer customized services starting from <strong>$500 USD or less</strong>, up to fees based on your purchase order. Our team of experts across different areas is ready to help you. First consultation: free and with no commitment.',
     faq_q1:          'How long does an import from China take?',
     faq_a1:          'Production: 25–45 days depending on the product. Sea freight: Ecuador 28–35 days · Peru 30–35 days · Colombia 32–38 days. With Xpand management, we coordinate predictable timelines with no customs delays (SENAE / SUNAT / DIAN).',
     faq_q2:          'What happens if the supplier does not deliver as agreed?',
     faq_a2:          "That's exactly what we prevent. We inspect at the factory <strong>before shipment</strong> — if the goods don't meet standards, we don't release the final payment. In case of post-delivery issues, we negotiate directly with the supplier in Chinese.",
     faq_q3:          'Do you work with small companies or only large corporations?',
-    faq_a3:          'We work with companies importing from <strong>$8,000 USD per order</strong>. We serve medium, large and very large clients — from SMEs to major corporations. The criterion is operational seriousness, not size.',
+    faq_a3:          'We work with companies importing from <strong>$8,000 USD per order</strong>. We serve medium, large and very large clients — from SMEs to major corporations. The criterion is operational seriousness, not size. If your order is recurring or grows over time, even better. From first-time imports to operations worth several million dollars, the same team on the factory floor.',
     faq_q4:          'How do you verify the supplier is legitimate and not a middleman?',
-    faq_a4:          'We verify the supplier\'s real export history and ISO certifications, and conduct a physical visit to the facilities with production tests. We never work with traders — only verified manufacturers with a history of exporting to Latin America.',
+    faq_a4:          'We have our own legal, financial and quality control (QA/QC) team — replacing traditional procurement firms. With Xpand you get your own team in China without needing to open your own office: we are your purchasing agents, your direct relationship with factories, and your quality control on the ground. <strong>Your own purchasing agent in China</strong> — the complete service, designed for small and medium businesses.',
     faq_q5:          'Can you import excavators and forklifts from China?',
     faq_a5:          'Yes, it is one of our specialties. We import excavators (SANY, XCMG, Liugong) and forklifts (Heli, Hangcha) with full technical inspection, INEN homologation and SENAE/SUNAT/DIAN procedures. <a href="excavadoras.html" style="color:var(--orange);">Excavator guide</a> · <a href="montacargas.html" style="color:var(--orange);">Forklift guide</a>',
     faq_q6:          'Do you handle delivery to my warehouse or only to the port?',
@@ -555,9 +615,9 @@ const translations = {
   },
   zh: {
     nav_services:    '服务',
-    nav_how:         '流程',
-    nav_clients:     '客户',
+    nav_distributors:'经销商',
     nav_about:       '关于我们',
+    nav_cases:       '成功案例',
     nav_contact:     '联系我们',
     nav_cta:         '立即联系 →',
     hero_badge:      '🇨🇳 中国 → 厄瓜多尔 · 秘鲁 · 哥伦比亚',
@@ -566,9 +626,9 @@ const translations = {
     hero_cta1:       '📱 联系专家',
     hero_cta2:       '查看我们的服务',
     trust_years:     '年行业经验',
-    trust_clients:   '活跃客户',
-    trust_countries: '拉美国家',
-    trust_langs:     '服务语言',
+    trust_clients:   '完全掌控',
+    trust_countries: '满意企业',
+    trust_langs:     '全球办事处',
     sect_services:   '我们的服务',
     services_title:  '您进口所需的一切<br><span class="text-orange">专业智慧，全程护航</span>',
     services_sub:    '我们不是中间商——我们是您在中国的战略合作伙伴。',
@@ -588,7 +648,7 @@ const translations = {
     clients_title:   '已掌控进口的行业<br><span class="text-orange">领导者</span>',
     clients_sub:     '信任 Xpand Latam 在中国采购的企业',
     why_tag:         '为何选择 Xpand Latam？',
-    why_title:       '我们说您的语言。<br><span class="text-orange">但这只是基础。</span>',
+    why_title:       '我们不是中间商。<br><span class="text-orange">我们是您在中国的团队。</span>',
     process_tag:     '流程',
     process_title:   '简单、透明、<br><span class="text-orange">没有意外</span>',
     contact_tag:     '联系我们',
@@ -623,11 +683,12 @@ const translations = {
     svt_title:       '进口所需的一切<br><span class="text-electric">智能化，全程无忧。</span>',
     svt_sub:         '在中国拥有实体团队、在拉丁美洲具备法律资质的专业服务。无中间商，无意外。',
     svt_btn0:        '质量控制',
-    svt_btn1:        '供应商寻源',
-    svt_btn2:        '安全付款',
-    svt_btn3:        '翻译与口译',
-    svt_btn4:        '交钥匙进口管理',
-    svt_btn5:        '中国商务出行',
+    svt_btn1:        '中国采购代理',
+    svt_btn2:        '供应商寻源',
+    svt_btn3:        '安全付款',
+    svt_btn4:        '翻译与口译',
+    svt_btn5:        '交钥匙进口管理',
+    svt_btn6:        '中国商务出行',
     svt0_ptag:       '服务01 — 最受欢迎',
     svt0_h3:         '工厂质量控制',
     svt0_body:       '我们在发货前在中国检验您的货物。48小时内提供图文视频报告。符合INEN（厄瓜多尔）和INDECOPI（秘鲁）标准。到达目的地零意外。',
@@ -636,7 +697,7 @@ const translations = {
     svt0_f3:         'INEN、INDECOPI标准及当地认证',
     svt0_f4:         '48小时内提供图文视频报告',
     svt0_cta:        '申请检验 →',
-    svt1_ptag:       '服务02',
+    svt1_ptag:       '服务03',
     svt1_h3:         '中国供应商寻源',
     svt1_body:       '我们寻找真实制造商——无贸易商，无中间商。我们的团队亲赴工厂，以普通话直接谈判，为您争取最优FOB价格。',
     svt1_f1:         '每个品类至少比较3家制造商',
@@ -644,15 +705,16 @@ const translations = {
     svt1_f3:         '以中文谈判——真实出厂价格',
     svt1_f4:         '供应商报告及推荐意见',
     svt1_cta:        '申请供应商寻源 →',
-    svt2_ptag:       '服务03',
+    svt2_ptag:       '服务04',
     svt2_h3:         '安全付款通道',
+    svt2_lead:       '<strong>用您的本地货币付款——我们在世界的另一端为您执行。</strong>',
     svt2_body:       '您在厄瓜多尔、秘鲁或哥伦比亚的本地账户付款——我们安全地将资金送达目的地。无高风险SWIFT转账，无银行欺诈风险。',
     svt2_f1:         '在您所在国家的本地账户付款',
     svt2_f2:         '无高风险SWIFT转账',
     svt2_f3:         '全面防范银行欺诈',
     svt2_f4:         '完整的付款可追溯性',
     svt2_cta:        '咨询付款通道 →',
-    svt3_ptag:       '服务04',
+    svt3_ptag:       '服务05',
     svt3_h3:         '翻译与实时口译',
     svt3_body:       '在谈判、工厂参观和技术会议期间提供西班牙语、英语和中文同声传译。技术规格以三种语言起草。',
     svt3_f1:         '西班牙语·中文·英语同声传译',
@@ -660,7 +722,7 @@ const translations = {
     svt3_f3:         '三种语言的技术规格',
     svt3_f4:         '现场与远程均可提供',
     svt3_cta:        '申请口译服务 →',
-    svt4_ptag:       '服务05',
+    svt4_ptag:       '服务06',
     svt4_h3:         '交钥匙进口管理',
     svt4_body:       '从中国工厂到您在厄瓜多尔、秘鲁或哥伦比亚的仓库。国际运费、货物保险、清关及最终交付。无复杂贸易术语，无成本意外。',
     svt4_f1:         '首次付款前计算全部费用',
@@ -668,7 +730,7 @@ const translations = {
     svt4_f3:         '货物保险及实时追踪',
     svt4_f4:         '送货上门至您的仓库',
     svt4_cta:        '评估我的进口方案 →',
-    svt5_ptag:       '服务06',
+    svt5_ptag:       '服务07',
     svt5_h3:         '中国及亚洲商务出行',
     svt5_body:       '专业陪同参观中国及亚洲的贸易展、工厂和会议。完整行程、物流及中文、西班牙语、英语沟通。适合团体和个人。',
     svt5_f1:         '以中文直接谈判的工厂参观',
@@ -676,11 +738,20 @@ const translations = {
     svt5_f3:         '完整物流：机票、酒店、接送',
     svt5_f4:         '技术会议实时口译',
     svt5_cta:        '规划我的行程 →',
+    svt6_ptag:       '服务02',
+    svt6_h3:         '中国采购代理',
+    svt6_lead:       '<strong>就像在中国拥有自己的办事处，却无需真正开设一间办公室。</strong>',
+    svt6_body:       '您用本地货币付款，我们负责在工厂现场完成所有采购、谈判和组织工作。',
+    svt6_f1:         '您在中国的采购团队，无需承担自设办公室的费用',
+    svt6_f2:         '本地货币付款——我们在中国执行',
+    svt6_f3:         '订单的完整谈判与组织',
+    svt6_f4:         '中国及亚洲的商业智能与市场洞察',
+    svt6_cta:        '申请采购代理 →',
     svt_more_tag:    '还有更多',
     svt_more_h3:     '专业增值服务',
     svt_more_p:      '我们用少数采购代理才提供的服务来完善您的业务——因为我们在亚洲拥有实体团队。',
-    svt_add1_h4:     '市场分析与寻源',
-    svt_add1_p:      '真实FOB价格、中国各地区供应商地图及总进口成本——在您投入任何资金之前全部掌握。',
+    svt_add1_h4:     '中国设计法律保护',
+    svt_add1_p:      '与您的工厂签订独家合同，并由我们在中国的法律团队为您注册知识产权。您的设计始终掌握在您手中。',
     svt_add2_h4:     '拉美出口至亚洲',
     svt_add2_p:      '我们将拉美生产商与中国、香港和台湾的真实买家对接。大批量，物流全包。',
     svt_add3_h4:     '中国工厂审核',
@@ -721,6 +792,25 @@ const translations = {
     ctaband_wa:      '📱 直接WhatsApp',
 
     // Why section
+    ia_tag:          '中国法律保护',
+    ia_h2:           '我们保护您交付给工厂的<br><span class="ia-highlight">专属设计</span>',
+    ia_lead:         '由我们自己的法律团队在中国起草的独家合同，确保您交付给工厂的设计和知识产权不会被第三方复制、生产或转售。来自中国的法律保护与知识产权权利，全程为您的企业提供专属代理。',
+    ia_feat1_h:      '与工厂签订独家合同',
+    ia_feat1_p:      '我们在中国签署具有法律约束力的合同，禁止您的工厂将设计生产、销售或分享给第三方或竞争对手。',
+    ia_feat2_h:      '设计与知识产权注册',
+    ia_feat2_p:      '在开始生产前，我们向中国当局注册您的设计和知识产权，为您的产品提供法律保障。',
+    ia_feat3_h:      '中国专属法律代理',
+    ia_feat3_p:      '我们自己的法律团队在工厂和中国当局面前专属代表您——不是远程中介，而是在现场只为您的利益辩护的律师。',
+    ia_cta:          '保护我的设计 →',
+    team_tag:        '我们的团队',
+    team_h2:         '自有团队。<br><span class="text-electric">没有中间商。</span>',
+    team_sub:        '最优的价格和品质，由常驻亚洲和拉丁美洲、在现场保护您业务的团队为您实现。',
+    team_asia_tag:   '🇨🇳 亚洲',
+    team_asia_h3:    '亚洲团队',
+    team_asia_p:     '在中国、香港和台湾均有实体驻点。我们直接在工厂进行谈判、检验和审核——不依赖第三方或中间商。',
+    team_latam_tag:  '🌎 拉丁美洲',
+    team_latam_h3:   '拉丁美洲团队',
+    team_latam_p:    '在厄瓜多尔、秘鲁和哥伦比亚设有自有办事处。您的本地联系人，使用您的语言和时区，并有亚洲团队作为后盾。',
     why_header_tag:  '为何选择 Xpand Latam？',
     why_header_h2:   '我们不是中间商。<br><span class="text-orange">我们是您在中国的团队。</span>',
     why_header_p:    '我们以中文、英语、德语和葡萄牙语开展业务。在亚洲及厄瓜多尔、秘鲁、哥伦比亚均有实体团队。我们不从您的货物中赚取差价——我们收取创造的价值。',
@@ -761,15 +851,15 @@ const translations = {
     faq_tag:         '常见问题',
     faq_h2:          '每位进口商<br><span class="text-orange">开始前需要了解的</span>',
     faq_q0:          'Xpand Latam的服务费用是多少？',
-    faq_a0:          '质量控制从每次检验$250起。供应商寻源和采购管理按FOB价值的百分比收费。<strong>我们创造的节省始终超过服务费用</strong>——如果评估后并非如此，我们会直接告知您。首次咨询：免费且无需承诺。',
+    faq_a0:          '我们提供个性化服务，费用从<strong>500美元或更低</strong>起，也可按您的采购订单计费。我们各领域的专家团队随时为您提供帮助。首次咨询：免费且无需承诺。',
     faq_q1:          '从中国进口需要多长时间？',
     faq_a1:          '生产：视产品25–45天。海运：厄瓜多尔28–35天 · 秘鲁30–35天 · 哥伦比亚32–38天。在Xpand管理下，我们协调可预期的时间，无海关延误（SENAE / SUNAT / DIAN）。',
     faq_q2:          '如果供应商未按约定交货怎么办？',
     faq_a2:          '这正是我们所预防的。我们在<strong>发货前</strong>在工厂检验——如果货物不达标，我们不放行最终付款。如果出现交货后问题，我们直接以中文与供应商谈判。',
     faq_q3:          '你们只服务大企业还是也接受小公司？',
-    faq_a3:          '我们服务每单从<strong>$8,000美元</strong>起的企业。服务中型、大型和超大型客户——从中小企业到大型集团。标准是操作认真度，而非规模大小。',
+    faq_a3:          '我们服务每单从<strong>8,000美元</strong>起的企业。服务中型、大型和超大型客户——从中小企业到大型集团。标准是操作的认真程度，而非规模大小。如果您的订单是持续性或逐渐增长的，那就更好了。从首次进口到价值数百万美元的业务，始终由同一支工厂现场团队为您服务。',
     faq_q4:          '如何核实供应商是制造商而非中间商？',
-    faq_a4:          '我们核实供应商真实的出口历史和ISO认证，并对设施进行实地参观及生产测试。我们从不与贸易商合作——只与有出口拉美历史的经核实制造商合作。',
+    faq_a4:          '我们拥有自己的法律、财务和质量控制（QA/QC）团队——取代传统的采购代理公司。选择Xpand，您无需开设自己的办事处即可拥有属于自己的中国团队：我们是您的采购代理，是您与工厂的直接联系人，也是您在现场的质量控制团队。<strong>您在中国专属的采购代理</strong>——为中小企业量身打造的一站式服务。',
     faq_q5:          '你们能从中国进口挖掘机和叉车吗？',
     faq_a5:          '是的，这是我们的专长之一。我们进口挖掘机（三一、徐工、柳工）和叉车（合力、杭叉），提供完整技术检验、INEN认证及SENAE/SUNAT/DIAN手续。<a href="excavadoras.html" style="color:var(--orange);">挖掘机指南</a> · <a href="montacargas.html" style="color:var(--orange);">叉车指南</a>',
     faq_q6:          '你们送货到我的仓库还是只到港口？',
@@ -835,9 +925,9 @@ const translations = {
 // Map data-i18n keys to DOM elements
 const i18nMap = {
   nav_services:    '.nav-links li:nth-child(1) a',
-  nav_how:         '.nav-links li:nth-child(2) a',
-  nav_clients:     '.nav-links li:nth-child(3) a',
-  nav_about:       '.nav-links li:nth-child(4) a',
+  nav_distributors:'.nav-links li:nth-child(2) a',
+  nav_about:       '.nav-links li:nth-child(3) a',
+  nav_cases:       '.nav-links li:nth-child(4) a',
   nav_contact:     '.nav-links li:nth-child(5) a',
   nav_cta:         '.nav-cta',
   hero_badge:      '.hero-badge',
@@ -905,6 +995,13 @@ function setLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
   const activeBtn = document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`);
   if (activeBtn) activeBtn.classList.add('active');
+
+  // Sync header globe switcher label + close its dropdown
+  const langLabels = { es: 'ES', en: 'EN', zh: '中文' };
+  const langCurrentEl = document.getElementById('langCurrent');
+  if (langCurrentEl) langCurrentEl.textContent = langLabels[lang] || lang.toUpperCase();
+  const langSwitcherEl = document.getElementById('langSwitcher');
+  if (langSwitcherEl) langSwitcherEl.classList.remove('open');
 
   // Store preference
   localStorage.setItem('xpand_lang', lang);
@@ -992,19 +1089,21 @@ function setLang(lang) {
     const key = 'svt_btn' + i;
     if (t[key]) btn.innerHTML = t[key];
   });
-  const svPanelIds  = ['svt-0','svt-1','svt-2','svt-3','svt-4','svt-6'];
-  const svPanelBase = ['svt0','svt1','svt2','svt3','svt4','svt5'];
+  const svPanelIds  = ['svt-0','svt-7','svt-1','svt-2','svt-3','svt-4','svt-6'];
+  const svPanelBase = ['svt0','svt6','svt1','svt2','svt3','svt4','svt5'];
   svPanelIds.forEach((id, i) => {
     const panel = document.getElementById(id);
     if (!panel) return;
     const k     = svPanelBase[i];
     const ptag  = panel.querySelector('.sv-panel-tag');
     const h3    = panel.querySelector('h3');
-    const body  = panel.querySelector('.sv-panel-content > p');
+    const lead  = panel.querySelector('.sv-panel-content > .sv-panel-lead');
+    const body  = panel.querySelector('.sv-panel-content > p:not(.sv-panel-lead)');
     const feats = panel.querySelectorAll('.sv-feats li');
     const cta   = panel.querySelector('.sv-panel-content .btn-primary');
     if (ptag  && t[k+'_ptag']) ptag.innerHTML  = t[k+'_ptag'];
     if (h3    && t[k+'_h3'])   h3.innerHTML    = t[k+'_h3'];
+    if (lead  && t[k+'_lead']) lead.innerHTML  = t[k+'_lead'];
     if (body  && t[k+'_body']) body.innerHTML  = t[k+'_body'];
     ['f1','f2','f3','f4'].forEach((f, fi) => {
       if (feats[fi] && t[k+'_'+f]) feats[fi].innerHTML = t[k+'_'+f];
@@ -1105,6 +1204,50 @@ function setLang(lang) {
     if (cbH2  && t.ctaband_h2)  cbH2.innerHTML  = t.ctaband_h2;
     if (cbSub && t.ctaband_sub) cbSub.innerHTML = t.ctaband_sub;
     if (cbWa  && t.ctaband_wa)  cbWa.innerHTML  = t.ctaband_wa;
+  }
+
+  // ===== LEGAL PROTECTION IN CHINA (invest-asia-section) =====
+  const iaSec = document.querySelector('.invest-asia-section');
+  if (iaSec) {
+    const iaTag  = iaSec.querySelector('.ia-tag');
+    const iaH2   = iaSec.querySelector('.invest-asia-top h2');
+    const iaLead = iaSec.querySelector('.ia-lead');
+    if (iaTag  && t.ia_tag)  iaTag.innerHTML  = t.ia_tag;
+    if (iaH2   && t.ia_h2)   iaH2.innerHTML   = t.ia_h2;
+    if (iaLead && t.ia_lead) iaLead.innerHTML = t.ia_lead;
+    const iaFeats = iaSec.querySelectorAll('.ia-feat');
+    ['ia_feat1','ia_feat2','ia_feat3'].forEach((base, i) => {
+      const f = iaFeats[i];
+      if (!f) return;
+      const strong = f.querySelector('strong');
+      const p = f.querySelector('p');
+      if (strong && t[base+'_h']) strong.innerHTML = t[base+'_h'];
+      if (p && t[base+'_p']) p.innerHTML = t[base+'_p'];
+    });
+    const iaCta = iaSec.querySelector('.ia-bottom .btn-primary');
+    if (iaCta && t.ia_cta) iaCta.innerHTML = t.ia_cta;
+  }
+
+  // ===== TEAM SECTION (Equipo Asia / Latam) =====
+  const teamSec = document.querySelector('.team-section');
+  if (teamSec) {
+    const tmTag = teamSec.querySelector('.section-tag');
+    const tmH2  = teamSec.querySelector('.section-header h2');
+    const tmSub = teamSec.querySelector('.section-subtitle');
+    if (tmTag && t.team_tag) tmTag.innerHTML = t.team_tag;
+    if (tmH2  && t.team_h2)  tmH2.innerHTML  = t.team_h2;
+    if (tmSub && t.team_sub) tmSub.innerHTML = t.team_sub;
+    const teamCards = teamSec.querySelectorAll('.team-card');
+    ['team_asia','team_latam'].forEach((base, i) => {
+      const c = teamCards[i];
+      if (!c) return;
+      const tag = c.querySelector('.team-card-tag');
+      const h3  = c.querySelector('h3');
+      const p   = c.querySelector('p');
+      if (tag && t[base+'_tag']) tag.innerHTML = t[base+'_tag'];
+      if (h3  && t[base+'_h3'])  h3.innerHTML  = t[base+'_h3'];
+      if (p   && t[base+'_p'])   p.innerHTML   = t[base+'_p'];
+    });
   }
 
   // ===== WHY XPAND HEADER =====
