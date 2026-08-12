@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inteligencia para Importación desde China para Latinoamérica | Control de Calidad, Sourcing y Maquinaria — Xpand Latam</title>
+  <title>Del Caos al Control: Importa desde China a Ecuador, Perú y Colombia</title>
   <meta name="description" content="Xpand Latam — inteligencia para importar desde China a Ecuador, Perú y Colombia. Control de calidad en fábrica, búsqueda de proveedores, maquinaria industrial (excavadoras, montacargas, CNC) y logística. Equipo físico en Asia. +15 años." />
   <meta name="keywords" content="importar de china ecuador, importar de china peru, importar de china colombia, agente de importación china latinoamerica, control de calidad china, inspección de fábricas china, auditoría proveedor china, búsqueda de proveedores china, maquinaria industrial china, excavadoras de china, montacargas de china, agente en china ecuador peru colombia, sourcing china proveedor, importación inteligente desde china, logística china latinoamérica, inversiones en asia" />
 
@@ -38,6 +38,83 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Homepage-specific spacing/type tuning (not in the shared style.css) -->
+  <style>
+    .hero--fullbleed { min-height: 78vh; }
+    .section-header { margin-bottom: 40px; }
+    .section-subtitle { font-size: 16px !important; }
+
+    /* Headings now wrap naturally (no forced <br>) instead of being shrunk to fit two lines */
+    .section-header h2,
+    .sv-tabsec-top h2,
+    .why-header h2,
+    .machinery-content h2,
+    .equipment-content h2,
+    .success-cases-content h2,
+    .cta-band h2,
+    .contact-info h2,
+    .la-header h2,
+    .invest-asia-top h2 { font-size: clamp(26px,3.4vw,40px) !important; white-space: normal; }
+
+    .sec-collapse-title { font-size: clamp(20px,2.4vw,28px) !important; white-space: normal; }
+
+    .markets-header h2 { font-size: clamp(22px,2.8vw,30px) !important; }
+    .sv-panel-content h3 { font-size: clamp(20px,2.3vw,27px) !important; }
+    .sv2-cta-full-text h3 { font-size: clamp(18px,2.2vw,24px) !important; }
+    .hero-title { font-size: clamp(36px,5.2vw,64px) !important; }
+
+    /* Plain eyebrow labels — no pill/box (Apple-style: colored small caps text, no shape) */
+    .section-tag, .section-tag-dark, .ia-tag {
+      background: none !important; border: none !important;
+      padding: 0 !important; border-radius: 0 !important;
+    }
+
+    /* Show full team photos uncropped instead of forcing a fixed-height crop */
+    .team-card-img { height: auto !important; }
+    .team-card-img img { height: auto !important; object-fit: contain !important; }
+
+    /* Plain badges: real emoji flags, no pill/box/color highlighting */
+    .hero-badge {
+      background: none !important; border: none !important;
+      padding: 0 !important; border-radius: 0 !important;
+      color: #fff !important; /* dark hero photo background — white stays legible */
+    }
+    .team-card-tag {
+      background: none !important; border: none !important;
+      padding: 0 !important; border-radius: 0 !important;
+      color: #1a1a1a !important;
+    }
+    /* Fix: these were white-on-white — team cards moved into the white why-xpand
+       section earlier but kept text colors meant for a dark card background */
+    .team-card { background: #fff !important; border: 1px solid var(--gray-200) !important; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+    .team-card h3 { color: var(--navy) !important; }
+    .team-card p { color: var(--gray-600) !important; }
+    .why-xpand, .how-it-works, .doorstep-section, .risks-section { padding: 52px 0 !important; }
+    .contact { padding: 44px 0 52px !important; }
+    .projects-section { padding: 52px 0 40px !important; }
+    .faq-section, .mach-overview, .catch-strip, .map-section { padding: 42px 0 !important; }
+    .success-cases { padding: 42px 0 0 !important; }
+    .sv-tabsec { padding-top: 60px !important; }
+    .calc-section { padding: 72px 0 !important; }
+    .leaders-section { padding: 32px 0 !important; }
+
+    /* Shrink invest-asia section to roughly a third of its size — keep all content, just tighten it */
+    .invest-asia-section { padding: 32px 0 28px !important; }
+    .invest-asia-top { margin-bottom: 20px !important; }
+    .ia-lead { font-size: 14px !important; line-height: 1.5 !important; max-width: 560px !important; }
+    .ia-feats-row { margin: 0 0 20px !important; }
+    .ia-feat { padding: 14px 16px !important; gap: 6px !important; }
+    .ia-feat-icon { font-size: 20px !important; }
+    .ia-feat strong { font-size: 13px !important; }
+    .ia-feat p { font-size: 11.5px !important; line-height: 1.4 !important; }
+    .ia-stats-bar { margin: 0 auto 18px !important; }
+    .ia-stat-num { font-size: 24px !important; letter-spacing: -1px !important; }
+    .ia-stat-lbl { font-size: 11px !important; }
+    .ia-stat-sep { height: 30px !important; }
+    .ia-bottom { gap: 12px !important; }
+
+    .form-hint { display: block; font-size: 11.5px; color: var(--gray-400); margin-top: 5px; line-height: 1.4; }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -303,17 +380,17 @@
   <div class="container offices-strip-inner">
     <span class="offices-label">Presencia global:</span>
     <div class="offices-list">
-      <div class="office-item"><span>🇨🇳</span><strong>China</strong></div>
+      <div class="office-item">🇨🇳<strong>China</strong></div>
       <div class="office-sep">·</div>
-      <div class="office-item"><span>🇭🇰</span><strong>Hong Kong</strong></div>
+      <div class="office-item">🇭🇰<strong>Hong Kong</strong></div>
       <div class="office-sep">·</div>
-      <div class="office-item"><span>🇹🇼</span><strong>Taiwán</strong></div>
+      <div class="office-item">🇹🇼<strong>Taiwán</strong></div>
       <div class="office-sep">·</div>
-      <div class="office-item"><span>🇨🇴</span><strong>Colombia</strong></div>
+      <div class="office-item">🇨🇴<strong>Colombia</strong></div>
       <div class="office-sep">·</div>
-      <div class="office-item"><span>🇵🇪</span><strong>Perú</strong></div>
+      <div class="office-item">🇵🇪<strong>Perú</strong></div>
       <div class="office-sep">·</div>
-      <div class="office-item"><span>🇪🇨</span><strong>Ecuador</strong></div>
+      <div class="office-item">🇪🇨<strong>Ecuador</strong></div>
     </div>
   </div>
 </div>
@@ -324,8 +401,8 @@
     <div class="catch-inner">
       <div class="catch-text">
         <div class="catch-tag">La verdad que nadie te dice</div>
-        <h2>Importa de China<br><span class="text-teal">sin perder dinero.</span></h2>
-        <p>7 de cada 10 importadores andinos enfrentan pérdidas evitables en sus primeros pedidos: proveedores fantasma, aduanas mal declaradas, calidad falsificada. Nosotros llevamos 15 años evitando exactamente eso — para más de 500 empresas.</p>
+        <h2>Importa de China <span class="text-teal">sin perder dinero.</span></h2>
+        <p>7 de cada 10 importadores andinos pierden dinero en su primer pedido. Llevamos 15 años evitando exactamente eso.</p>
         <a href="#riesgos" class="catch-link">Ver casos documentados →</a>
       </div>
       <div class="catch-stats">
@@ -434,7 +511,7 @@
   <div class="container">
     <div class="section-header">
       <span class="section-tag-dark">Casos Documentados</span>
-      <h2>Lo que le pasa a quien importa<br><span class="text-orange">sin un aliado en China</span></h2>
+      <h2>Lo que le pasa a quien importa <span class="text-orange">sin un aliado en China</span></h2>
       <p class="section-subtitle risks-subtitle">Estos son patrones reales que documentamos en el mercado andino. La gran mayoría se pudo haber evitado completamente con el equipo correcto.</p>
     </div>
 
@@ -538,7 +615,7 @@
     <div class="success-cases-inner">
       <div class="success-cases-content">
         <span class="section-tag">Casos de Éxito</span>
-        <h2>Cientos de operaciones<br><span class="text-orange">realizadas con éxito</span></h2>
+        <h2>Cientos de operaciones <span class="text-orange">realizadas con éxito</span></h2>
         <p>Llevamos más de 15 años acompañando a empresas en Ecuador, Perú y Colombia en sus importaciones desde China. Cada operación es un caso documentado: fábricas verificadas, calidad garantizada y entrega sin sorpresas.</p>
         <div class="success-metrics">
           <div class="sm-item"><strong>+1200</strong><span>operaciones ejecutadas</span></div>
@@ -662,7 +739,7 @@
 <section class="sv-tabsec" id="servicios">
   <div class="sv-tabsec-top container">
     <span class="section-tag">Lo que hacemos</span>
-    <h2>Todo lo que necesitas<br><span class="text-electric">para importar con inteligencia.</span></h2>
+    <h2>Todo lo que necesitas <span class="text-electric">para importar con inteligencia.</span></h2>
     <p class="section-subtitle">Servicios especializados con equipo físico en China y presencia legal en Latinoamérica. Sin intermediarios, sin sorpresas.</p>
   </div>
 
@@ -1214,38 +1291,6 @@
   </div>
 </section>
 
-<!-- ===== EQUIPO GLOBAL ===== -->
-<section class="team-section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">Nuestro Equipo</span>
-      <h2>Personal propio.<br><span class="text-electric">Sin intermediarios.</span></h2>
-      <p class="section-subtitle">Los mejores precios y calidad, con equipo permanente en Asia y Latinoamérica, en el terreno para proteger tu operación.</p>
-    </div>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-card-img">
-          <img src="images/agente-compras-china-guangzhou.jpg" alt="Equipo Xpand Latam en Asia" />
-        </div>
-        <div class="team-card-body">
-          <span class="team-card-tag">🇨🇳 Asia</span>
-          <h3>Equipo de Asia</h3>
-          <p>Presencia física en China, Hong Kong y Taiwán. Negociamos, inspeccionamos y auditamos directamente en fábrica — sin depender de terceros ni intermediarios.</p>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="team-card-img">
-          <img src="images/equipo-latinoamerica-guangzhou.jpg" alt="Equipo Xpand Latam en Latinoamérica" />
-        </div>
-        <div class="team-card-body">
-          <span class="team-card-tag">🌎 Latinoamérica</span>
-          <h3>Equipo de Latinoamérica</h3>
-          <p>Oficinas propias en Ecuador, Perú y Colombia. Tu punto de contacto local, en tu idioma y zona horaria, respaldado por el equipo en Asia.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ===== LLAVE EN MANO ===== -->
 <section class="doorstep-section">
@@ -1253,7 +1298,7 @@
     <div class="sec-collapse-header" onclick="toggleSection('doorstepBody',this)">
       <div>
         <span class="section-tag">Servicio Llave en Mano</span>
-        <h2 class="sec-collapse-title">Tú decides qué importar.<br><span class="text-teal">Nosotros nos encargamos de todo.</span></h2>
+        <h2 class="sec-collapse-title"><span class="text-teal">Nosotros nos encargamos de todo.</span></h2>
       </div>
       <span class="sec-collapse-arrow">▼</span>
     </div>
@@ -1314,7 +1359,7 @@
   <div class="container">
     <div class="section-header">
       <span class="section-tag">Distribuidores Desde China</span>
-      <h2>Productos de los que somos<br><span class="text-orange">distribuidores desde China</span></h2>
+      <h2>Productos de los que somos <span class="text-orange">distribuidores desde China</span></h2>
       <p class="section-subtitle">Inspección técnica, aduana y entrega incluidos. Selecciona una categoría para ver la guía completa.</p>
     </div>
     <div class="mach-slider-wrap">
@@ -1583,56 +1628,59 @@
 <section class="invest-asia-section">
   <div class="invest-asia-top">
     <span class="ia-tag">Protección Legal en China</span>
-    <h2>Protegemos el diseño exclusivo<br><span class="ia-highlight">que le entregas a tu fábrica</span></h2>
-    <p class="ia-lead">Contratos legales exclusivos en China, redactados por nuestro propio equipo de abogados, para que el diseño y la propiedad intelectual que entregas a tu fábrica no puedan ser copiados, fabricados ni revendidos por terceros. Protección legal e IP Rights desde China, con representación exclusiva de tu empresa en todo el proceso.</p>
+    <h2>Protegemos el diseño exclusivo <span class="ia-highlight">que le entregas a tu fábrica</span></h2>
   </div>
 
-  <div class="ia-feats-row">
-    <div class="ia-feat">
-      <span class="ia-feat-icon">⚖️</span>
-      <strong>Contratos de exclusividad con la fábrica</strong>
-      <p>Firmamos contratos legales vinculantes en China que prohíben a tu fábrica fabricar, vender o compartir tu diseño con terceros o competidores.</p>
-    </div>
-    <div class="ia-feat">
-      <span class="ia-feat-icon">🔒</span>
-      <strong>Registro de diseño y propiedad intelectual</strong>
-      <p>Registramos tu diseño y propiedad intelectual ante las autoridades chinas antes de iniciar producción, blindando tu producto legalmente.</p>
-    </div>
-    <div class="ia-feat">
-      <span class="ia-feat-icon">👨‍⚖️</span>
-      <strong>Representación legal exclusiva en China</strong>
-      <p>Nuestro equipo legal propio te representa de forma exclusiva ante fábricas y autoridades chinas — no un intermediario remoto, sino abogados en el terreno defendiendo únicamente tus intereses.</p>
-    </div>
-  </div>
+  <div class="ia-body">
+    <p class="ia-lead">Protegemos tu diseño con contratos legales en China.</p>
 
-  <div class="ia-stats-bar">
-    <div class="ia-stat">
-      <span class="ia-stat-num">3</span>
-      <span class="ia-stat-lbl">Oficinas legales en Asia</span>
+    <div class="ia-feats-row">
+      <div class="ia-feat">
+        <span class="ia-feat-icon">⚖️</span>
+        <strong>Exclusividad</strong>
+        <p>Tu fábrica no puede vender tu diseño a otros.</p>
+      </div>
+      <div class="ia-feat">
+        <span class="ia-feat-icon">🔒</span>
+        <strong>Registro legal</strong>
+        <p>Registramos tu diseño antes de producir.</p>
+      </div>
+      <div class="ia-feat">
+        <span class="ia-feat-icon">👨‍⚖️</span>
+        <strong>Abogados en China</strong>
+        <p>Te representamos en persona, no a distancia.</p>
+      </div>
     </div>
-    <div class="ia-stat-sep"></div>
-    <div class="ia-stat">
-      <span class="ia-stat-num">15+</span>
-      <span class="ia-stat-lbl">Años en mercados asiáticos</span>
-    </div>
-    <div class="ia-stat-sep"></div>
-    <div class="ia-stat">
-      <span class="ia-stat-num">100%</span>
-      <span class="ia-stat-lbl">Diseños protegidos legalmente</span>
-    </div>
-  </div>
 
-  <div class="ia-bottom">
-    <div class="ia-countries">
-      <span>🇨🇳 China</span>
-      <span>🇻🇳 Vietnam</span>
-      <span>🇹🇭 Tailandia</span>
-      <span>🇰🇷 Corea</span>
-      <span>🇯🇵 Japón</span>
+    <div class="ia-stats-bar">
+      <div class="ia-stat">
+        <span class="ia-stat-num">3</span>
+        <span class="ia-stat-lbl">Oficinas legales en Asia</span>
+      </div>
+      <div class="ia-stat-sep"></div>
+      <div class="ia-stat">
+        <span class="ia-stat-num">15+</span>
+        <span class="ia-stat-lbl">Años en mercados asiáticos</span>
+      </div>
+      <div class="ia-stat-sep"></div>
+      <div class="ia-stat">
+        <span class="ia-stat-num">100%</span>
+        <span class="ia-stat-lbl">Diseños protegidos legalmente</span>
+      </div>
     </div>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
-      <a href="#contacto" class="btn btn-primary btn-lg">Proteger mi diseño →</a>
-      <a href="inversiones.html" class="btn btn-outline-light btn-lg">Ver más sobre inversiones</a>
+
+    <div class="ia-bottom">
+      <div class="ia-countries">
+        <span>🇨🇳 China</span>
+        <span>🇻🇳 Vietnam</span>
+        <span>🇹🇭 Tailandia</span>
+        <span>🇰🇷 Corea</span>
+        <span>🇯🇵 Japón</span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+        <a href="#contacto" class="btn btn-primary btn-lg">Proteger mi diseño →</a>
+        <a href="inversiones.html" class="btn btn-outline-light btn-lg">Ver más sobre inversiones</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1644,17 +1692,38 @@
     <!-- Centered header -->
     <div class="why-header">
       <span class="section-tag">¿Por qué Xpand Latam?</span>
-      <h2>No somos intermediarios.<br><span class="text-orange">Somos tu equipo en China.</span></h2>
+      <h2>No somos intermediarios. <span class="text-orange">Somos tu equipo en China.</span></h2>
       <p>Operamos en chino, inglés, alemán y portugués. Equipo físico en Asia y en Ecuador, Perú y Colombia. No cobramos margen sobre tu mercancía — cobramos por el valor que generamos.</p>
     </div>
 
-    <!-- Services overview image -->
-    <img src="images/23. xpand latam image of all our services. .png" alt="Servicios Xpand Latam — equipo en China" style="display:block;width:100%;height:auto;margin:2rem 0;" />
+    <!-- Team photo proof -->
+    <div class="team-grid" style="margin-bottom:2rem;">
+      <div class="team-card">
+        <div class="team-card-img">
+          <img src="images/agente-compras-china-guangzhou.jpg" alt="Equipo Xpand Latam en Asia" />
+        </div>
+        <div class="team-card-body">
+          <span class="team-card-tag">🇨🇳 Asia</span>
+          <h3>Equipo de Asia</h3>
+          <p>Presencia física en China, Hong Kong y Taiwán. Negociamos, inspeccionamos y auditamos directamente en fábrica.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-img">
+          <img src="images/equipo-latinoamerica-guangzhou.jpg" alt="Equipo Xpand Latam en Latinoamérica" />
+        </div>
+        <div class="team-card-body">
+          <span class="team-card-tag">🌎 Latinoamérica</span>
+          <h3>Equipo de Latinoamérica</h3>
+          <p>Oficinas propias en Ecuador, Perú y Colombia. Tu punto de contacto local, respaldado por el equipo en Asia.</p>
+        </div>
+      </div>
+    </div>
 
     <!-- Language advantage banner -->
     <div class="lang-banner">
       <div class="lang-banner-text">
-        <h3>Negociamos directamente en fábrica<br><span class="text-teal">en China, Vietnam y Tailandia</span></h3>
+        <h3>Negociamos directamente en fábrica <span class="text-teal">en China, Vietnam y Tailandia</span></h3>
         <p>Hablamos tu mismo idioma — y el de tus proveedores. Lo que hace que cada negociación sea más fluida, precisa y con ventaja real para tu empresa.</p>
       </div>
       <div class="la-langs">
@@ -1708,11 +1777,6 @@
         <div class="comp-cell comp-good">✅</div>
       </div>
       <div class="comp-row">
-        <div class="comp-cell comp-label">Comprende la cultura de negocio en Asia</div>
-        <div class="comp-cell comp-bad">❌</div>
-        <div class="comp-cell comp-good">✅</div>
-      </div>
-      <div class="comp-row">
         <div class="comp-cell comp-label">Presencia legal en Ecuador, Perú y Colombia</div>
         <div class="comp-cell comp-bad">Raramente</div>
         <div class="comp-cell comp-good">✅ Sí</div>
@@ -1721,11 +1785,6 @@
         <div class="comp-cell comp-label">Atiende desde $7,000 hasta millones de dólares</div>
         <div class="comp-cell comp-bad">Solo grandes</div>
         <div class="comp-cell comp-good">✅ Todos</div>
-      </div>
-      <div class="comp-row">
-        <div class="comp-cell comp-label">Verifica fábricas con visita presencial</div>
-        <div class="comp-cell comp-bad">❌</div>
-        <div class="comp-cell comp-good">✅</div>
       </div>
       <div class="comp-row comp-row--highlight">
         <div class="comp-cell comp-label">El ahorro supera el costo del servicio</div>
@@ -1744,9 +1803,7 @@
 <section class="projects-section" id="proyectos">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">Importaciones Ejecutadas con Éxito</span>
-      <h2>Más de 500 importaciones<br><span class="text-orange">ejecutadas con éxito</span></h2>
-      <p class="section-subtitle">Casos reales de empresas en Ecuador, Perú y Colombia que confiaron en Xpand Latam.</p>
+      <span class="section-tag">Proyectos Destacados</span>
     </div>
   </div>
   <div class="carousel-outer">
@@ -1800,63 +1857,6 @@
         <div class="pc-stats"><span>⏱ 5 días auditoría</span><span>✅ ISO 9001</span><span>🔍 45 puntos</span></div>
       </div>
 
-      <div class="project-card">
-        <div class="pc-top"><span class="pc-flag">🇪🇨</span><span class="pc-status">✅ Completado</span></div>
-        <div class="pc-category">Agroindustria</div>
-        <h4>Procesadora de camarón — Ecuador</h4>
-        <p>Maquinaria especializada para procesamiento acuícola. SENAE + INEN + Agrocalidad gestionados. Instalación técnica incluida.</p>
-        <div class="pc-stats"><span>⏱ 58 días</span><span>💰 Ahorro 28%</span><span>🔍 INEN aprobado</span></div>
-      </div>
-
-      <div class="project-card">
-        <div class="pc-top"><span class="pc-flag">🇵🇪</span><span class="pc-status">✅ Completado</span></div>
-        <div class="pc-category">Sourcing Especializado</div>
-        <h4>Maquinaria de frío — Perú</h4>
-        <p>Búsqueda de proveedor para cámaras frigoríficas industriales. 8 fábricas auditadas en Guangdong. Precio final 22% menor al de mercado.</p>
-        <div class="pc-stats"><span>⏱ 50 días</span><span>💰 -22% precio</span><span>🔍 8 fab. auditadas</span></div>
-      </div>
-
-      <div class="project-card">
-        <div class="pc-top"><span class="pc-flag">🇨🇴</span><span class="pc-status">✅ Completado</span></div>
-        <div class="pc-category">Embotellado</div>
-        <h4>Línea de embotellado en vidrio — Colombia</h4>
-        <p>Equipo completo para embotellado de bebidas en vidrio. Visita técnica a fábrica en Guangdong. Coordinación DIAN y agente aduanero local.</p>
-        <div class="pc-stats"><span>⏱ 55 días</span><span>💰 Ahorro 24%</span><span>🔍 Visita técnica</span></div>
-      </div>
-
-      <div class="project-card">
-        <div class="pc-top"><span class="pc-flag">🇪🇨</span><span class="pc-status">✅ Completado</span></div>
-        <div class="pc-category">CNC y Metal-mecánica</div>
-        <h4>Centros de mecanizado CNC — Ecuador</h4>
-        <p>2 centros de mecanizado de 5 ejes. Selección entre 4 fabricantes verificados. Capacitación de operarios incluida en contrato.</p>
-        <div class="pc-stats"><span>⏱ 63 días</span><span>💰 Ahorro 30%</span><span>🔍 4 fab. evaluadas</span></div>
-      </div>
-
-      <!-- Duplicado para loop infinito -->
-      <div class="project-card">
-        <div class="pc-top"><span class="pc-flag">🇪🇨</span><span class="pc-status">✅ Completado</span></div>
-        <div class="pc-category">Línea de Embotellado</div>
-        <h4>Planta embotelladora de agua — Ecuador</h4>
-        <p>Línea completa de 10,000 botellas/hora. Fábrica verificada en Zhuhai. Instalación supervisada por equipo Xpand.</p>
-        <div class="pc-stats"><span>⏱ 52 días</span><span>💰 Ahorro 26%</span><span>🔍 Fábrica auditada</span></div>
-      </div>
-
-      <div class="project-card">
-        <div class="pc-top"><span class="pc-flag">🇵🇪</span><span class="pc-status">✅ Completado</span></div>
-        <div class="pc-category">Maquinaria Pesada</div>
-        <h4>Excavadoras XCMG 20T — Perú</h4>
-        <p>3 unidades para proyecto minero. Inspección técnica completa en fábrica. Trámites SUNAT coordinados por Xpand.</p>
-        <div class="pc-stats"><span>⏱ 42 días</span><span>💰 Precio -19% vs. mercado</span><span>🔍 3 fab. evaluadas</span></div>
-      </div>
-
-      <div class="project-card">
-        <div class="pc-top"><span class="pc-flag">🇨🇴</span><span class="pc-status">✅ Completado</span></div>
-        <div class="pc-category">Empaque Industrial</div>
-        <h4>Línea de empaque automático — Ecuador</h4>
-        <p>Sistema de empaque Flow-Pack para industria alimentaria. 6 fabricantes evaluados en Guangdong. Arancel 0% con TLC Ecuador-China.</p>
-        <div class="pc-stats"><span>⏱ 47 días</span><span>💰 Arancel 0% TLC</span><span>🔍 6 fab. auditadas</span></div>
-      </div>
-
     </div>
     <nav class="proyectos-nav" aria-label="Navegar importaciones ejecutadas">
       <button class="carousel-btn" id="carouselPrev" aria-label="Ver importaciones anteriores">&#8592; Anterior</button>
@@ -1871,7 +1871,7 @@
   <div class="container">
     <div class="section-header">
       <span class="section-tag">Proceso</span>
-      <h2>Simple, transparente,<br><span class="text-orange">sin sorpresas</span></h2>
+      <h2>Simple, transparente, <span class="text-orange">sin sorpresas</span></h2>
     </div>
     <div class="steps-grid">
       <div class="step">
@@ -1913,7 +1913,7 @@
   <div class="container">
     <div class="section-header">
       <span class="section-tag">Calculadora de Ahorro</span>
-      <h2>¿Cuánto puedes ahorrar<br><span class="text-teal">con Xpand Latam?</span></h2>
+      <h2>¿Cuánto puedes ahorrar <span class="text-teal">con Xpand Latam?</span></h2>
       <p class="section-subtitle">Estimación real basada en más de 500 proyectos ejecutados. Los resultados varían por categoría y proveedor.</p>
     </div>
     <div class="calc-box">
@@ -1973,7 +1973,7 @@
   <div class="container">
     <div class="section-header">
       <span class="section-tag">Preguntas Frecuentes</span>
-      <h2>Lo que todo importador<br><span class="text-orange">necesita saber antes de empezar</span></h2>
+      <h2>Lo que todo importador <span class="text-orange">necesita saber antes de empezar</span></h2>
     </div>
     <div class="faq-list">
       <div class="faq-item" onclick="toggleFaq(this)">
@@ -2014,7 +2014,7 @@
     <div class="contact-grid">
       <div class="contact-info">
         <span class="section-tag">Contacto</span>
-        <h2>Hablemos de<br><span class="text-orange">tu próxima importación</span></h2>
+        <h2>Hablemos de <span class="text-orange">tu próxima importación</span></h2>
         <p>Operamos desde China con equipo local en Ecuador, Perú y Colombia. Disponibles en español, inglés, chino y portugués.</p>
         <div class="contact-channels">
           <a href="https://wa.me/886932999971" target="_blank" class="channel channel--primary">
@@ -2067,15 +2067,22 @@
               <input id="cf-nombre" name="nombre" type="text" placeholder="Tu nombre" required />
             </div>
             <div class="form-group">
-              <label for="cf-empresa">Empresa</label>
-              <input id="cf-empresa" name="empresa" type="text" placeholder="Nombre de tu empresa" />
+              <label for="cf-telefono">Teléfono / WhatsApp *</label>
+              <input id="cf-telefono" name="telefono" type="tel" placeholder="+593 99 999 9999" required />
+              <small class="form-hint">Incluye el código de país — Ecuador +593, Perú +51, Colombia +57, México +52, Chile +56, Argentina +54, EE.UU. +1</small>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
+              <label for="cf-empresa">Empresa</label>
+              <input id="cf-empresa" name="empresa" type="text" placeholder="Nombre de tu empresa" />
+            </div>
+            <div class="form-group">
               <label for="cf-email">Email *</label>
               <input id="cf-email" name="email" type="email" placeholder="tu@empresa.com" required />
             </div>
+          </div>
+          <div class="form-row">
             <div class="form-group">
               <label for="cf-pais">País</label>
               <select id="cf-pais" name="pais">
@@ -2083,6 +2090,42 @@
                 <option>Ecuador</option>
                 <option>Perú</option>
                 <option>Colombia</option>
+                <option>México</option>
+                <option>Chile</option>
+                <option>Argentina</option>
+                <option>Bolivia</option>
+                <option>Paraguay</option>
+                <option>Uruguay</option>
+                <option>Venezuela</option>
+                <option>Brasil</option>
+                <option>Panamá</option>
+                <option>Costa Rica</option>
+                <option>Guatemala</option>
+                <option>Honduras</option>
+                <option>El Salvador</option>
+                <option>Nicaragua</option>
+                <option>República Dominicana</option>
+                <option>Puerto Rico</option>
+                <option>Cuba</option>
+                <option>Estados Unidos</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cf-categoria">Producto que buscas</label>
+              <select id="cf-categoria" name="categoria">
+                <option value="">Selecciona una categoría</option>
+                <option>Maquinaria CNC</option>
+                <option>Montacargas</option>
+                <option>Excavadoras</option>
+                <option>Maquinaria industrial</option>
+                <option>PVC y pisos</option>
+                <option>Ferretería y grifería</option>
+                <option>Madera y MDF</option>
+                <option>Cosméticos</option>
+                <option>Textiles y confección</option>
+                <option>Electrónica</option>
+                <option>Alimentos / agroindustria</option>
                 <option>Otro</option>
               </select>
             </div>
@@ -2156,7 +2199,7 @@
         <img src="images/21. XPand latam logo.jpeg" alt="Xpand Latam" style="height:36px;width:auto;display:block;" />
         <p>Inteligencia real en comercio internacional. Importa desde China a Ecuador, Perú y Colombia con confianza.</p>
         <div class="footer-langs">
-          <span>🇨🇳</span><span>🇬🇧</span><span>🇩🇪</span><span>🇧🇷</span><span>🇪🇸</span>
+          🇨🇳🇬🇧🇩🇪🇧🇷🇪🇸
         </div>
         <div class="footer-social">
           <a href="https://www.instagram.com/xpandlatam/" target="_blank" rel="noopener" class="social-link" title="Instagram">
