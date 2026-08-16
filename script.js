@@ -946,6 +946,31 @@ window.leadersAddSlot = function() {
   }
 })();
 
+// ===== PHONE COUNTRY-CODE AUTOFILL (shared across all pages) =====
+(function () {
+  var paisSelect = document.getElementById('cf-pais');
+  var telInput = document.getElementById('cf-telefono');
+  if (!paisSelect || !telInput) return;
+  var dialCodes = {
+    'Ecuador': '+593', 'Perú': '+51', 'Colombia': '+57', 'México': '+52',
+    'Chile': '+56', 'Argentina': '+54', 'Bolivia': '+591', 'Paraguay': '+595',
+    'Uruguay': '+598', 'Venezuela': '+58', 'Brasil': '+55', 'Panamá': '+507',
+    'Costa Rica': '+506', 'Guatemala': '+502', 'Honduras': '+504',
+    'El Salvador': '+503', 'Nicaragua': '+505', 'República Dominicana': '+1',
+    'Puerto Rico': '+1', 'Cuba': '+53', 'Estados Unidos': '+1'
+  };
+  paisSelect.addEventListener('change', function () {
+    var code = dialCodes[paisSelect.value];
+    if (!code) return;
+    // Replace any existing dial-code prefix but keep whatever number the user already typed
+    var rest = telInput.value.trim().replace(/^\+\d{1,4}\s*/, '');
+    telInput.value = code + ' ' + rest;
+    telInput.focus();
+    var len = telInput.value.length;
+    telInput.setSelectionRange(len, len);
+  });
+})();
+
 // ===== CONTACT FORM (formsubmit.co, shared across all pages) =====
 (function () {
   var form = document.getElementById('contactForm');
