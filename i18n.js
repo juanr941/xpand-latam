@@ -179,24 +179,24 @@ const translations = {
 
     // Why section (body text)
     ia_tag:          'Protección Legal en China',
-    ia_h2:           'Protegemos el diseño exclusivo<br><span class="ia-highlight">que le entregas a tu fábrica</span>',
+    ia_h2:           'Protegemos el diseño exclusivo <span class="ia-highlight">que le entregas a tu fábrica</span>',
     ia_lead:         'Contratos legales exclusivos en China, redactados por nuestro propio equipo de abogados, para que el diseño y la propiedad intelectual que entregas a tu fábrica no puedan ser copiados, fabricados ni revendidos por terceros. Protección legal e IP Rights desde China, con representación exclusiva de tu empresa en todo el proceso.',
-    ia_feat1_h:      'Contratos de exclusividad con la fábrica',
-    ia_feat1_p:      'Firmamos contratos legales vinculantes en China que prohíben a tu fábrica fabricar, vender o compartir tu diseño con terceros o competidores.',
-    ia_feat2_h:      'Registro de diseño y propiedad intelectual',
-    ia_feat2_p:      'Registramos tu diseño y propiedad intelectual ante las autoridades chinas antes de iniciar producción, blindando tu producto legalmente.',
-    ia_feat3_h:      'Representación legal exclusiva en China',
-    ia_feat3_p:      'Nuestro equipo legal propio te representa de forma exclusiva ante fábricas y autoridades chinas — no un intermediario remoto, sino abogados en el terreno defendiendo únicamente tus intereses.',
+    ia_feat1_h:      'Exclusividad',
+    ia_feat1_p:      'Tu fábrica no puede vender tu diseño a otros.',
+    ia_feat2_h:      'Registro legal',
+    ia_feat2_p:      'Registramos tu diseño antes de producir.',
+    ia_feat3_h:      'Abogados en China',
+    ia_feat3_p:      'Te representamos en persona, no a distancia.',
     ia_cta:          'Proteger mi diseño →',
     team_tag:        'Nuestro Equipo',
     team_h2:         'Personal propio.<br><span class="text-electric">Sin intermediarios.</span>',
     team_sub:        'Los mejores precios y calidad, con equipo permanente en Asia y Latinoamérica, en el terreno para proteger tu operación.',
     team_asia_tag:   '🇨🇳 Asia',
     team_asia_h3:    'Equipo de Asia',
-    team_asia_p:     'Presencia física en China, Hong Kong y Taiwán. Negociamos, inspeccionamos y auditamos directamente en fábrica — sin depender de terceros ni intermediarios.',
+    team_asia_p:     'Presencia física en China, Hong Kong y Taiwán. Negociamos, inspeccionamos y auditamos directamente en fábrica.',
     team_latam_tag:  '🌎 Latinoamérica',
     team_latam_h3:   'Equipo de Latinoamérica',
-    team_latam_p:    'Oficinas propias en Ecuador, Perú y Colombia. Tu punto de contacto local, en tu idioma y zona horaria, respaldado por el equipo en Asia.',
+    team_latam_p:    'Oficinas propias en Ecuador, Perú y Colombia. Tu punto de contacto local, respaldado por el equipo en Asia.',
     why_header_tag:  '¿Por qué Xpand Latam?',
     why_header_h2:   'No somos intermediarios.<br><span class="text-orange">Somos tu equipo en China.</span>',
     why_header_p:    'Operamos en chino, inglés, alemán y portugués. Equipo físico en Asia y en Ecuador, Perú y Colombia. No cobramos margen sobre tu mercancía — cobramos por el valor que generamos.',
@@ -264,13 +264,15 @@ const translations = {
     form_p_empresa:  'Nombre de tu empresa',
     form_f_pais:     'País',
     form_sel_pais:   'Selecciona tu país',
+    form_f_telefono: 'Teléfono / WhatsApp *',
+    form_p_telefono: '+593 99 999 9999',
+    form_hint_telefono: 'Se autocompleta el código al elegir tu país — puedes editarlo si lo necesitas.',
+    form_f_categoria:'Producto que buscas',
+    form_sel_categoria: 'Selecciona una categoría',
     form_f_producto: '¿Qué necesitas importar?',
     form_p_producto: 'Describe el producto, cantidad aproximada y cualquier detalle relevante...',
-    form_f_industria:'Industria',
-    form_sel_ind:    'Tu industria',
-    form_f_volumen:  'Volumen anual estimado',
-    form_sel_vol:    'Selecciona un rango',
-    form_vol_opt0:   'Primer pedido (explorando)',
+    form_f_flete:    'Costo de carga aproximado',
+    form_sel_flete:  'Selecciona un rango',
     form_f_servicio: 'Servicio de interés',
     form_chk0:       'Búsqueda de proveedores',
     form_chk1:       'Control de calidad (AQL)',
@@ -278,7 +280,12 @@ const translations = {
     form_chk3:       'Gestión de compras completa',
     form_chk4:       'Maquinaria industrial',
     form_chk5:       'Excavadoras / Montacargas',
+    form_chk6:       'Alta tecnología',
+    form_chk7:       'Robots',
     form_note:       'Respuesta garantizada en menos de 24 horas hábiles.',
+    hv_title:        '¿Tu operación supera los $500,000 USD?',
+    hv_sub:          'Habla directo con un ejecutivo.',
+    hv_btn:          '📱 Contactar ejecutivo',
 
     // Stats bar
     stat_l1:         'Años importando desde China',
@@ -486,24 +493,24 @@ const translations = {
 
     // Why section
     ia_tag:          'Legal Protection in China',
-    ia_h2:           'We protect the exclusive design<br><span class="ia-highlight">you hand over to your factory</span>',
+    ia_h2:           'We protect the exclusive design <span class="ia-highlight">you hand over to your factory</span>',
     ia_lead:         'Exclusive legal contracts in China, drafted by our own legal team, so the design and intellectual property you hand over to your factory cannot be copied, manufactured or resold by third parties. Legal protection and IP rights from China, with exclusive representation of your company throughout the process.',
-    ia_feat1_h:      'Exclusivity contracts with the factory',
-    ia_feat1_p:      'We sign binding legal contracts in China that prohibit your factory from manufacturing, selling or sharing your design with third parties or competitors.',
-    ia_feat2_h:      'Design and IP registration',
-    ia_feat2_p:      'We register your design and intellectual property with Chinese authorities before production begins, legally shielding your product.',
-    ia_feat3_h:      'Exclusive legal representation in China',
-    ia_feat3_p:      'Our own legal team represents you exclusively before factories and Chinese authorities — not a remote intermediary, but lawyers on the ground defending only your interests.',
+    ia_feat1_h:      'Exclusivity',
+    ia_feat1_p:      'Your factory cannot sell your design to anyone else.',
+    ia_feat2_h:      'Legal registration',
+    ia_feat2_p:      'We register your design before production begins.',
+    ia_feat3_h:      'Lawyers in China',
+    ia_feat3_p:      'We represent you in person, not remotely.',
     ia_cta:          'Protect my design →',
     team_tag:        'Our Team',
     team_h2:         'Our own people.<br><span class="text-electric">No middlemen.</span>',
     team_sub:        'The best prices and quality, with a permanent team in Asia and Latin America, on the ground to protect your operation.',
     team_asia_tag:   '🇨🇳 Asia',
     team_asia_h3:    'Asia Team',
-    team_asia_p:     'Physical presence in China, Hong Kong and Taiwan. We negotiate, inspect and audit directly at the factory — without relying on third parties or middlemen.',
+    team_asia_p:     'Physical presence in China, Hong Kong and Taiwan. We negotiate, inspect and audit directly at the factory.',
     team_latam_tag:  '🌎 Latin America',
     team_latam_h3:   'Latin America Team',
-    team_latam_p:    'Own offices in Ecuador, Peru and Colombia. Your local point of contact, in your language and time zone, backed by the team in Asia.',
+    team_latam_p:    'Own offices in Ecuador, Peru and Colombia. Your local point of contact, backed by the team in Asia.',
     why_header_tag:  'Why Xpand Latam?',
     why_header_h2:   "We're not middlemen.<br><span class=\"text-orange\">We're your team in China.</span>",
     why_header_p:    'We operate in Chinese, English, German and Portuguese. Physical team in Asia and in Ecuador, Peru and Colombia. We do not charge a margin on your goods — we charge for the value we create.',
@@ -571,13 +578,15 @@ const translations = {
     form_p_empresa:  'Your company name',
     form_f_pais:     'Country',
     form_sel_pais:   'Select your country',
+    form_f_telefono: 'Phone / WhatsApp *',
+    form_p_telefono: '+593 99 999 9999',
+    form_hint_telefono: 'The country code fills in automatically when you pick your country — you can edit it if needed.',
+    form_f_categoria:'Product you\'re looking for',
+    form_sel_categoria: 'Select a category',
     form_f_producto: 'What do you need to import?',
     form_p_producto: 'Describe the product, approximate quantity and any relevant details...',
-    form_f_industria:'Industry',
-    form_sel_ind:    'Your industry',
-    form_f_volumen:  'Estimated annual volume',
-    form_sel_vol:    'Select a range',
-    form_vol_opt0:   'First order (exploring)',
+    form_f_flete:    'Approximate freight cost',
+    form_sel_flete:  'Select a range',
     form_f_servicio: 'Service of interest',
     form_chk0:       'Supplier sourcing',
     form_chk1:       'Quality control (AQL)',
@@ -585,7 +594,12 @@ const translations = {
     form_chk3:       'Full purchase management',
     form_chk4:       'Industrial machinery',
     form_chk5:       'Excavators / Forklifts',
+    form_chk6:       'High technology',
+    form_chk7:       'Robots',
     form_note:       'Guaranteed response in less than 24 business hours.',
+    hv_title:        'Is your operation over $500,000 USD?',
+    hv_sub:          'Talk directly to an executive.',
+    hv_btn:          '📱 Contact an executive',
 
     // Stats bar
     stat_l1:         'Years importing from China',
@@ -793,24 +807,24 @@ const translations = {
 
     // Why section
     ia_tag:          '中国法律保护',
-    ia_h2:           '我们保护您交付给工厂的<br><span class="ia-highlight">专属设计</span>',
+    ia_h2:           '我们保护您交付给工厂的<span class="ia-highlight">专属设计</span>',
     ia_lead:         '由我们自己的法律团队在中国起草的独家合同，确保您交付给工厂的设计和知识产权不会被第三方复制、生产或转售。来自中国的法律保护与知识产权权利，全程为您的企业提供专属代理。',
-    ia_feat1_h:      '与工厂签订独家合同',
-    ia_feat1_p:      '我们在中国签署具有法律约束力的合同，禁止您的工厂将设计生产、销售或分享给第三方或竞争对手。',
-    ia_feat2_h:      '设计与知识产权注册',
-    ia_feat2_p:      '在开始生产前，我们向中国当局注册您的设计和知识产权，为您的产品提供法律保障。',
-    ia_feat3_h:      '中国专属法律代理',
-    ia_feat3_p:      '我们自己的法律团队在工厂和中国当局面前专属代表您——不是远程中介，而是在现场只为您的利益辩护的律师。',
+    ia_feat1_h:      '独家保护',
+    ia_feat1_p:      '您的工厂不能将设计卖给其他人。',
+    ia_feat2_h:      '法律注册',
+    ia_feat2_p:      '我们在开始生产前为您注册设计。',
+    ia_feat3_h:      '中国本地律师',
+    ia_feat3_p:      '我们亲自代表您，而非远程处理。',
     ia_cta:          '保护我的设计 →',
     team_tag:        '我们的团队',
     team_h2:         '自有团队。<br><span class="text-electric">没有中间商。</span>',
     team_sub:        '最优的价格和品质，由常驻亚洲和拉丁美洲、在现场保护您业务的团队为您实现。',
     team_asia_tag:   '🇨🇳 亚洲',
     team_asia_h3:    '亚洲团队',
-    team_asia_p:     '在中国、香港和台湾均有实体驻点。我们直接在工厂进行谈判、检验和审核——不依赖第三方或中间商。',
+    team_asia_p:     '在中国、香港和台湾均有实体驻点。我们直接在工厂进行谈判、检验和审核。',
     team_latam_tag:  '🌎 拉丁美洲',
     team_latam_h3:   '拉丁美洲团队',
-    team_latam_p:    '在厄瓜多尔、秘鲁和哥伦比亚设有自有办事处。您的本地联系人，使用您的语言和时区，并有亚洲团队作为后盾。',
+    team_latam_p:    '在厄瓜多尔、秘鲁和哥伦比亚设有自有办事处。您的本地联系人，并有亚洲团队作为后盾。',
     why_header_tag:  '为何选择 Xpand Latam？',
     why_header_h2:   '我们不是中间商。<br><span class="text-orange">我们是您在中国的团队。</span>',
     why_header_p:    '我们以中文、英语、德语和葡萄牙语开展业务。在亚洲及厄瓜多尔、秘鲁、哥伦比亚均有实体团队。我们不从您的货物中赚取差价——我们收取创造的价值。',
@@ -878,13 +892,15 @@ const translations = {
     form_p_empresa:  '公司名称',
     form_f_pais:     '国家',
     form_sel_pais:   '选择国家',
+    form_f_telefono: '电话 / WhatsApp *',
+    form_p_telefono: '+593 99 999 9999',
+    form_hint_telefono: '选择国家后会自动填入区号——如有需要可自行修改。',
+    form_f_categoria:'您需要的产品类别',
+    form_sel_categoria: '选择一个类别',
     form_f_producto: '您需要进口什么？',
     form_p_producto: '描述产品、大概数量及相关细节...',
-    form_f_industria:'行业',
-    form_sel_ind:    '您的行业',
-    form_f_volumen:  '预估年采购量',
-    form_sel_vol:    '选择区间',
-    form_vol_opt0:   '首次订单（探索中）',
+    form_f_flete:    '预估运费',
+    form_sel_flete:  '选择区间',
     form_f_servicio: '感兴趣的服务',
     form_chk0:       '供应商开发',
     form_chk1:       '质量控制（AQL）',
@@ -892,7 +908,12 @@ const translations = {
     form_chk3:       '全程采购管理',
     form_chk4:       '工业机械',
     form_chk5:       '挖掘机 / 叉车',
+    form_chk6:       '高科技',
+    form_chk7:       '机器人',
     form_note:       '保证在24个工作小时内回复。',
+    hv_title:        '您的业务量超过50万美元吗？',
+    hv_sub:          '直接联系我们的高管。',
+    hv_btn:          '📱 联系高管',
 
     // Stats bar
     stat_l1:         '年从中国进口经验',
@@ -1228,16 +1249,10 @@ function setLang(lang) {
     if (iaCta && t.ia_cta) iaCta.innerHTML = t.ia_cta;
   }
 
-  // ===== TEAM SECTION (Equipo Asia / Latam) =====
-  const teamSec = document.querySelector('.team-section');
-  if (teamSec) {
-    const tmTag = teamSec.querySelector('.section-tag');
-    const tmH2  = teamSec.querySelector('.section-header h2');
-    const tmSub = teamSec.querySelector('.section-subtitle');
-    if (tmTag && t.team_tag) tmTag.innerHTML = t.team_tag;
-    if (tmH2  && t.team_h2)  tmH2.innerHTML  = t.team_h2;
-    if (tmSub && t.team_sub) tmSub.innerHTML = t.team_sub;
-    const teamCards = teamSec.querySelectorAll('.team-card');
+  // ===== TEAM CARDS (Equipo Asia / Latam — now inside why-xpand) =====
+  const teamGrid = document.querySelector('.team-grid');
+  if (teamGrid) {
+    const teamCards = teamGrid.querySelectorAll('.team-card');
     ['team_asia','team_latam'].forEach((base, i) => {
       const c = teamCards[i];
       if (!c) return;
@@ -1353,14 +1368,17 @@ function setLang(lang) {
     const fmap = [
       ['label[for="cf-nombre"]',   'innerHTML',   'form_f_name'],
       ['#cf-nombre',               'placeholder', 'form_p_name'],
+      ['label[for="cf-pais"]',     'innerHTML',   'form_f_pais'],
       ['label[for="cf-empresa"]',  'innerHTML',   'form_f_empresa'],
       ['#cf-empresa',              'placeholder', 'form_p_empresa'],
-      ['label[for="cf-pais"]',     'innerHTML',   'form_f_pais'],
       ['label[for="cf-email"]',    'innerHTML',   null],
+      ['label[for="cf-telefono"]', 'innerHTML',   'form_f_telefono'],
+      ['#cf-telefono',             'placeholder', 'form_p_telefono'],
+      ['.form-hint',               'innerHTML',   'form_hint_telefono'],
+      ['label[for="cf-categoria"]','innerHTML',   'form_f_categoria'],
       ['label[for="cf-producto"]', 'innerHTML',   'form_f_producto'],
       ['#cf-producto',             'placeholder', 'form_p_producto'],
-      ['label[for="cf-industria"]','innerHTML',   'form_f_industria'],
-      ['label[for="cf-volumen"]',  'innerHTML',   'form_f_volumen'],
+      ['label[for="cf-flete"]',    'innerHTML',   'form_f_flete'],
     ];
     fmap.forEach(([sel, prop, key]) => {
       if (!key) return;
@@ -1371,19 +1389,16 @@ function setLang(lang) {
     });
     const paisSel = cf.querySelector('#cf-pais');
     if (paisSel && t.form_sel_pais) paisSel.options[0].text = t.form_sel_pais;
-    const indSel = cf.querySelector('#cf-industria');
-    if (indSel && t.form_sel_ind) indSel.options[0].text = t.form_sel_ind;
-    const volSel = cf.querySelector('#cf-volumen');
-    if (volSel) {
-      if (t.form_sel_vol) volSel.options[0].text = t.form_sel_vol;
-      if (t.form_vol_opt0 && volSel.options[1]) volSel.options[1].text = t.form_vol_opt0;
-    }
+    const catSel = cf.querySelector('#cf-categoria');
+    if (catSel && t.form_sel_categoria) catSel.options[0].text = t.form_sel_categoria;
+    const fleteSel = cf.querySelector('#cf-flete');
+    if (fleteSel && t.form_sel_flete) fleteSel.options[0].text = t.form_sel_flete;
     // Service interest label (no "for" attribute)
     cf.querySelectorAll('.form-group > label').forEach(lbl => {
       if (!lbl.htmlFor && t.form_f_servicio) lbl.innerHTML = t.form_f_servicio;
     });
     // Checkbox labels
-    const chkKeys = ['form_chk0','form_chk1','form_chk2','form_chk3','form_chk4','form_chk5'];
+    const chkKeys = ['form_chk0','form_chk1','form_chk2','form_chk3','form_chk4','form_chk5','form_chk6','form_chk7'];
     cf.querySelectorAll('.checkbox-label').forEach((lbl, i) => {
       if (!t[chkKeys[i]]) return;
       const chk = lbl.querySelector('input[type="checkbox"]');
