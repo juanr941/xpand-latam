@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <!-- PREVIEW-ONLY: compact spacing/type experiment, not in style.css -->
+  <!-- Homepage-specific spacing/type tuning (not in the shared style.css) -->
   <style>
     .hero--fullbleed { min-height: 78vh; }
     .section-header { margin-bottom: 40px; }
@@ -99,20 +99,9 @@
     .calc-section { padding: 72px 0 !important; }
     .leaders-section { padding: 32px 0 !important; }
 
-    /* Shrink invest-asia section to roughly a third of its size — keep all content, just tighten it */
+    /* invest-asia section cut down to just tag + headline + buttons */
     .invest-asia-section { padding: 32px 0 28px !important; }
-    .invest-asia-top { margin-bottom: 20px !important; }
-    .ia-lead { font-size: 14px !important; line-height: 1.5 !important; max-width: 560px !important; }
-    .ia-feats-row { margin: 0 0 20px !important; }
-    .ia-feat { padding: 14px 16px !important; gap: 6px !important; }
-    .ia-feat-icon { font-size: 20px !important; }
-    .ia-feat strong { font-size: 13px !important; }
-    .ia-feat p { font-size: 11.5px !important; line-height: 1.4 !important; }
-    .ia-stats-bar { margin: 0 auto 18px !important; }
-    .ia-stat-num { font-size: 24px !important; letter-spacing: -1px !important; }
-    .ia-stat-lbl { font-size: 11px !important; }
-    .ia-stat-sep { height: 30px !important; }
-    .ia-bottom { gap: 12px !important; }
+    .invest-asia-top { margin-bottom: 0 !important; }
 
     .form-hint { display: block; font-size: 11.5px; color: var(--gray-400); margin-top: 5px; line-height: 1.4; }
   </style>
@@ -1629,59 +1618,13 @@
 <section class="invest-asia-section">
   <div class="invest-asia-top">
     <span class="ia-tag">Protección Legal en China</span>
-    <h2>Protegemos el diseño exclusivo <span class="ia-highlight">que le entregas a tu fábrica</span></h2>
+    <h2>Contratos legales en China: protección legal e IPR de China</h2>
   </div>
 
   <div class="ia-body">
-    <p class="ia-lead">Protegemos tu diseño con contratos legales en China.</p>
-
-    <div class="ia-feats-row">
-      <div class="ia-feat">
-        <span class="ia-feat-icon">⚖️</span>
-        <strong>Exclusividad</strong>
-        <p>Tu fábrica no puede vender tu diseño a otros.</p>
-      </div>
-      <div class="ia-feat">
-        <span class="ia-feat-icon">🔒</span>
-        <strong>Registro legal</strong>
-        <p>Registramos tu diseño antes de producir.</p>
-      </div>
-      <div class="ia-feat">
-        <span class="ia-feat-icon">👨‍⚖️</span>
-        <strong>Abogados en China</strong>
-        <p>Te representamos en persona, no a distancia.</p>
-      </div>
-    </div>
-
-    <div class="ia-stats-bar">
-      <div class="ia-stat">
-        <span class="ia-stat-num">3</span>
-        <span class="ia-stat-lbl">Oficinas legales en Asia</span>
-      </div>
-      <div class="ia-stat-sep"></div>
-      <div class="ia-stat">
-        <span class="ia-stat-num">15+</span>
-        <span class="ia-stat-lbl">Años en mercados asiáticos</span>
-      </div>
-      <div class="ia-stat-sep"></div>
-      <div class="ia-stat">
-        <span class="ia-stat-num">100%</span>
-        <span class="ia-stat-lbl">Diseños protegidos legalmente</span>
-      </div>
-    </div>
-
-    <div class="ia-bottom">
-      <div class="ia-countries">
-        <span>🇨🇳 China</span>
-        <span>🇻🇳 Vietnam</span>
-        <span>🇹🇭 Tailandia</span>
-        <span>🇰🇷 Corea</span>
-        <span>🇯🇵 Japón</span>
-      </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
-        <a href="#contacto" class="btn btn-primary btn-lg">Proteger mi diseño →</a>
-        <a href="inversiones.html" class="btn btn-outline-light btn-lg">Ver más sobre inversiones</a>
-      </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+      <a href="#contacto" class="btn btn-primary btn-lg">Proteger mi diseño →</a>
+      <a href="inversiones.html" class="btn btn-outline-navy btn-lg">Ver más sobre inversiones</a>
     </div>
   </div>
 </section>
@@ -2068,23 +2011,6 @@
               <input id="cf-nombre" name="nombre" type="text" placeholder="Tu nombre" required />
             </div>
             <div class="form-group">
-              <label for="cf-telefono">Teléfono / WhatsApp *</label>
-              <input id="cf-telefono" name="telefono" type="tel" placeholder="+593 99 999 9999" required />
-              <small class="form-hint">Incluye el código de país — Ecuador +593, Perú +51, Colombia +57, México +52, Chile +56, Argentina +54, EE.UU. +1</small>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="cf-empresa">Empresa</label>
-              <input id="cf-empresa" name="empresa" type="text" placeholder="Nombre de tu empresa" />
-            </div>
-            <div class="form-group">
-              <label for="cf-email">Email *</label>
-              <input id="cf-email" name="email" type="email" placeholder="tu@empresa.com" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
               <label for="cf-pais">País</label>
               <select id="cf-pais" name="pais">
                 <option value="">Selecciona tu país</option>
@@ -2112,6 +2038,23 @@
                 <option>Otro</option>
               </select>
             </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-empresa">Empresa</label>
+              <input id="cf-empresa" name="empresa" type="text" placeholder="Nombre de tu empresa" />
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email *</label>
+              <input id="cf-email" name="email" type="email" placeholder="tu@empresa.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-telefono">Teléfono / WhatsApp *</label>
+              <input id="cf-telefono" name="telefono" type="tel" placeholder="+593 99 999 9999" required />
+              <small class="form-hint">Se autocompleta el código al elegir tu país — puedes editarlo si lo necesitas.</small>
+            </div>
             <div class="form-group">
               <label for="cf-categoria">Producto que buscas</label>
               <select id="cf-categoria" name="categoria">
@@ -2137,29 +2080,27 @@
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="cf-industria">Industria</label>
-              <select id="cf-industria" name="industria">
-                <option value="">Tu industria</option>
-                <option>Manufactura / Industria</option>
-                <option>Construcción / Minería</option>
-                <option>Agroindustria / Alimentos</option>
-                <option>Comercio / Distribución</option>
-                <option>Logística / Transporte</option>
-                <option>Salud / Farmacéutica</option>
-                <option>Tecnología / Electrónica</option>
-                <option>Otro</option>
-              </select>
-            </div>
-            <div class="form-group">
               <label for="cf-volumen">Volumen anual estimado</label>
               <select id="cf-volumen" name="volumen">
                 <option value="">Selecciona un rango</option>
                 <option>Primer pedido (explorando)</option>
+                <option>$5,000 – $8,000 USD</option>
                 <option>$8,000 – $30,000 USD</option>
                 <option>$30,000 – $100,000 USD</option>
                 <option>$100,000 – $500,000 USD</option>
                 <option>$500,000 – $1,000,000 USD</option>
                 <option>Más de $1,000,000 USD</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cf-flete">Costo de carga aproximado</label>
+              <select id="cf-flete" name="flete">
+                <option value="">No estoy seguro</option>
+                <option>Menos de $1,000 USD</option>
+                <option>$1,000 – $3,000 USD</option>
+                <option>$3,000 – $8,000 USD</option>
+                <option>$8,000 – $20,000 USD</option>
+                <option>Más de $20,000 USD</option>
               </select>
             </div>
           </div>
