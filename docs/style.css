@@ -699,8 +699,8 @@ cite { font-size: 13px; color: var(--orange); font-weight: 600; font-style: norm
 .cdc-item span:first-child { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
 .cdc-item strong { color: rgba(255,255,255,0.85); }
 .btn-outline-navy {
-  background: transparent; color: rgba(255,255,255,0.85);
-  border: 2px solid rgba(255,255,255,0.25); border-radius: 8px;
+  background: transparent; color: var(--navy);
+  border: 2px solid rgba(6,42,120,0.25); border-radius: 8px;
   padding: 12px 28px; font-weight: 600; font-size: 15px;
   display: inline-flex; align-items: center; gap: 8px;
   transition: var(--transition); cursor: pointer;

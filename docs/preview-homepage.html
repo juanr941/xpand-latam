@@ -99,9 +99,14 @@
     .calc-section { padding: 72px 0 !important; }
     .leaders-section { padding: 32px 0 !important; }
 
-    /* invest-asia section cut down to just tag + headline + buttons */
+    /* invest-asia section: tag + headline + brief icon features + buttons, kept compact */
     .invest-asia-section { padding: 32px 0 28px !important; }
-    .invest-asia-top { margin-bottom: 0 !important; }
+    .invest-asia-top { margin-bottom: 20px !important; }
+    .ia-feats-row { margin: 0 0 20px !important; }
+    .ia-feat { padding: 14px 16px !important; gap: 6px !important; }
+    .ia-feat-icon { font-size: 20px !important; }
+    .ia-feat strong { font-size: 13px !important; }
+    .ia-feat p { font-size: 11.5px !important; line-height: 1.4 !important; }
 
     .form-hint { display: block; font-size: 11.5px; color: var(--gray-400); margin-top: 5px; line-height: 1.4; }
   </style>
@@ -1622,6 +1627,23 @@
   </div>
 
   <div class="ia-body">
+    <div class="ia-feats-row">
+      <div class="ia-feat">
+        <span class="ia-feat-icon">⚖️</span>
+        <strong>Exclusividad</strong>
+        <p>Tu fábrica no puede vender tu diseño a otros.</p>
+      </div>
+      <div class="ia-feat">
+        <span class="ia-feat-icon">🔒</span>
+        <strong>Registro legal</strong>
+        <p>Registramos tu diseño antes de producir.</p>
+      </div>
+      <div class="ia-feat">
+        <span class="ia-feat-icon">👨‍⚖️</span>
+        <strong>Abogados en China</strong>
+        <p>Te representamos en persona, no a distancia.</p>
+      </div>
+    </div>
     <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
       <a href="#contacto" class="btn btn-primary btn-lg">Proteger mi diseño →</a>
       <a href="inversiones.html" class="btn btn-outline-navy btn-lg">Ver más sobre inversiones</a>
@@ -1921,6 +1943,10 @@
     </div>
     <div class="faq-list">
       <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span class="faq-q-text">¿Tu operación supera los $500,000 USD?</span><span class="faq-arrow">▼</span></div>
+        <div class="faq-a-wrap"><div class="faq-a">Habla directo con un ejecutivo — sin pasar por el proceso estándar.<br><a href="https://wa.me/886932999971" target="_blank" class="btn btn-primary" style="margin-top:12px;" onclick="event.stopPropagation()">📱 Contactar ejecutivo</a></div></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q"><span class="faq-q-text">¿Cuánto cuesta el servicio de Xpand Latam?</span><span class="faq-arrow">▼</span></div>
         <div class="faq-a-wrap"><div class="faq-a">Tenemos servicios personalizados que van desde los <strong>$500 USD o menos</strong> hasta cobros de acuerdo a tu orden de compra. Nuestro equipo experto en diferentes áreas está listo para ayudarte. Primera consulta: gratuita y sin compromiso.</div></div>
       </div>
@@ -1993,16 +2019,6 @@
 
       </div>
       <div class="contact-form-wrap">
-        <div class="high-value-block">
-          <div class="hv-content">
-            <span class="hv-icon">💼</span>
-            <div>
-              <strong>¿Tu operación supera los $500,000 USD?</strong>
-              <p>Habla directo con un ejecutivo.</p>
-            </div>
-          </div>
-          <a href="https://wa.me/886932999971" target="_blank" class="btn btn-primary hv-btn">📱 Contactar ejecutivo</a>
-        </div>
         <form class="contact-form" id="contactForm">
           <h3>Solicitar consulta gratuita</h3>
           <div class="form-row">
@@ -2080,7 +2096,7 @@
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="cf-volumen">Volumen anual estimado</label>
+              <label for="cf-volumen">Volumen de inversión estimado</label>
               <select id="cf-volumen" name="volumen">
                 <option value="">Selecciona un rango</option>
                 <option>Primer pedido (explorando)</option>
@@ -2187,6 +2203,7 @@
           <li><a href="mailto:info@xpandlatam.com">info@xpandlatam.com</a></li>
           <li><a href="https://wa.me/8613564313406">+86 135 6431 3406</a></li>
           <li><a href="https://xpandlatam.com">www.xpandlatam.com</a></li>
+          <li><a href="https://xpand-latam.com" target="_blank" rel="noopener">xpand-latam.com</a></li>
         </ul>
       </div>
     </div>
