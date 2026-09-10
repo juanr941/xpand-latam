@@ -917,6 +917,18 @@ window.leadersAddSlot = function() {
 
   function totalCards() { return track.querySelectorAll('.mach-card').length; }
 
+  // Cards with a real uploaded/set photo (non-empty src) vs. icon-only placeholders
+  function imageCardsCount() {
+    const cards = [...track.querySelectorAll('.mach-card')];
+    let count = 0;
+    for (const card of cards) {
+      const img = card.querySelector('img');
+      if (img && img.getAttribute('src')) count++;
+      else break; // image cards are kept first; stop at the first icon-only card
+    }
+    return count;
+  }
+
   function goTo(idx) {
     const max = Math.max(0, totalCards() - visibleCount());
     if (idx > max) idx = 0;
@@ -928,7 +940,12 @@ window.leadersAddSlot = function() {
   let autoTimer = null;
   function startAuto() {
     stopAuto();
-    autoTimer = setInterval(function() { goTo(current + 1); }, 4000);
+    autoTimer = setInterval(function() {
+      // Auto-rotate only through the cards that have real photos — never
+      // drift on its own into the icon-only placeholder cards.
+      const autoMax = Math.max(0, imageCardsCount() - visibleCount());
+      goTo(current >= autoMax ? 0 : current + 1);
+    }, 4000);
   }
   function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
 
