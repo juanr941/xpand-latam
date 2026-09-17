@@ -1004,6 +1004,7 @@ window.leadersAddSlot = function() {
     data.append('_subject', 'Nueva consulta — Xpand Latam');
     data.append('_template', 'table');
     data.append('_captcha', 'false');
+    data.append('_cc', 'klever.vallejo@xpandlatam.com,info@xpandlatam.com');
 
     fetch('https://formsubmit.co/ajax/juanricardo@xpandlatam.com', {
       method: 'POST',
