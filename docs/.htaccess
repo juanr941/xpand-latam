@@ -1,0 +1,10 @@
+# Redirect stale URLs from the old (pre-2026) version of the site that are
+# still indexed by Google, so they 301 to current content instead of 404ing —
+# preserves any backlink/search equity those old pages built up over time.
+RewriteEngine On
+
+# Old Squarespace-style blog/info section — no direct current equivalent, send to homepage
+RewriteRule ^information/ https://www.xpandlatam.com/ [R=301,L]
+
+# Old store page (trailing-slash, no extension) — maps directly to the current page
+RewriteRule ^tienda/?$ https://www.xpandlatam.com/tienda.html [R=301,L]
